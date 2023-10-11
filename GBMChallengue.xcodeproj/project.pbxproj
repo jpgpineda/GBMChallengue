@@ -16,9 +16,18 @@
 		089C162A2AD59FEC00741169 /* GBMChallengueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16292AD59FEC00741169 /* GBMChallengueTests.swift */; };
 		089C16342AD59FEC00741169 /* GBMChallengueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16332AD59FEC00741169 /* GBMChallengueUITests.swift */; };
 		089C16362AD59FEC00741169 /* GBMChallengueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16352AD59FEC00741169 /* GBMChallengueUITestsLaunchTests.swift */; };
-		089C16452AD5B4E700741169 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C16442AD5B4E700741169 /* Localizable.strings */; };
 		089C16472AD5B50000741169 /* StringLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16462AD5B50000741169 /* StringLocalized.swift */; };
 		089C164A2AD5B52500741169 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089C16492AD5B52500741169 /* Colors.xcassets */; };
+		089C165E2AD6000F00741169 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C165D2AD6000F00741169 /* ApiError.swift */; };
+		089C16602AD6010C00741169 /* ApiResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C165F2AD6010C00741169 /* ApiResponseProtocol.swift */; };
+		089C16642AD6028B00741169 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16632AD6028B00741169 /* ApiClient.swift */; };
+		089C16682AD60C1500741169 /* ApiRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16672AD60C1500741169 /* ApiRequestProtocol.swift */; };
+		089C166A2AD60C5A00741169 /* TickerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16692AD60C5A00741169 /* TickerRequest.swift */; };
+		089C166C2AD611DC00741169 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C166B2AD611DC00741169 /* RequestManager.swift */; };
+		089C166E2AD6154400741169 /* TickerApiGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C166D2AD6154400741169 /* TickerApiGateway.swift */; };
+		089C16702AD615C500741169 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C166F2AD615C500741169 /* Ticker.swift */; };
+		089C16712AD6164700741169 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C16732AD6164700741169 /* Localizable.strings */; };
+		089C16752AD61A2900741169 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16742AD61A2900741169 /* ApiResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +61,18 @@
 		089C162F2AD59FEC00741169 /* GBMChallengueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBMChallengueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089C16332AD59FEC00741169 /* GBMChallengueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMChallengueUITests.swift; sourceTree = "<group>"; };
 		089C16352AD59FEC00741169 /* GBMChallengueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMChallengueUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		089C16442AD5B4E700741169 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		089C16462AD5B50000741169 /* StringLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLocalized.swift; sourceTree = "<group>"; };
 		089C16492AD5B52500741169 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		089C165D2AD6000F00741169 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		089C165F2AD6010C00741169 /* ApiResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseProtocol.swift; sourceTree = "<group>"; };
+		089C16632AD6028B00741169 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		089C16672AD60C1500741169 /* ApiRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestProtocol.swift; sourceTree = "<group>"; };
+		089C16692AD60C5A00741169 /* TickerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerRequest.swift; sourceTree = "<group>"; };
+		089C166B2AD611DC00741169 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		089C166D2AD6154400741169 /* TickerApiGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerApiGateway.swift; sourceTree = "<group>"; };
+		089C166F2AD615C500741169 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		089C16722AD6164700741169 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		089C16742AD61A2900741169 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +168,7 @@
 		089C16432AD5B4CC00741169 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				089C16442AD5B4E700741169 /* Localizable.strings */,
+				089C16732AD6164700741169 /* Localizable.strings */,
 				089C16462AD5B50000741169 /* StringLocalized.swift */,
 			);
 			path = Strings;
@@ -192,6 +210,7 @@
 		089C164E2AD5B5A200741169 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				089C165C2AD6000000741169 /* Network */,
 				089C16582AD5B63900741169 /* Defaults */,
 				089C16522AD5B5C700741169 /* Entities */,
 				089C16542AD5B5EF00741169 /* Gateways */,
@@ -228,6 +247,7 @@
 		089C16522AD5B5C700741169 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				089C166F2AD615C500741169 /* Ticker.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -242,6 +262,7 @@
 		089C16542AD5B5EF00741169 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				089C166D2AD6154400741169 /* TickerApiGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -284,8 +305,22 @@
 		089C165B2AD5B67A00741169 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				089C16692AD60C5A00741169 /* TickerRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		089C165C2AD6000000741169 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				089C165D2AD6000F00741169 /* ApiError.swift */,
+				089C165F2AD6010C00741169 /* ApiResponseProtocol.swift */,
+				089C16632AD6028B00741169 /* ApiClient.swift */,
+				089C16672AD60C1500741169 /* ApiRequestProtocol.swift */,
+				089C166B2AD611DC00741169 /* RequestManager.swift */,
+				089C16742AD61A2900741169 /* ApiResult.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,7 +429,7 @@
 			files = (
 				089C164A2AD5B52500741169 /* Colors.xcassets in Resources */,
 				089C161F2AD59FEC00741169 /* LaunchScreen.storyboard in Resources */,
-				089C16452AD5B4E700741169 /* Localizable.strings in Resources */,
+				089C16712AD6164700741169 /* Localizable.strings in Resources */,
 				089C161C2AD59FEC00741169 /* Assets.xcassets in Resources */,
 				089C161A2AD59FEA00741169 /* Main.storyboard in Resources */,
 			);
@@ -421,9 +456,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089C16682AD60C1500741169 /* ApiRequestProtocol.swift in Sources */,
+				089C16702AD615C500741169 /* Ticker.swift in Sources */,
+				089C16752AD61A2900741169 /* ApiResult.swift in Sources */,
 				089C16172AD59FEA00741169 /* ViewController.swift in Sources */,
+				089C16602AD6010C00741169 /* ApiResponseProtocol.swift in Sources */,
+				089C166A2AD60C5A00741169 /* TickerRequest.swift in Sources */,
 				089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */,
+				089C166C2AD611DC00741169 /* RequestManager.swift in Sources */,
+				089C16642AD6028B00741169 /* ApiClient.swift in Sources */,
 				089C16472AD5B50000741169 /* StringLocalized.swift in Sources */,
+				089C165E2AD6000F00741169 /* ApiError.swift in Sources */,
+				089C166E2AD6154400741169 /* TickerApiGateway.swift in Sources */,
 				089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +519,14 @@
 				089C161E2AD59FEC00741169 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		089C16732AD6164700741169 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C16722AD6164700741169 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

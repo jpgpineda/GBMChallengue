@@ -1,0 +1,30 @@
+//
+//  ApiError.swift
+//  GBMChallengue
+//
+//  Created by javier pineda on 10/10/23.
+//
+
+enum ApiError: Error {
+    case requestFailed(description: String)
+    case invalidData
+    case responseUnsuccessful(description: String)
+    case jsonConversionFailure(description: String)
+    case jsonParsingFailure
+    case failedSerialization
+    case unknown
+    case noInternet
+    
+    var customDescription: String {
+        switch self {
+        case let .requestFailed(description): return .Localized.requestFailed + description
+        case .invalidData: return .Localized.invalidData
+        case let .responseUnsuccessful(description): return .Localized.unsuccessfull + description
+        case let .jsonConversionFailure(description): return .Localized.JSONConversionFailure + description
+        case .jsonParsingFailure: return .Localized.JSONParsingFailure
+        case .failedSerialization: return .Localized.serializationFailed
+        case .unknown: return .Localized.unexpected
+        case .noInternet: return .Localized.noInternet
+        }
+    }
+}

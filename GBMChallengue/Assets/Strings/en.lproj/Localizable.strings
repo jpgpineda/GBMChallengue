@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  GBMChallengue
+
+  Created by javier pineda on 10/10/23.
+  
+*/
+
+// MARK: ApiErrors
+"invalidResponse"           = "Invalid Response";
+"statusCode"                = "Status code: ";
+"requestFailed"             = "Request Failed: ";
+"invalidData"               = "Invalid Data";
+"JSONConversionFailure"     = "JSON Conversion Failure: ";
+"serializationFailed"       = "Serialization failed";
+"JSONParsingFailure"        = "JSON Parsing Failure";
+"noInternet"                = "No internet connection";
+"unsuccessfull"             = "Unsuccessful: ";
+"unexpected"                = "An unexpected error occured, please try again";
