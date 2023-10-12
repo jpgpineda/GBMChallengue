@@ -28,6 +28,16 @@
 		089C16702AD615C500741169 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C166F2AD615C500741169 /* Ticker.swift */; };
 		089C16712AD6164700741169 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C16732AD6164700741169 /* Localizable.strings */; };
 		089C16752AD61A2900741169 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16742AD61A2900741169 /* ApiResult.swift */; };
+		089C16782AD76BA600741169 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 089C16772AD76BA600741169 /* FirebaseAnalytics */; };
+		089C167A2AD76BA600741169 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 089C16792AD76BA600741169 /* FirebaseAuth */; };
+		089C167C2AD76BA600741169 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 089C167B2AD76BA600741169 /* FirebaseCrashlytics */; };
+		089C167E2AD76BA600741169 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 089C167D2AD76BA600741169 /* FirebaseFirestore */; };
+		089C16812AD76C9500741169 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 089C16802AD76C9500741169 /* Realm */; };
+		089C16832AD76C9500741169 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 089C16822AD76C9500741169 /* RealmSwift */; };
+		089C16862AD76D4C00741169 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 089C16852AD76D4C00741169 /* Lottie */; };
+		5EC96C08E6BF47424D0A262C /* Pods_GBMChallengue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29EC7578480905E86CACCA7 /* Pods_GBMChallengue.framework */; };
+		A73CF6B90A9DEA5401FEDE7F /* Pods_GBMChallengue_GBMChallengueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8632FBD1D1E67AABDFF191E /* Pods_GBMChallengue_GBMChallengueUITests.framework */; };
+		FE3540CCFEC5434FAFD2FE19 /* Pods_GBMChallengueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519B73395FEECF0BBCC5ABD8 /* Pods_GBMChallengueTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +83,15 @@
 		089C166F2AD615C500741169 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		089C16722AD6164700741169 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		089C16742AD61A2900741169 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		24018E08650A13FCC2F791A1 /* Pods-GBMChallengue-GBMChallengueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBMChallengue-GBMChallengueUITests.release.xcconfig"; path = "Target Support Files/Pods-GBMChallengue-GBMChallengueUITests/Pods-GBMChallengue-GBMChallengueUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4189D39BBC606403D02DD7C4 /* Pods-GBMChallengueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBMChallengueTests.release.xcconfig"; path = "Target Support Files/Pods-GBMChallengueTests/Pods-GBMChallengueTests.release.xcconfig"; sourceTree = "<group>"; };
+		519B73395FEECF0BBCC5ABD8 /* Pods_GBMChallengueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBMChallengueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF4670E0B544C736C02E56D /* Pods-GBMChallengue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBMChallengue.release.xcconfig"; path = "Target Support Files/Pods-GBMChallengue/Pods-GBMChallengue.release.xcconfig"; sourceTree = "<group>"; };
+		C8632FBD1D1E67AABDFF191E /* Pods_GBMChallengue_GBMChallengueUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBMChallengue_GBMChallengueUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29EC7578480905E86CACCA7 /* Pods_GBMChallengue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBMChallengue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECDCB776323665A846404637 /* Pods-GBMChallengue-GBMChallengueUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBMChallengue-GBMChallengueUITests.debug.xcconfig"; path = "Target Support Files/Pods-GBMChallengue-GBMChallengueUITests/Pods-GBMChallengue-GBMChallengueUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED543A1ACB7E024994B92939 /* Pods-GBMChallengue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBMChallengue.debug.xcconfig"; path = "Target Support Files/Pods-GBMChallengue/Pods-GBMChallengue.debug.xcconfig"; sourceTree = "<group>"; };
+		FF28F99448F8807948E9E182 /* Pods-GBMChallengueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBMChallengueTests.debug.xcconfig"; path = "Target Support Files/Pods-GBMChallengueTests/Pods-GBMChallengueTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +99,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089C16832AD76C9500741169 /* RealmSwift in Frameworks */,
+				089C16862AD76D4C00741169 /* Lottie in Frameworks */,
+				089C167C2AD76BA600741169 /* FirebaseCrashlytics in Frameworks */,
+				089C167E2AD76BA600741169 /* FirebaseFirestore in Frameworks */,
+				089C16782AD76BA600741169 /* FirebaseAnalytics in Frameworks */,
+				089C167A2AD76BA600741169 /* FirebaseAuth in Frameworks */,
+				089C16812AD76C9500741169 /* Realm in Frameworks */,
+				5EC96C08E6BF47424D0A262C /* Pods_GBMChallengue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3540CCFEC5434FAFD2FE19 /* Pods_GBMChallengueTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73CF6B90A9DEA5401FEDE7F /* Pods_GBMChallengue_GBMChallengueUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +136,8 @@
 				089C16282AD59FEC00741169 /* GBMChallengueTests */,
 				089C16322AD59FEC00741169 /* GBMChallengueUITests */,
 				089C16102AD59FEA00741169 /* Products */,
+				3E6402EE70867BE7F2BF7179 /* Pods */,
+				6F407C654839AA08D79B6CF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,6 +354,30 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		3E6402EE70867BE7F2BF7179 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED543A1ACB7E024994B92939 /* Pods-GBMChallengue.debug.xcconfig */,
+				9CF4670E0B544C736C02E56D /* Pods-GBMChallengue.release.xcconfig */,
+				ECDCB776323665A846404637 /* Pods-GBMChallengue-GBMChallengueUITests.debug.xcconfig */,
+				24018E08650A13FCC2F791A1 /* Pods-GBMChallengue-GBMChallengueUITests.release.xcconfig */,
+				FF28F99448F8807948E9E182 /* Pods-GBMChallengueTests.debug.xcconfig */,
+				4189D39BBC606403D02DD7C4 /* Pods-GBMChallengueTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6F407C654839AA08D79B6CF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E29EC7578480905E86CACCA7 /* Pods_GBMChallengue.framework */,
+				C8632FBD1D1E67AABDFF191E /* Pods_GBMChallengue_GBMChallengueUITests.framework */,
+				519B73395FEECF0BBCC5ABD8 /* Pods_GBMChallengueTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,15 +385,26 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 089C16392AD59FEC00741169 /* Build configuration list for PBXNativeTarget "GBMChallengue" */;
 			buildPhases = (
+				7298B770161C6933479E594C /* [CP] Check Pods Manifest.lock */,
 				089C160B2AD59FEA00741169 /* Sources */,
 				089C160C2AD59FEA00741169 /* Frameworks */,
 				089C160D2AD59FEA00741169 /* Resources */,
+				2B00725DBE99CCD0B2CA8514 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GBMChallengue;
+			packageProductDependencies = (
+				089C16772AD76BA600741169 /* FirebaseAnalytics */,
+				089C16792AD76BA600741169 /* FirebaseAuth */,
+				089C167B2AD76BA600741169 /* FirebaseCrashlytics */,
+				089C167D2AD76BA600741169 /* FirebaseFirestore */,
+				089C16802AD76C9500741169 /* Realm */,
+				089C16822AD76C9500741169 /* RealmSwift */,
+				089C16852AD76D4C00741169 /* Lottie */,
+			);
 			productName = GBMChallengue;
 			productReference = 089C160F2AD59FEA00741169 /* GBMChallengue.app */;
 			productType = "com.apple.product-type.application";
@@ -347,6 +413,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 089C163C2AD59FEC00741169 /* Build configuration list for PBXNativeTarget "GBMChallengueTests" */;
 			buildPhases = (
+				A4C5766CF441345E19F72468 /* [CP] Check Pods Manifest.lock */,
 				089C16212AD59FEC00741169 /* Sources */,
 				089C16222AD59FEC00741169 /* Frameworks */,
 				089C16232AD59FEC00741169 /* Resources */,
@@ -365,9 +432,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 089C163F2AD59FEC00741169 /* Build configuration list for PBXNativeTarget "GBMChallengueUITests" */;
 			buildPhases = (
+				2FB4D4A48151C763C80C1556 /* [CP] Check Pods Manifest.lock */,
 				089C162B2AD59FEC00741169 /* Sources */,
 				089C162C2AD59FEC00741169 /* Frameworks */,
 				089C162D2AD59FEC00741169 /* Resources */,
+				019681733C99176F4F1B6935 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +480,11 @@
 				Base,
 			);
 			mainGroup = 089C16062AD59FEA00741169;
+			packageReferences = (
+				089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift.git" */,
+				089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios.git" */,
+			);
 			productRefGroup = 089C16102AD59FEA00741169 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -450,6 +524,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		019681733C99176F4F1B6935 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBMChallengue-GBMChallengueUITests/Pods-GBMChallengue-GBMChallengueUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBMChallengue-GBMChallengueUITests/Pods-GBMChallengue-GBMChallengueUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBMChallengue-GBMChallengueUITests/Pods-GBMChallengue-GBMChallengueUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B00725DBE99CCD0B2CA8514 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBMChallengue/Pods-GBMChallengue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBMChallengue/Pods-GBMChallengue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBMChallengue/Pods-GBMChallengue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FB4D4A48151C763C80C1556 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBMChallengue-GBMChallengueUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7298B770161C6933479E594C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBMChallengue-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4C5766CF441345E19F72468 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBMChallengueTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		089C160B2AD59FEA00741169 /* Sources */ = {
@@ -648,6 +825,7 @@
 		};
 		089C163A2AD59FEC00741169 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED543A1ACB7E024994B92939 /* Pods-GBMChallengue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -676,6 +854,7 @@
 		};
 		089C163B2AD59FEC00741169 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF4670E0B544C736C02E56D /* Pods-GBMChallengue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -704,6 +883,7 @@
 		};
 		089C163D2AD59FEC00741169 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF28F99448F8807948E9E182 /* Pods-GBMChallengueTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -724,6 +904,7 @@
 		};
 		089C163E2AD59FEC00741169 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4189D39BBC606403D02DD7C4 /* Pods-GBMChallengueTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -744,6 +925,7 @@
 		};
 		089C16402AD59FEC00741169 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECDCB776323665A846404637 /* Pods-GBMChallengue-GBMChallengueUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -762,6 +944,7 @@
 		};
 		089C16412AD59FEC00741169 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24018E08650A13FCC2F791A1 /* Pods-GBMChallengue-GBMChallengueUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -818,6 +1001,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.43.0;
+			};
+		};
+		089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		089C16772AD76BA600741169 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		089C16792AD76BA600741169 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		089C167B2AD76BA600741169 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		089C167D2AD76BA600741169 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		089C16802AD76C9500741169 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			productName = Realm;
+		};
+		089C16822AD76C9500741169 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			productName = RealmSwift;
+		};
+		089C16852AD76D4C00741169 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios.git" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 089C16072AD59FEA00741169 /* Project object */;
 }
