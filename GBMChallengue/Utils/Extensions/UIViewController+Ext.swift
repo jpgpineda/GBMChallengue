@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
 extension UIViewController {
     func showLoader() {
@@ -24,10 +25,16 @@ extension UIViewController {
     }
     
     func showErrorAlert(message: String) {
-        
+        let errorBanner = NotificationBanner(title: .Localized.ups,
+                                             subtitle: message,
+                                             style: .danger)
+        errorBanner.show()
     }
     
     func showSuccessAlert(message: String) {
-        
+        let successBanner = NotificationBanner(title: .Localized.congratsTitle,
+                                               subtitle: message,
+                                               style: .success)
+        successBanner.show()
     }
 }

@@ -17,6 +17,7 @@
 "noInternet"                = "No internet connection";
 "unsuccessfull"             = "Unsuccessful: ";
 "unexpected"                = "An unexpected error occured, please try again";
+"ups"                       = "Ups!";
 
 // MARK: Sign Up
 "name"                      = "Nombre:";
@@ -39,3 +40,7 @@
 "emptyField"                = "El campo no puede estar vacío";
 "invalidEmail"              = "El correo no tiene un formato válido";
 "invalidPassword"           = "La contraseña debe tener al menos 8 caracteres";
+
+// MARK: Success messages
+"congratsTitle"             = "Felicidades!!";
+

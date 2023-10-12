@@ -20,6 +20,7 @@ extension String {
         static var noInternet: String { return getLocalizedString(#function) }
         static var unsuccessfull: String { return getLocalizedString(#function) }
         static var unexpected: String { return getLocalizedString(#function) }
+        static var ups: String { return getLocalizedString(#function) }
         
         // MARK: Sign Up
         static var name: String { return getLocalizedString(#function) }
@@ -42,6 +43,9 @@ extension String {
         static var emptyField: String { return getLocalizedString(#function) }
         static var invalidEmail: String { return getLocalizedString(#function) }
         static var invalidPassword: String { return getLocalizedString(#function) }
+        
+        // MARK: Success messages
+        static var congratsTitle: String { return getLocalizedString(#function) }
         
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)
