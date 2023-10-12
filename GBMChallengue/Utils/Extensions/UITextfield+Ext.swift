@@ -16,4 +16,8 @@ extension UITextField {
             return placeholder ?? .empty
         }
     }
+    
+    func setState(isError: Bool) {
+        setUpMargins(color: isError ? .red : .secondaryLabel)
+    }
 }

@@ -64,7 +64,7 @@
                                                 <constraint firstAttribute="height" constant="45" id="lQJ-Gc-nGp"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="name"/>
                                             </userDefinedRuntimeAttributes>
@@ -75,7 +75,7 @@
                                                 <constraint firstAttribute="height" constant="45" id="YRV-32-iU5"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="lastName"/>
                                             </userDefinedRuntimeAttributes>
@@ -86,7 +86,7 @@
                                                 <constraint firstAttribute="height" constant="45" id="TwU-eU-gsa"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="email"/>
                                             </userDefinedRuntimeAttributes>
@@ -97,7 +97,7 @@
                                                 <constraint firstAttribute="height" constant="45" id="weH-pF-B6H"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" textContentType="password"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="password"/>
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
@@ -114,6 +114,9 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="NO"/>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localized" value="register"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="requestSignUp:" destination="-1" eventType="touchUpInside" id="K6U-IX-4rF"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>

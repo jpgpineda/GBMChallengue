@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="emailTextField" destination="vQ7-7K-8dg" id="Ibh-5j-xZy"/>
                 <outlet property="passwordTextField" destination="7F6-wp-ie4" id="rCT-Dd-lzO"/>
-                <outlet property="signInButton" destination="N4t-Oy-ccL" id="BuJ-do-cWw"/>
+                <outlet property="signInButton" destination="wGE-7r-Wox" id="YRw-Uc-g1f"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -69,6 +69,9 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="localized" value="signIn"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="NO"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="requestSignIn:" destination="-1" eventType="touchUpInside" id="hbh-5g-LWX"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-An-N9l" customClass="GBMDashedButton" customModule="GBMChallengue" customModuleProvider="target">
                             <rect key="frame" x="169.66666666666666" y="223.33333333333331" width="54" height="34"/>

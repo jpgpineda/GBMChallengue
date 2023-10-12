@@ -13,7 +13,7 @@ class SignInViewController: UIViewController {
     ///////////////////////////////////////
     @IBOutlet weak var emailTextField: GBMTextField!
     @IBOutlet weak var passwordTextField: GBMTextField!
-    @IBOutlet weak var signInButton: GBMContainer!
+    @IBOutlet weak var signInButton: GBMButton!
     ///////////////////////////////////////
     // MARK: Properties
     ///////////////////////////////////////
@@ -23,8 +23,18 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(controller: self)
+        setupView()
+    }
+    
+    private func setupView() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
 
+    @IBAction func requestSignIn(_ sender: GBMButton) {
+        presenter.requestSignIn()
+    }
+    
     @IBAction func presentSignUP(_ sender: GBMDashedButton) {
         presenter.presentSignUp()
     }
@@ -32,8 +42,42 @@ class SignInViewController: UIViewController {
     @IBAction func backToWelcome(_ sender: UIButton) {
         presenter.dismissScreen()
     }
+    
+    private func validateFields() {
+        signInButton.isActive = presenter.validateData()
+    }
 }
 
 extension SignInViewController: SignInView {
+    func showFailure(message: String) {
+        showErrorAlert(message: message)
+    }
     
+    func showSuccess(message: String) {
+        showSuccessAlert(message: message)
+    }
+}
+
+extension SignInViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        if textField == emailTextField {
+            if !text.isValidEmail() || text.isEmpty {
+                textField.setState(isError: true)
+                showErrorAlert(message: .Localized.invalidEmail)
+            } else {
+                textField.setState(isError: false)
+            }
+            presenter.email = text
+        } else {
+            if !text.isPasswordValid() || text.isEmpty {
+                textField.setState(isError: true)
+                showErrorAlert(message: .Localized.invalidPassword)
+            } else {
+                textField.setState(isError: false)
+            }
+            presenter.password = text
+        }
+        validateFields()
+    }
 }

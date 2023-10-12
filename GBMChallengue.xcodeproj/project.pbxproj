@@ -30,6 +30,7 @@
 		083CF8CC2AD866A9001E95D5 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8CB2AD866A9001E95D5 /* SignUpRouter.swift */; };
 		083CF8CE2AD86743001E95D5 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8CD2AD86743001E95D5 /* SignUpPresenter.swift */; };
 		083CF8D02AD8689B001E95D5 /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8CF2AD8689B001E95D5 /* SignUpConfigurator.swift */; };
+		083CF8D22AD872EE001E95D5 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8D12AD872EE001E95D5 /* Regex.swift */; };
 		089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16122AD59FEA00741169 /* AppDelegate.swift */; };
 		089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16142AD59FEA00741169 /* SceneDelegate.swift */; };
 		089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16162AD59FEA00741169 /* WelcomeViewController.swift */; };
@@ -108,6 +109,7 @@
 		083CF8CB2AD866A9001E95D5 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		083CF8CD2AD86743001E95D5 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		083CF8CF2AD8689B001E95D5 /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
+		083CF8D12AD872EE001E95D5 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		089C160F2AD59FEA00741169 /* GBMChallengue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBMChallengue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089C16122AD59FEA00741169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089C16142AD59FEA00741169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 		089C165A2AD5B66500741169 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				083CF8D12AD872EE001E95D5 /* Regex.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -783,6 +786,7 @@
 				089C16892AD7725700741169 /* SignInViewController.swift in Sources */,
 				089C16642AD6028B00741169 /* ApiClient.swift in Sources */,
 				083CF8B62AD78A6E001E95D5 /* AccessDependency.swift in Sources */,
+				083CF8D22AD872EE001E95D5 /* Regex.swift in Sources */,
 				083CF8A62AD77C8F001E95D5 /* CGFloat+Ext.swift in Sources */,
 				08D3F7C42AD775660088C29E /* GBMTextField.swift in Sources */,
 				089C16472AD5B50000741169 /* StringLocalized.swift in Sources */,

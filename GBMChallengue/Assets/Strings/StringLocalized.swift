@@ -38,6 +38,11 @@ extension String {
         // MARK: Welcome
         static var begin: String { return getLocalizedString(#function) }
         
+        // MARK: Validation Errors
+        static var emptyField: String { return getLocalizedString(#function) }
+        static var invalidEmail: String { return getLocalizedString(#function) }
+        static var invalidPassword: String { return getLocalizedString(#function) }
+        
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)
         }

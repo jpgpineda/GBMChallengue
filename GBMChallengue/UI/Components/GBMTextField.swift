@@ -21,11 +21,6 @@ class GBMTextField: UITextField {
     }
     
     private var isPasswordCovered: Bool = false
-    private var isError: Bool = false {
-        didSet {
-            
-        }
-    }
     
     private func setupPasswordIcon() {
         rightViewMode = UITextField.ViewMode.always
@@ -41,7 +36,7 @@ class GBMTextField: UITextField {
     @objc private func changePasswordIcon() {
         isPasswordCovered = !isPasswordCovered
         passwordImage.image = isPasswordCovered ? coverPasswordImage : showPasswordImage
-        self.isSecureTextEntry = !isPasswordCovered
+        isSecureTextEntry = !isPasswordCovered
     }
     
     override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
@@ -51,6 +46,6 @@ class GBMTextField: UITextField {
     }
     
     override func awakeFromNib() {
-        self.setUpMargins(color: .secondaryLabel)
+        setUpMargins(color: .secondaryLabel)
     }
 }

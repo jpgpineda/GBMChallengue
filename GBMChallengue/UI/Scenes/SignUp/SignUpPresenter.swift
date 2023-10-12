@@ -13,16 +13,22 @@ protocol SignUpView {
 protocol SignUpPresenter {
     var view: SignUpView { get set }
     var router: SignUpRouter { get set }
-    func requestSignUp(name: String,
-                       lastNames: String,
-                       email: String,
-                       password: String)
+    var name: String { get set }
+    var lastName: String { get set }
+    var email: String { get set }
+    var password: String { get set }
+    func requestSignUp()
     func dismissView()
+    func validateData() -> Bool
 }
 
 class SignUpPresenterImplementation: SignUpPresenter {
     internal var view: SignUpView
     internal var router: SignUpRouter
+    var name: String = .empty
+    var lastName: String = .empty
+    var email: String = .empty
+    var password: String = .empty
     
     init(view: SignUpView,
          router: SignUpRouter) {
@@ -30,14 +36,28 @@ class SignUpPresenterImplementation: SignUpPresenter {
         self.router = router
     }
     
-    func requestSignUp(name: String,
-                       lastNames: String,
-                       email: String,
-                       password: String) {
+    func requestSignUp() {
         
     }
     
     func dismissView() {
         router.dismissView()
+    }
+    
+    func validateData() -> Bool {
+        var isValid = true
+        if name.isEmpty {
+            isValid = false
+        }
+        if lastName.isEmpty {
+            isValid = false
+        }
+        if email.isEmpty || !email.isValidEmail() {
+            isValid = false
+        }
+        if password.isEmpty || !password.isPasswordValid() {
+            isValid = false
+        }
+        return isValid
     }
 }

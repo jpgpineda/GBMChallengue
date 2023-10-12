@@ -34,3 +34,8 @@
 
 // MARK: Welcome
 "begin"                     = "Comenzar";
+
+// MARK: Validation errors
+"emptyField"                = "El campo no puede estar vacío";
+"invalidEmail"              = "El correo no tiene un formato válido";
+"invalidPassword"           = "La contraseña debe tener al menos 8 caracteres";
