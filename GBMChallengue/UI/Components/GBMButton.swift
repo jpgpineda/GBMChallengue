@@ -9,9 +9,15 @@ import UIKit
 
 class GBMButton: UIButton {
     override func awakeFromNib() {
-        backgroundColor = .label
         setTitleColor(.systemBackground, for: .normal)
         roundCorners([.bottomLeft, .bottomRight, .topLeft], radius: .eight)
-        titleLabel?.font = .systemFont(ofSize: .twenty, weight: .semibold)
+        titleLabel?.font = .systemFont(ofSize: .twenty, weight: .bold)
+    }
+    
+    @IBInspectable var isActive: Bool = false {
+        didSet {
+            backgroundColor = isActive ? .label : .lightGray
+            isEnabled = isActive
+        }
     }
 }

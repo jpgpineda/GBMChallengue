@@ -30,6 +30,7 @@
 "signIn"                    = "Ingresar";
 "newAccountQuestion"        = "¿No tienes cuenta?";
 "signUp"                    = "Registrate";
+"restorePass"               = "Restablecer contraseña";
 
 // MARK: Welcome
 "begin"                     = "Comenzar";

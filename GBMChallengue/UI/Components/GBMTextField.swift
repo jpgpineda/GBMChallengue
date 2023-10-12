@@ -21,14 +21,20 @@ class GBMTextField: UITextField {
     }
     
     private var isPasswordCovered: Bool = false
+    private var isError: Bool = false {
+        didSet {
+            
+        }
+    }
     
     private func setupPasswordIcon() {
         rightViewMode = UITextField.ViewMode.always
         let imageView = passwordImage
         imageView.contentMode = .scaleAspectFit
         imageView.image = showPasswordImage
-        imageView.tintColor = .systemBackground
+        imageView.tintColor = .label
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.changePasswordIcon)))
+        imageView.isUserInteractionEnabled = true
         rightView = imageView
     }
     
@@ -38,14 +44,13 @@ class GBMTextField: UITextField {
         self.isSecureTextEntry = !isPasswordCovered
     }
     
-    override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
-        var textRect = super.leftViewRect(forBounds: bounds)
-        textRect.origin.x += .eight
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        var textRect = super.rightViewRect(forBounds: bounds)
+        textRect.origin.x += .minusEight
         return textRect
     }
     
     override func awakeFromNib() {
-        self.roundCorners(.allCorners, radius: .eight)
-        self.setUpMargins(color: .systemBackground)
+        self.setUpMargins(color: .secondaryLabel)
     }
 }

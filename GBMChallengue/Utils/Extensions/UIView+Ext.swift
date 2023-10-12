@@ -8,6 +8,17 @@
 import UIKit
 
 extension UIView {
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.addGestureRecognizer(tap)
+    }
+        
+    @objc func dismissKeyboard() {
+        self.endEditing(true)
+    }
+    
     func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
         if #available(iOS 11, *) {
             self.clipsToBounds = true
@@ -27,7 +38,8 @@ extension UIView {
     }
     
     func setUpMargins(color: UIColor) {
-        layer.cornerRadius = .twenty
+        roundCorners(.allCorners, radius: .eight)
+        layer.cornerRadius = .eight
         layer.borderWidth  = .one
         layer.borderColor  = color.cgColor
     }

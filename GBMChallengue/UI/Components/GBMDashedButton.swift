@@ -8,22 +8,17 @@
 import UIKit
 
 class GBMDashedButton: UIButton {
-    var dashedLine: CAShapeLayer!
+    var dashedLine = CAShapeLayer()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUp()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override func awakeFromNib() {
         setUp()
     }
     
     private func setUp() {
-        dashedLine = CAShapeLayer()
-        dashedLine.strokeColor = UIColor.label.cgColor
+        dashedLine.strokeColor = UIColor.secondaryLabel.cgColor
         dashedLine.lineWidth = .two
+        titleLabel?.font = .systemFont(ofSize: .ten, weight: .semibold)
+        setTitleColor(.label, for: .normal)
         layer.addSublayer(dashedLine)
     }
     

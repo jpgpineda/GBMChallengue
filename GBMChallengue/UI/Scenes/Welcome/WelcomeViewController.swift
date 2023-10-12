@@ -11,11 +11,12 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
-
     @IBAction func showSignIn(_ sender: GBMButton) {
+        guard let viewController = ModuleManager.accessDependency.makeSignInViewController() else { return }
+        show(viewController, sender: nil)
     }
 }
 

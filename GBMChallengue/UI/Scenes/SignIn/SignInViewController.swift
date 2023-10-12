@@ -8,22 +8,32 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
+    ///////////////////////////////////////
+    // MARK: Outlets
+    ///////////////////////////////////////
+    @IBOutlet weak var emailTextField: GBMTextField!
+    @IBOutlet weak var passwordTextField: GBMTextField!
+    @IBOutlet weak var signInButton: GBMContainer!
+    ///////////////////////////////////////
+    // MARK: Properties
+    ///////////////////////////////////////
+    private let configurator = SignInConfiguratorImplementation()
+    var presenter: SignInPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configurator.configure(controller: self)
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func presentSignUP(_ sender: GBMDashedButton) {
+        presenter.presentSignUp()
     }
-    */
+    
+    @IBAction func backToWelcome(_ sender: UIButton) {
+        presenter.dismissScreen()
+    }
+}
 
+extension SignInViewController: SignInView {
+    
 }

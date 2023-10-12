@@ -33,6 +33,7 @@ extension String {
         static var signIn: String { return getLocalizedString(#function) }
         static var newAccountQuestion: String { return getLocalizedString(#function) }
         static var signUp: String { return getLocalizedString(#function) }
+        static var restorePassword: String { return getLocalizedString(#function) }
         
         // MARK: Welcome
         static var begin: String { return getLocalizedString(#function) }

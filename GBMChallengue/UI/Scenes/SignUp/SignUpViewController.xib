@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="GBMChallengue" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="h9q-5a-YNv" id="vub-BK-xK5"/>
+                <outlet property="lastNameTextField" destination="SMD-IU-r4r" id="bRA-Mh-5Ix"/>
+                <outlet property="nameTextField" destination="9kJ-Qv-mxc" id="Fmh-vz-VFB"/>
+                <outlet property="passwordTextField" destination="z8k-pF-vWD" id="Cnb-h7-jcj"/>
+                <outlet property="signUpButton" destination="EW3-Yo-Z9T" id="jbe-o4-4Pe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58w-nf-mEQ">
+                    <rect key="frame" x="16" y="36" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="0Eg-fO-Npa"/>
+                        <constraint firstAttribute="height" constant="32" id="fbY-lZ-ThS"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissView:" destination="-1" eventType="touchUpInside" id="xbK-s9-DYl"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRu-yh-gIo">
+                    <rect key="frame" x="132.5" y="39" width="55" height="26"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="signUp"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvq-Te-rSZ" customClass="GBMContainer" customModule="GBMChallengue" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="97" width="320" height="471"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCZ-BY-S9K">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="471"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-QX-iPB">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="471"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kJ-Qv-mxc" customClass="GBMTextField" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="32" width="288" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="lQJ-Gc-nGp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="name"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SMD-IU-r4r" customClass="GBMTextField" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="109" width="288" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="YRV-32-iU5"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="lastName"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h9q-5a-YNv" customClass="GBMTextField" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="186" width="288" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="TwU-eU-gsa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="email"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8k-pF-vWD" customClass="GBMTextField" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="263" width="288" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="weH-pF-B6H"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="password"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EW3-Yo-Z9T" customClass="GBMButton" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="340" width="288" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="dtF-mr-sMi"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="register"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="9kJ-Qv-mxc" firstAttribute="leading" secondItem="Pv1-QX-iPB" secondAttribute="leading" constant="16" id="3De-Zp-gWH"/>
+                                        <constraint firstItem="SMD-IU-r4r" firstAttribute="leading" secondItem="Pv1-QX-iPB" secondAttribute="leading" constant="16" id="80q-ZC-UGm"/>
+                                        <constraint firstAttribute="trailing" secondItem="EW3-Yo-Z9T" secondAttribute="trailing" constant="16" id="BTM-4h-roF"/>
+                                        <constraint firstItem="z8k-pF-vWD" firstAttribute="top" secondItem="h9q-5a-YNv" secondAttribute="bottom" constant="32" id="FCk-jz-41h"/>
+                                        <constraint firstAttribute="trailing" secondItem="z8k-pF-vWD" secondAttribute="trailing" constant="16" id="LlT-iz-dQG"/>
+                                        <constraint firstItem="z8k-pF-vWD" firstAttribute="leading" secondItem="Pv1-QX-iPB" secondAttribute="leading" constant="16" id="OKa-On-hI5"/>
+                                        <constraint firstItem="EW3-Yo-Z9T" firstAttribute="top" secondItem="z8k-pF-vWD" secondAttribute="bottom" constant="32" id="P6A-e3-n3g"/>
+                                        <constraint firstAttribute="trailing" secondItem="SMD-IU-r4r" secondAttribute="trailing" constant="16" id="TBJ-p6-tcc"/>
+                                        <constraint firstAttribute="trailing" secondItem="9kJ-Qv-mxc" secondAttribute="trailing" constant="16" id="VT6-ip-8HP"/>
+                                        <constraint firstItem="9kJ-Qv-mxc" firstAttribute="top" secondItem="Pv1-QX-iPB" secondAttribute="top" constant="32" id="XP8-HH-R1J"/>
+                                        <constraint firstItem="EW3-Yo-Z9T" firstAttribute="leading" secondItem="Pv1-QX-iPB" secondAttribute="leading" constant="16" id="fUG-qk-zgU"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EW3-Yo-Z9T" secondAttribute="bottom" constant="86" id="fjW-xW-M1Q"/>
+                                        <constraint firstItem="h9q-5a-YNv" firstAttribute="leading" secondItem="Pv1-QX-iPB" secondAttribute="leading" constant="16" id="lXr-bF-AHN"/>
+                                        <constraint firstItem="SMD-IU-r4r" firstAttribute="top" secondItem="9kJ-Qv-mxc" secondAttribute="bottom" constant="32" id="mc0-AM-x5N"/>
+                                        <constraint firstAttribute="trailing" secondItem="h9q-5a-YNv" secondAttribute="trailing" constant="16" id="s7Z-1P-Zcu"/>
+                                        <constraint firstItem="h9q-5a-YNv" firstAttribute="top" secondItem="SMD-IU-r4r" secondAttribute="bottom" constant="32" id="sBk-rh-bp0"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Pv1-QX-iPB" firstAttribute="height" secondItem="UCZ-BY-S9K" secondAttribute="height" multiplier="1.00047" priority="250" id="3jT-1v-Yt3"/>
+                                <constraint firstAttribute="bottom" secondItem="Pv1-QX-iPB" secondAttribute="bottom" id="3uw-aj-ags"/>
+                                <constraint firstItem="Pv1-QX-iPB" firstAttribute="width" secondItem="UCZ-BY-S9K" secondAttribute="width" id="3yl-lj-pwg"/>
+                                <constraint firstItem="Pv1-QX-iPB" firstAttribute="leading" secondItem="UCZ-BY-S9K" secondAttribute="leading" id="HXo-DN-4v1"/>
+                                <constraint firstItem="Pv1-QX-iPB" firstAttribute="top" secondItem="UCZ-BY-S9K" secondAttribute="top" id="miK-s9-Uzo"/>
+                                <constraint firstAttribute="trailing" secondItem="Pv1-QX-iPB" secondAttribute="trailing" id="yCD-P0-pjV"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="UCZ-BY-S9K" firstAttribute="leading" secondItem="qvq-Te-rSZ" secondAttribute="leading" id="2Gf-Zl-3OC"/>
+                        <constraint firstAttribute="bottom" secondItem="UCZ-BY-S9K" secondAttribute="bottom" id="JWU-9m-oIY"/>
+                        <constraint firstAttribute="trailing" secondItem="UCZ-BY-S9K" secondAttribute="trailing" id="TPz-9r-eb4"/>
+                        <constraint firstItem="UCZ-BY-S9K" firstAttribute="top" secondItem="qvq-Te-rSZ" secondAttribute="top" id="urs-DZ-5ry"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HRu-yh-gIo" firstAttribute="centerY" secondItem="58w-nf-mEQ" secondAttribute="centerY" id="5Q9-sc-ffA"/>
+                <constraint firstItem="HRu-yh-gIo" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="96P-G8-ch1"/>
+                <constraint firstItem="58w-nf-mEQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="UKf-zU-vj6"/>
+                <constraint firstItem="58w-nf-mEQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="cdv-da-anB"/>
+                <constraint firstItem="qvq-Te-rSZ" firstAttribute="top" secondItem="HRu-yh-gIo" secondAttribute="bottom" constant="32" id="hGo-Sa-21U"/>
+                <constraint firstAttribute="bottom" secondItem="qvq-Te-rSZ" secondAttribute="bottom" id="r6y-Si-kWD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qvq-Te-rSZ" secondAttribute="trailing" id="rUr-9I-IVK"/>
+                <constraint firstItem="qvq-Te-rSZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vLk-Gu-ou8"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

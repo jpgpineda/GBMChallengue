@@ -10,6 +10,7 @@ import UIKit
 class GBMContainer: UIView {
     override func awakeFromNib() {
         backgroundColor = .secondarySystemBackground
-        roundCorners(.topLeft, radius: .twenty)
+        hideKeyboardWhenTappedAround()
+        roundCorners(.topLeft, radius: .forty)
     }
 }
