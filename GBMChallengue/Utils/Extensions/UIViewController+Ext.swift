@@ -20,21 +20,27 @@ extension UIViewController {
     }
     
     func dismissLoader() {
-        guard let loaderView = self.view.viewWithTag(100) else { return }
-        loaderView.removeFromSuperview()
+        DispatchQueue.main.async {
+            guard let loaderView = self.view.viewWithTag(100) else { return }
+            loaderView.removeFromSuperview()
+        }
     }
     
     func showErrorAlert(message: String) {
         let errorBanner = NotificationBanner(title: .Localized.ups,
                                              subtitle: message,
                                              style: .danger)
-        errorBanner.show()
+        DispatchQueue.main.async {
+            errorBanner.show()
+        }
     }
     
     func showSuccessAlert(message: String) {
         let successBanner = NotificationBanner(title: .Localized.congratsTitle,
                                                subtitle: message,
                                                style: .success)
-        successBanner.show()
+        DispatchQueue.main.async {
+            successBanner.show()
+        }
     }
 }

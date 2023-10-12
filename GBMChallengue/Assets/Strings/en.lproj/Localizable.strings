@@ -17,6 +17,7 @@
 "noInternet"                = "No internet connection";
 "unsuccessfull"             = "Unsuccessful: ";
 "unexpected"                = "An unexpected error occured, please try again";
+"noActiveSession"           = "No cuentas con una sesión activa";
 "ups"                       = "Ups!";
 
 // MARK: Sign Up
@@ -43,4 +44,5 @@
 
 // MARK: Success messages
 "congratsTitle"             = "Felicidades!!";
+"accountCreated"            = "Tu cuenta ha sido creada satisfactoriamente";
 

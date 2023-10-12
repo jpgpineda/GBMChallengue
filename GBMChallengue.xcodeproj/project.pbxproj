@@ -31,6 +31,12 @@
 		083CF8CE2AD86743001E95D5 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8CD2AD86743001E95D5 /* SignUpPresenter.swift */; };
 		083CF8D02AD8689B001E95D5 /* SignUpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8CF2AD8689B001E95D5 /* SignUpConfigurator.swift */; };
 		083CF8D22AD872EE001E95D5 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8D12AD872EE001E95D5 /* Regex.swift */; };
+		083CF8D42AD89010001E95D5 /* AccessApiGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8D32AD89010001E95D5 /* AccessApiGateway.swift */; };
+		083CF8D62AD8924B001E95D5 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8D52AD8924B001E95D5 /* SignInRequest.swift */; };
+		083CF8D82AD89433001E95D5 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8D72AD89433001E95D5 /* SignUpRequest.swift */; };
+		083CF8DB2AD89670001E95D5 /* FirebaseCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8DA2AD89670001E95D5 /* FirebaseCollections.swift */; };
+		083CF8DD2AD8983B001E95D5 /* AccessUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8DC2AD8983B001E95D5 /* AccessUseCase.swift */; };
+		083CF8DF2AD8997A001E95D5 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 083CF8DE2AD8997A001E95D5 /* loader.json */; };
 		089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16122AD59FEA00741169 /* AppDelegate.swift */; };
 		089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16142AD59FEA00741169 /* SceneDelegate.swift */; };
 		089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16162AD59FEA00741169 /* WelcomeViewController.swift */; };
@@ -110,6 +116,12 @@
 		083CF8CD2AD86743001E95D5 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		083CF8CF2AD8689B001E95D5 /* SignUpConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpConfigurator.swift; sourceTree = "<group>"; };
 		083CF8D12AD872EE001E95D5 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		083CF8D32AD89010001E95D5 /* AccessApiGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessApiGateway.swift; sourceTree = "<group>"; };
+		083CF8D52AD8924B001E95D5 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		083CF8D72AD89433001E95D5 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		083CF8DA2AD89670001E95D5 /* FirebaseCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollections.swift; sourceTree = "<group>"; };
+		083CF8DC2AD8983B001E95D5 /* AccessUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessUseCase.swift; sourceTree = "<group>"; };
+		083CF8DE2AD8997A001E95D5 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
 		089C160F2AD59FEA00741169 /* GBMChallengue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBMChallengue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089C16122AD59FEA00741169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089C16142AD59FEA00741169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +239,14 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		083CF8D92AD89663001E95D5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				083CF8DA2AD89670001E95D5 /* FirebaseCollections.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		089C16062AD59FEA00741169 = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +325,7 @@
 		089C16482AD5B50D00741169 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				083CF8DE2AD8997A001E95D5 /* loader.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -312,6 +333,7 @@
 		089C164B2AD5B53800741169 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				083CF8D92AD89663001E95D5 /* Constants */,
 				089C16562AD5B60600741169 /* Dependencies */,
 				089C164C2AD5B53E00741169 /* Extensions */,
 				089C165A2AD5B66500741169 /* Tools */,
@@ -402,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				089C166D2AD6154400741169 /* TickerApiGateway.swift */,
+				083CF8D32AD89010001E95D5 /* AccessApiGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -409,6 +432,7 @@
 		089C16552AD5B5FB00741169 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				083CF8DC2AD8983B001E95D5 /* AccessUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -449,6 +473,8 @@
 			isa = PBXGroup;
 			children = (
 				089C16692AD60C5A00741169 /* TickerRequest.swift */,
+				083CF8D52AD8924B001E95D5 /* SignInRequest.swift */,
+				083CF8D72AD89433001E95D5 /* SignUpRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -628,6 +654,7 @@
 				089C161F2AD59FEC00741169 /* LaunchScreen.storyboard in Resources */,
 				089C16712AD6164700741169 /* Localizable.strings in Resources */,
 				089C161C2AD59FEC00741169 /* Assets.xcassets in Resources */,
+				083CF8DF2AD8997A001E95D5 /* loader.json in Resources */,
 				083CF8CA2AD865C3001E95D5 /* SignUpViewController.xib in Resources */,
 				089C168A2AD7725700741169 /* SignInViewController.xib in Resources */,
 				089C161A2AD59FEA00741169 /* Main.storyboard in Resources */,
@@ -773,6 +800,7 @@
 				083CF8BA2AD7B64F001E95D5 /* SignInPresenter.swift in Sources */,
 				089C16752AD61A2900741169 /* ApiResult.swift in Sources */,
 				083CF8A22AD77B07001E95D5 /* String+Ext.swift in Sources */,
+				083CF8D62AD8924B001E95D5 /* SignInRequest.swift in Sources */,
 				089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */,
 				089C16602AD6010C00741169 /* ApiResponseProtocol.swift in Sources */,
 				089C166A2AD60C5A00741169 /* TickerRequest.swift in Sources */,
@@ -794,7 +822,11 @@
 				083CF8B02AD785AE001E95D5 /* GBMDashedButton.swift in Sources */,
 				083CF8C02AD7BA63001E95D5 /* LoaderViewController.swift in Sources */,
 				083CF8AE2AD78534001E95D5 /* GBMContainer.swift in Sources */,
+				083CF8DD2AD8983B001E95D5 /* AccessUseCase.swift in Sources */,
 				089C165E2AD6000F00741169 /* ApiError.swift in Sources */,
+				083CF8D42AD89010001E95D5 /* AccessApiGateway.swift in Sources */,
+				083CF8D82AD89433001E95D5 /* SignUpRequest.swift in Sources */,
+				083CF8DB2AD89670001E95D5 /* FirebaseCollections.swift in Sources */,
 				089C166E2AD6154400741169 /* TickerApiGateway.swift in Sources */,
 				089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */,
 			);

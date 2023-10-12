@@ -13,6 +13,7 @@ protocol SignInView {
 protocol SignInPresenter {
     var view: SignInView { get set }
     var router: SignInRouter { get set }
+    var useCase: AccessUseCase { get set }
     var email: String { get set }
     var password: String { get set }
     func requestSignIn()
@@ -25,17 +26,31 @@ protocol SignInPresenter {
 class SignInPresenterImplementation: SignInPresenter {
     internal var view: SignInView
     internal var router: SignInRouter
+    internal var useCase: AccessUseCase
     var email: String = .empty
     var password: String = .empty
     
     init(view: SignInView,
-         router: SignInRouter) {
+         router: SignInRouter,
+         useCase: AccessUseCase) {
         self.view = view
         self.router = router
+        self.useCase = useCase
     }
     
     func requestSignIn() {
-        
+        let parameters = SignInRequest(email: email, password: password)
+        router.showLoader()
+        Task(priority: .background) {
+            let response = await useCase.requestSignIn(parameters: parameters)
+            router.dismissLoader()
+            switch response {
+            case .success(_):
+                view.showSuccess(message: .Localized.accountCreated)
+            case .failure(let error):
+                view.showFailure(message: error.localizedDescription)
+            }
+        }
     }
     
     func presentRestorePassword() {

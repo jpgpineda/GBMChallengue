@@ -19,6 +19,7 @@ extension String {
         static var JSONParsingFailure: String { return getLocalizedString(#function) }
         static var noInternet: String { return getLocalizedString(#function) }
         static var unsuccessfull: String { return getLocalizedString(#function) }
+        static var noActiveSession: String { return getLocalizedString(#function) }
         static var unexpected: String { return getLocalizedString(#function) }
         static var ups: String { return getLocalizedString(#function) }
         
@@ -46,6 +47,7 @@ extension String {
         
         // MARK: Success messages
         static var congratsTitle: String { return getLocalizedString(#function) }
+        static var accountCreated: String { return getLocalizedString(#function) }
         
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)
