@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083CF8A02AD77AC3001E95D5 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */; };
+		083CF8A22AD77B07001E95D5 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A12AD77B07001E95D5 /* String+Ext.swift */; };
+		083CF8A42AD77C0D001E95D5 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */; };
+		083CF8A62AD77C8F001E95D5 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A52AD77C8F001E95D5 /* CGFloat+Ext.swift */; };
+		083CF8A82AD7822A001E95D5 /* GBMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A72AD7822A001E95D5 /* GBMButton.swift */; };
+		083CF8AA2AD7831F001E95D5 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A92AD7831F001E95D5 /* UIButton+Ext.swift */; };
+		083CF8AC2AD7836E001E95D5 /* UITextfield+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8AB2AD7836D001E95D5 /* UITextfield+Ext.swift */; };
+		083CF8AE2AD78534001E95D5 /* GBMContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8AD2AD78534001E95D5 /* GBMContainer.swift */; };
+		083CF8B02AD785AE001E95D5 /* GBMDashedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8AF2AD785AE001E95D5 /* GBMDashedButton.swift */; };
 		089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16122AD59FEA00741169 /* AppDelegate.swift */; };
 		089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16142AD59FEA00741169 /* SceneDelegate.swift */; };
-		089C16172AD59FEA00741169 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16162AD59FEA00741169 /* ViewController.swift */; };
+		089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16162AD59FEA00741169 /* WelcomeViewController.swift */; };
 		089C161A2AD59FEA00741169 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089C16182AD59FEA00741169 /* Main.storyboard */; };
 		089C161C2AD59FEC00741169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089C161B2AD59FEC00741169 /* Assets.xcassets */; };
 		089C161F2AD59FEC00741169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089C161D2AD59FEC00741169 /* LaunchScreen.storyboard */; };
@@ -35,6 +44,10 @@
 		089C16812AD76C9500741169 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 089C16802AD76C9500741169 /* Realm */; };
 		089C16832AD76C9500741169 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 089C16822AD76C9500741169 /* RealmSwift */; };
 		089C16862AD76D4C00741169 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 089C16852AD76D4C00741169 /* Lottie */; };
+		089C16892AD7725700741169 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16872AD7725700741169 /* SignInViewController.swift */; };
+		089C168A2AD7725700741169 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089C16882AD7725700741169 /* SignInViewController.xib */; };
+		08D3F7C42AD775660088C29E /* GBMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3F7C32AD775660088C29E /* GBMTextField.swift */; };
+		08D3F7C62AD776450088C29E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08D3F7C52AD776450088C29E /* GoogleService-Info.plist */; };
 		5EC96C08E6BF47424D0A262C /* Pods_GBMChallengue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29EC7578480905E86CACCA7 /* Pods_GBMChallengue.framework */; };
 		A73CF6B90A9DEA5401FEDE7F /* Pods_GBMChallengue_GBMChallengueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8632FBD1D1E67AABDFF191E /* Pods_GBMChallengue_GBMChallengueUITests.framework */; };
 		FE3540CCFEC5434FAFD2FE19 /* Pods_GBMChallengueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519B73395FEECF0BBCC5ABD8 /* Pods_GBMChallengueTests.framework */; };
@@ -58,10 +71,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		083CF8A12AD77B07001E95D5 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		083CF8A52AD77C8F001E95D5 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		083CF8A72AD7822A001E95D5 /* GBMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMButton.swift; sourceTree = "<group>"; };
+		083CF8A92AD7831F001E95D5 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		083CF8AB2AD7836D001E95D5 /* UITextfield+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Ext.swift"; sourceTree = "<group>"; };
+		083CF8AD2AD78534001E95D5 /* GBMContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMContainer.swift; sourceTree = "<group>"; };
+		083CF8AF2AD785AE001E95D5 /* GBMDashedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMDashedButton.swift; sourceTree = "<group>"; };
 		089C160F2AD59FEA00741169 /* GBMChallengue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBMChallengue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089C16122AD59FEA00741169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089C16142AD59FEA00741169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		089C16162AD59FEA00741169 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		089C16162AD59FEA00741169 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		089C16192AD59FEA00741169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		089C161B2AD59FEC00741169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		089C161E2AD59FEC00741169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,6 +105,10 @@
 		089C166F2AD615C500741169 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		089C16722AD6164700741169 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		089C16742AD61A2900741169 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		089C16872AD7725700741169 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		089C16882AD7725700741169 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		08D3F7C32AD775660088C29E /* GBMTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMTextField.swift; sourceTree = "<group>"; };
+		08D3F7C52AD776450088C29E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24018E08650A13FCC2F791A1 /* Pods-GBMChallengue-GBMChallengueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBMChallengue-GBMChallengueUITests.release.xcconfig"; path = "Target Support Files/Pods-GBMChallengue-GBMChallengueUITests/Pods-GBMChallengue-GBMChallengueUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4189D39BBC606403D02DD7C4 /* Pods-GBMChallengueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBMChallengueTests.release.xcconfig"; path = "Target Support Files/Pods-GBMChallengueTests/Pods-GBMChallengueTests.release.xcconfig"; sourceTree = "<group>"; };
 		519B73395FEECF0BBCC5ABD8 /* Pods_GBMChallengueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBMChallengueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +155,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		083CF8B12AD786FA001E95D5 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				089C16162AD59FEA00741169 /* WelcomeViewController.swift */,
+				089C16182AD59FEA00741169 /* Main.storyboard */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		083CF8B22AD78709001E95D5 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				089C16872AD7725700741169 /* SignInViewController.swift */,
+				089C16882AD7725700741169 /* SignInViewController.xib */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		089C16062AD59FEA00741169 = {
 			isa = PBXGroup;
 			children = (
@@ -154,14 +198,13 @@
 		089C16112AD59FEA00741169 /* GBMChallengue */ = {
 			isa = PBXGroup;
 			children = (
+				08D3F7C52AD776450088C29E /* GoogleService-Info.plist */,
 				089C16202AD59FEC00741169 /* Info.plist */,
 				089C16122AD59FEA00741169 /* AppDelegate.swift */,
 				089C16142AD59FEA00741169 /* SceneDelegate.swift */,
-				089C16162AD59FEA00741169 /* ViewController.swift */,
 				089C16422AD5B4C200741169 /* Assets */,
 				089C164E2AD5B5A200741169 /* Data */,
 				089C164D2AD5B57300741169 /* Domain */,
-				089C16182AD59FEA00741169 /* Main.storyboard */,
 				089C164F2AD5B5A700741169 /* UI */,
 				089C164B2AD5B53800741169 /* Utils */,
 			);
@@ -226,6 +269,12 @@
 		089C164C2AD5B53E00741169 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */,
+				083CF8A12AD77B07001E95D5 /* String+Ext.swift */,
+				083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */,
+				083CF8A52AD77C8F001E95D5 /* CGFloat+Ext.swift */,
+				083CF8A92AD7831F001E95D5 /* UIButton+Ext.swift */,
+				083CF8AB2AD7836D001E95D5 /* UITextfield+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +303,7 @@
 		089C164F2AD5B5A700741169 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				08D3F7C22AD775560088C29E /* Components */,
 				089C161D2AD59FEC00741169 /* LaunchScreen.storyboard */,
 				089C16512AD5B5B500741169 /* Cells */,
 				089C16502AD5B5AF00741169 /* Scenes */,
@@ -264,6 +314,8 @@
 		089C16502AD5B5AF00741169 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				083CF8B22AD78709001E95D5 /* SignIn */,
+				083CF8B12AD786FA001E95D5 /* Welcome */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -354,6 +406,17 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		08D3F7C22AD775560088C29E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				08D3F7C32AD775660088C29E /* GBMTextField.swift */,
+				083CF8A72AD7822A001E95D5 /* GBMButton.swift */,
+				083CF8AD2AD78534001E95D5 /* GBMContainer.swift */,
+				083CF8AF2AD785AE001E95D5 /* GBMDashedButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		3E6402EE70867BE7F2BF7179 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,7 +427,6 @@
 				FF28F99448F8807948E9E182 /* Pods-GBMChallengueTests.debug.xcconfig */,
 				4189D39BBC606403D02DD7C4 /* Pods-GBMChallengueTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -482,8 +544,8 @@
 			mainGroup = 089C16062AD59FEA00741169;
 			packageReferences = (
 				089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift.git" */,
-				089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios.git" */,
+				089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 089C16102AD59FEA00741169 /* Products */;
 			projectDirPath = "";
@@ -505,7 +567,9 @@
 				089C161F2AD59FEC00741169 /* LaunchScreen.storyboard in Resources */,
 				089C16712AD6164700741169 /* Localizable.strings in Resources */,
 				089C161C2AD59FEC00741169 /* Assets.xcassets in Resources */,
+				089C168A2AD7725700741169 /* SignInViewController.xib in Resources */,
 				089C161A2AD59FEA00741169 /* Main.storyboard in Resources */,
+				08D3F7C62AD776450088C29E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,14 +699,25 @@
 			files = (
 				089C16682AD60C1500741169 /* ApiRequestProtocol.swift in Sources */,
 				089C16702AD615C500741169 /* Ticker.swift in Sources */,
+				083CF8AA2AD7831F001E95D5 /* UIButton+Ext.swift in Sources */,
 				089C16752AD61A2900741169 /* ApiResult.swift in Sources */,
-				089C16172AD59FEA00741169 /* ViewController.swift in Sources */,
+				083CF8A22AD77B07001E95D5 /* String+Ext.swift in Sources */,
+				089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */,
 				089C16602AD6010C00741169 /* ApiResponseProtocol.swift in Sources */,
 				089C166A2AD60C5A00741169 /* TickerRequest.swift in Sources */,
+				083CF8A02AD77AC3001E95D5 /* UILabel+Ext.swift in Sources */,
+				083CF8AC2AD7836E001E95D5 /* UITextfield+Ext.swift in Sources */,
+				083CF8A82AD7822A001E95D5 /* GBMButton.swift in Sources */,
 				089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */,
 				089C166C2AD611DC00741169 /* RequestManager.swift in Sources */,
+				089C16892AD7725700741169 /* SignInViewController.swift in Sources */,
 				089C16642AD6028B00741169 /* ApiClient.swift in Sources */,
+				083CF8A62AD77C8F001E95D5 /* CGFloat+Ext.swift in Sources */,
+				08D3F7C42AD775660088C29E /* GBMTextField.swift in Sources */,
 				089C16472AD5B50000741169 /* StringLocalized.swift in Sources */,
+				083CF8A42AD77C0D001E95D5 /* UIView+Ext.swift in Sources */,
+				083CF8B02AD785AE001E95D5 /* GBMDashedButton.swift in Sources */,
+				083CF8AE2AD78534001E95D5 /* GBMContainer.swift in Sources */,
 				089C165E2AD6000F00741169 /* ApiError.swift in Sources */,
 				089C166E2AD6154400741169 /* TickerApiGateway.swift in Sources */,
 				089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */,
@@ -1011,7 +1086,7 @@
 				minimumVersion = 10.0.0;
 			};
 		};
-		089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -1019,7 +1094,7 @@
 				minimumVersion = 10.43.0;
 			};
 		};
-		089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios.git" */ = {
+		089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -1052,17 +1127,17 @@
 		};
 		089C16802AD76C9500741169 /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		089C16822AD76C9500741169 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 		089C16852AD76D4C00741169 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios.git" */;
+			package = 089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -17,3 +17,19 @@
 "noInternet"                = "No internet connection";
 "unsuccessfull"             = "Unsuccessful: ";
 "unexpected"                = "An unexpected error occured, please try again";
+
+// MARK: Sign Up
+"name"                      = "Nombre:";
+"lastName"                  = "Apellidos:";
+"register"                  = "Registrarme";
+"email"                     = "Correo eléctronico:";
+"password"                  = "Contraseña:";
+
+// MARK: Sign In
+"login"                     = "Login";
+"signIn"                    = "Ingresar";
+"newAccountQuestion"        = "¿No tienes cuenta?";
+"signUp"                    = "Registrate";
+
+// MARK: Welcome
+"begin"                     = "Comenzar";
