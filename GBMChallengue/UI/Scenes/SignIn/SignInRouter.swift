@@ -5,10 +5,13 @@
 //  Created by javier pineda on 11/10/23.
 //
 
+import UIKit
+
 protocol SignInRouter {
     func showLoader()
     func dismissLoader()
     func presentRestorePassword()
+    func presentTickerList()
     func presentSignUp()
     func dismissScreen()
 }
@@ -30,6 +33,15 @@ class SignInRouterImplementation: SignInRouter {
     
     func presentRestorePassword() {
         
+    }
+    
+    func presentTickerList() {
+        guard let viewController = ModuleManager.homeDependency.makeTickerListViewController() else { return }
+        DispatchQueue.main.async {
+            let navigationController = UINavigationController(rootViewController: viewController)
+            navigationController.setupPresentation()
+            self.controller.present(navigationController, animated: true)
+        }
     }
     
     func presentSignUp() {

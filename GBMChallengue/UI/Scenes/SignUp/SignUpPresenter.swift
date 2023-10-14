@@ -53,8 +53,10 @@ class SignUpPresenterImplementation: SignUpPresenter {
             router.dismissLoader()
             switch response {
             case .success(_):
-                self.view.showSuccess(message: .Localized.accountCreated)
-                self.router.dismissView()
+                DispatchQueue.main.async {
+                    self.view.showSuccess(message: .Localized.accountCreated)
+                    self.router.dismissView()
+                }
             case .failure(let error):
                 self.view.showFailure(message: error.localizedDescription)
             }

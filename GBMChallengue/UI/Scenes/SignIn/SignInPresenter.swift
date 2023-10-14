@@ -43,11 +43,11 @@ class SignInPresenterImplementation: SignInPresenter {
         router.showLoader()
         Task(priority: .background) {
             let response = await useCase.requestSignIn(parameters: parameters)
-            router.dismissLoader()
             switch response {
             case .success(_):
-                view.showSuccess(message: .Localized.accountCreated)
+                router.presentTickerList()
             case .failure(let error):
+                router.dismissLoader()
                 view.showFailure(message: error.localizedDescription)
             }
         }

@@ -5,11 +5,13 @@
 //  Created by javier pineda on 12/10/23.
 //
 
+import UIKit
+
 protocol SignUpRouter {
     func dismissView()
     func showLoader()
     func dismissLoader()
-    func presentHome()
+    func presentTickerList()
 }
 
 class SignUpRouterImplementation: SignUpRouter {
@@ -31,7 +33,10 @@ class SignUpRouterImplementation: SignUpRouter {
         controller.dismissLoader()
     }
     
-    func presentHome() {
-        
+    func presentTickerList() {
+        guard let viewController = ModuleManager.homeDependency.makeTickerListViewController() else { return }
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.setupPresentation()
+        controller.present(navigationController, animated: true)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TickerApiGateway {
-    func fetchTickers(parameters: TickerRequest) async -> ApiResult<Tickers?>
+    func fetchTickers(parameters: TickerRequest) async -> ApiResult<Tickers>
 }
 
 class TickerApiGatewayImplementation: TickerApiGateway {
@@ -18,7 +18,7 @@ class TickerApiGatewayImplementation: TickerApiGateway {
         self.apiClient = apiClient
     }
     
-    func fetchTickers(parameters: TickerRequest) async -> ApiResult<Tickers?> {
+    func fetchTickers(parameters: TickerRequest) async -> ApiResult<Tickers> {
         guard let urlRequest = parameters.apiRequest else { return .failure(ApiError.unknown) }
         do {
             let response = try await apiClient.fetch(type: Tickers.self, with: urlRequest)

@@ -8,9 +8,8 @@
 import Foundation
 
 struct TickerRequest: ApiRequest {
-    var objectType: Codable
     var isUnitTest: Bool
-    let offset: Int = 0
+    let offset: Int
     var stringUrl: String {
         if isUnitTest {
             return Host.Mock.tickerMock
@@ -27,9 +26,9 @@ struct TickerRequest: ApiRequest {
         return request
     }
     
-    init(objectType: Codable,
-         isUnitTest: Bool) {
-        self.objectType = objectType
-        self.isUnitTest = isUnitTest
+    init(isUnitTest: Bool? = false,
+         offSet: Int? = .zero) {
+        self.isUnitTest = isUnitTest ?? false
+        self.offset = offSet ?? .zero
     }
 }
