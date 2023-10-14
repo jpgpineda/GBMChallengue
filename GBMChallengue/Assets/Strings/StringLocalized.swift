@@ -37,6 +37,15 @@ extension String {
         static var signUp: String { return getLocalizedString(#function) }
         static var restorePassword: String { return getLocalizedString(#function) }
         
+        // MARK: Ticker Detail
+        static var filterBy: String { return getLocalizedString(#function) }
+        static var openPrice: String { return getLocalizedString(#function) }
+        static var closePrice: String { return getLocalizedString(#function) }
+        static var highPrice: String { return getLocalizedString(#function) }
+        static var lowPrice: String { return getLocalizedString(#function) }
+        static var volume: String { return getLocalizedString(#function) }
+        static var date: String { return getLocalizedString(#function) }
+        
         // MARK: Welcome
         static var begin: String { return getLocalizedString(#function) }
         

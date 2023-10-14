@@ -9,6 +9,7 @@ protocol TickerListRouter {
     func showLoader()
     func dismissLoader()
     func presentDrawerMenu()
+    func presentTickerDetail(ticker: TickerDetailDTO)
 }
 
 class TickerListRouterImplementation: TickerListRouter {
@@ -29,5 +30,10 @@ class TickerListRouterImplementation: TickerListRouter {
     func presentDrawerMenu() {
         guard let viewController = ModuleManager.homeDependency.makeDrawerMenuViewController() else { return }
         controller.present(viewController, animated: true)
+    }
+    
+    func presentTickerDetail(ticker: TickerDetailDTO) {
+        guard let viewController = ModuleManager.homeDependency.makeTickerDetailViewController(ticker: ticker) else { return }
+        controller.show(viewController, sender: nil)
     }
 }

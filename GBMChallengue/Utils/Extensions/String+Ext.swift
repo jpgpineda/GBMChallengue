@@ -9,6 +9,7 @@ import Foundation
 
 extension String {
     static let empty: String = ""
+    static let dots: String  = ":"
     
     func isValidEmail() -> Bool {
         let emailTest = NSPredicate(format: "SELF MATCHES %@", Regex.emailRegex)

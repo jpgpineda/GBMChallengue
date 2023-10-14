@@ -20,9 +20,9 @@ class TickerDetailConfiguratorImplementation: TickerDetailConfigurator {
         // Router
         let router = TickerDetailRouterImplemenentation(controller: controller)
         // Presenter
-        let presenter = TickerListPresenterImplementation(view: controller,
-                                                          router: router,
-                                                          useCase: useCase)
+        let presenter = TickerDetailPresenterImplementation(view: controller,
+                                                            router: router,
+                                                            useCase: useCase)
         controller.presenter = presenter
     }
 }

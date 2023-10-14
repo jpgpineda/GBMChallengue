@@ -78,5 +78,8 @@ extension TickerListViewController: UITableViewDataSource {
 }
 
 extension TickerListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter.presentTickerDetail(ticker: tickers[indexPath.row])
+    }
 }

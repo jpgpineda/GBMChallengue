@@ -14,6 +14,7 @@ protocol TickerDetailPresenter {
     var router: TickerDetailRouter { get set }
     var useCase: TickerUseCase { get set }
     func getTickerDetail(ticker: TickerDetailDTO)
+    func dismissView()
 }
 
 class TickerDetailPresenterImplementation: TickerDetailPresenter {
@@ -31,5 +32,9 @@ class TickerDetailPresenterImplementation: TickerDetailPresenter {
     
     func getTickerDetail(ticker: TickerDetailDTO) {
         
+    }
+    
+    func dismissView() {
+        router.dismissView()
     }
 }

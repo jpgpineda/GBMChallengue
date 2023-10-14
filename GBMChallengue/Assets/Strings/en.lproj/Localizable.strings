@@ -34,6 +34,15 @@
 "signUp"                    = "Registrate";
 "restorePass"               = "Restablecer contraseña";
 
+// MARK: Ticker detail
+"filterBy"                  = "Visualizar por:";
+"openPrice"                 = "Precio de apertura";
+"closePrice"                = "Precio de cierre";
+"highPrice"                 = "Precio mas alto";
+"lowPrice"                  = "Precio mas bajo";
+"volume"                    = "Volumen";
+"date"                      = "Fecha";
+
 // MARK: Welcome
 "begin"                     = "Comenzar";
 

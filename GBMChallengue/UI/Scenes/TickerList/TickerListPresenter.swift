@@ -17,6 +17,7 @@ protocol TickerListPresenter {
     var router: TickerListRouter { get set }
     var useCase: TickerUseCase { get set }
     func requestTickers(offSet: Int?)
+    func presentTickerDetail(ticker: TickerDetailDTO)
     func presentDrawerMenu()
 }
 
@@ -53,6 +54,10 @@ class TickerListPresenterImplementation: TickerListPresenter {
                 view.showFailure(message: error.localizedDescription)
             }
         }
+    }
+    
+    func presentTickerDetail(ticker: TickerDetailDTO) {
+        router.presentTickerDetail(ticker: ticker)
     }
     
     func presentDrawerMenu() {
