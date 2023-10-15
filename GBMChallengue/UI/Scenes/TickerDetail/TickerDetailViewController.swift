@@ -67,6 +67,10 @@ class TickerDetailViewController: UIViewController {
 }
 
 extension TickerDetailViewController: TickerDetailView {
+    func updateInfo(intraday: TickerIntradayDTO) {
+        print(intraday)
+    }
+    
     func showFailure(message: String) {
         showErrorAlert(message: message)
     }

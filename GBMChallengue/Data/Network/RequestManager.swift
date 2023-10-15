@@ -19,5 +19,6 @@ struct Host {
     static let marketStack = "http://api.marketstack.com/v1/"
     struct Mock {
         static let tickerMock = ""
+        static let tickerDetailMock = ""
     }
 }

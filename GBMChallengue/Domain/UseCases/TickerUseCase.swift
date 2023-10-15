@@ -8,6 +8,7 @@
 protocol TickerUseCase {
     var apiGateway: TickerApiGateway { get set }
     func requestTicker(parameters: TickerRequest) async -> ApiResult<TickersDTO>
+    func requesTickerIntraday(parameters: TickerIntradayRequest) async -> ApiResult<TickerIntradayDTO>
 }
 
 class TickerUseCaseImplementation: TickerUseCase {
@@ -22,6 +23,16 @@ class TickerUseCaseImplementation: TickerUseCase {
         switch response {
         case .success(let tickers):
             return .success(TickersDTO(with: tickers))
+        case .failure(let error):
+            return .failure(error)
+        }
+    }
+    
+    func requesTickerIntraday(parameters: TickerIntradayRequest) async -> ApiResult<TickerIntradayDTO> {
+        let response = await apiGateway.fetchTickerIntradayData(parameters: parameters)
+        switch response {
+        case .success(let ticker):
+            return .success(TickerIntradayDTO(with: ticker))
         case .failure(let error):
             return .failure(error)
         }

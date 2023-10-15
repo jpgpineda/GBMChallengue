@@ -59,6 +59,11 @@
 		083CF90C2ADA518B001E95D5 /* TickerDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF90B2ADA518B001E95D5 /* TickerDetailPresenter.swift */; };
 		083CF90E2ADA527C001E95D5 /* TickerDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF90D2ADA527C001E95D5 /* TickerDetailConfigurator.swift */; };
 		083CF9102ADA5A18001E95D5 /* GBMFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF90F2ADA5A18001E95D5 /* GBMFilterButton.swift */; };
+		083CF9122ADB1DE0001E95D5 /* TickerIntradayRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9112ADB1DE0001E95D5 /* TickerIntradayRequest.swift */; };
+		083CF9142ADB21AF001E95D5 /* TickerIntraday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9132ADB21AF001E95D5 /* TickerIntraday.swift */; };
+		083CF9162ADB230B001E95D5 /* TickerIntradayDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9152ADB230B001E95D5 /* TickerIntradayDTO.swift */; };
+		083CF9182ADB233F001E95D5 /* IntradayDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9172ADB233F001E95D5 /* IntradayDataDTO.swift */; };
+		083CF91A2ADB6378001E95D5 /* TickerIntradayDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9192ADB6378001E95D5 /* TickerIntradayDetailDTO.swift */; };
 		089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16122AD59FEA00741169 /* AppDelegate.swift */; };
 		089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16142AD59FEA00741169 /* SceneDelegate.swift */; };
 		089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16162AD59FEA00741169 /* WelcomeViewController.swift */; };
@@ -166,6 +171,11 @@
 		083CF90B2ADA518B001E95D5 /* TickerDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailPresenter.swift; sourceTree = "<group>"; };
 		083CF90D2ADA527C001E95D5 /* TickerDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailConfigurator.swift; sourceTree = "<group>"; };
 		083CF90F2ADA5A18001E95D5 /* GBMFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMFilterButton.swift; sourceTree = "<group>"; };
+		083CF9112ADB1DE0001E95D5 /* TickerIntradayRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerIntradayRequest.swift; sourceTree = "<group>"; };
+		083CF9132ADB21AF001E95D5 /* TickerIntraday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerIntraday.swift; sourceTree = "<group>"; };
+		083CF9152ADB230B001E95D5 /* TickerIntradayDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerIntradayDTO.swift; sourceTree = "<group>"; };
+		083CF9172ADB233F001E95D5 /* IntradayDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntradayDataDTO.swift; sourceTree = "<group>"; };
+		083CF9192ADB6378001E95D5 /* TickerIntradayDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerIntradayDetailDTO.swift; sourceTree = "<group>"; };
 		089C160F2AD59FEA00741169 /* GBMChallengue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBMChallengue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089C16122AD59FEA00741169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089C16142AD59FEA00741169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -339,6 +349,9 @@
 				083CF9032AD9FFED001E95D5 /* TickerDTO.swift */,
 				083CF9052ADA009F001E95D5 /* TickerDetailDTO.swift */,
 				083CF9072ADA00DA001E95D5 /* StockDTO.swift */,
+				083CF9152ADB230B001E95D5 /* TickerIntradayDTO.swift */,
+				083CF9172ADB233F001E95D5 /* IntradayDataDTO.swift */,
+				083CF9192ADB6378001E95D5 /* TickerIntradayDetailDTO.swift */,
 			);
 			path = DomainObjects;
 			sourceTree = "<group>";
@@ -511,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				089C166F2AD615C500741169 /* Ticker.swift */,
+				083CF9132ADB21AF001E95D5 /* TickerIntraday.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -579,6 +593,7 @@
 				089C16692AD60C5A00741169 /* TickerRequest.swift */,
 				083CF8D52AD8924B001E95D5 /* SignInRequest.swift */,
 				083CF8D72AD89433001E95D5 /* SignUpRequest.swift */,
+				083CF9112ADB1DE0001E95D5 /* TickerIntradayRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -910,6 +925,7 @@
 				083CF8B42AD78A20001E95D5 /* ModuleManager.swift in Sources */,
 				083CF8D02AD8689B001E95D5 /* SignUpConfigurator.swift in Sources */,
 				083CF9042AD9FFEE001E95D5 /* TickerDTO.swift in Sources */,
+				083CF9182ADB233F001E95D5 /* IntradayDataDTO.swift in Sources */,
 				083CF8AA2AD7831F001E95D5 /* UIButton+Ext.swift in Sources */,
 				083CF90E2ADA527C001E95D5 /* TickerDetailConfigurator.swift in Sources */,
 				083CF8BA2AD7B64F001E95D5 /* SignInPresenter.swift in Sources */,
@@ -925,6 +941,8 @@
 				083CF8B82AD7B595001E95D5 /* SignInRouter.swift in Sources */,
 				083CF8A02AD77AC3001E95D5 /* UILabel+Ext.swift in Sources */,
 				083CF90C2ADA518B001E95D5 /* TickerDetailPresenter.swift in Sources */,
+				083CF9142ADB21AF001E95D5 /* TickerIntraday.swift in Sources */,
+				083CF91A2ADB6378001E95D5 /* TickerIntradayDetailDTO.swift in Sources */,
 				083CF8AC2AD7836E001E95D5 /* UITextfield+Ext.swift in Sources */,
 				083CF8CE2AD86743001E95D5 /* SignUpPresenter.swift in Sources */,
 				083CF8A82AD7822A001E95D5 /* GBMButton.swift in Sources */,
@@ -937,7 +955,9 @@
 				083CF8D22AD872EE001E95D5 /* Regex.swift in Sources */,
 				083CF8EA2AD90306001E95D5 /* TickerListViewController.swift in Sources */,
 				083CF9082ADA00DA001E95D5 /* StockDTO.swift in Sources */,
+				083CF9122ADB1DE0001E95D5 /* TickerIntradayRequest.swift in Sources */,
 				083CF8A62AD77C8F001E95D5 /* CGFloat+Ext.swift in Sources */,
+				083CF9162ADB230B001E95D5 /* TickerIntradayDTO.swift in Sources */,
 				08D3F7C42AD775660088C29E /* GBMTextField.swift in Sources */,
 				089C16472AD5B50000741169 /* StringLocalized.swift in Sources */,
 				083CF8A42AD77C0D001E95D5 /* UIView+Ext.swift in Sources */,

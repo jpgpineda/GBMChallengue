@@ -5,8 +5,11 @@
 //  Created by javier pineda on 13/10/23.
 //
 
+import Foundation
+
 protocol TickerDetailView {
     func showFailure(message: String)
+    func updateInfo(intraday: TickerIntradayDTO)
 }
 
 protocol TickerDetailPresenter {
@@ -31,7 +34,20 @@ class TickerDetailPresenterImplementation: TickerDetailPresenter {
     }
     
     func getTickerDetail(ticker: TickerDetailDTO) {
-        
+        let parameters = TickerIntradayRequest(symbol: ticker.symbol)
+        router.showLoader()
+        Task {
+            let response = await useCase.requesTickerIntraday(parameters: parameters)
+            router.dismissLoader()
+            switch response {
+            case .success(let tickerIntraday):
+                DispatchQueue.main.async {
+                    self.view.updateInfo(intraday: tickerIntraday)
+                }
+            case .failure(let error):
+                view.showFailure(message: error.localizedDescription)
+            }
+        }
     }
     
     func dismissView() {
