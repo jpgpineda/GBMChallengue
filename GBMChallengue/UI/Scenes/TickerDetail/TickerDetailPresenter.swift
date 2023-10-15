@@ -10,6 +10,7 @@ import Foundation
 protocol TickerDetailView {
     func showFailure(message: String)
     func updateInfo(intraday: TickerIntradayDTO)
+    func updateIntradayInfo(intraday: IntradayDataDTO)
 }
 
 protocol TickerDetailPresenter {
@@ -38,11 +39,28 @@ class TickerDetailPresenterImplementation: TickerDetailPresenter {
         router.showLoader()
         Task {
             let response = await useCase.requesTickerIntraday(parameters: parameters)
-            router.dismissLoader()
             switch response {
             case .success(let tickerIntraday):
                 DispatchQueue.main.async {
                     self.view.updateInfo(intraday: tickerIntraday)
+                }
+                requestLatestIntradayData(ticker: ticker)
+            case .failure(let error):
+                router.dismissLoader()
+                view.showFailure(message: error.localizedDescription)
+            }
+        }
+    }
+    
+    private func requestLatestIntradayData(ticker: TickerDetailDTO) {
+        let parameters = TickerIntradayLatestRequest(symbol: ticker.symbol)
+        Task {
+            let response = await useCase.requestLatestIntradayData(parameters: parameters)
+            router.dismissLoader()
+            switch response {
+            case .success(let intraday):
+                DispatchQueue.main.async {
+                    self.view.updateIntradayInfo(intraday: intraday)
                 }
             case .failure(let error):
                 view.showFailure(message: error.localizedDescription)

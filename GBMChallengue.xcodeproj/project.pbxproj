@@ -64,6 +64,10 @@
 		083CF9162ADB230B001E95D5 /* TickerIntradayDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9152ADB230B001E95D5 /* TickerIntradayDTO.swift */; };
 		083CF9182ADB233F001E95D5 /* IntradayDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9172ADB233F001E95D5 /* IntradayDataDTO.swift */; };
 		083CF91A2ADB6378001E95D5 /* TickerIntradayDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9192ADB6378001E95D5 /* TickerIntradayDetailDTO.swift */; };
+		083CF91C2ADC5D4D001E95D5 /* TickerIntradayLatestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF91B2ADC5D4D001E95D5 /* TickerIntradayLatestRequest.swift */; };
+		083CF91E2ADC616C001E95D5 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF91D2ADC616C001E95D5 /* Double+Ext.swift */; };
+		083CF9202ADC6230001E95D5 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF91F2ADC6230001E95D5 /* Int+Ext.swift */; };
+		083CF9222ADC64A3001E95D5 /* CVDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF9212ADC64A3001E95D5 /* CVDateFormatter.swift */; };
 		089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16122AD59FEA00741169 /* AppDelegate.swift */; };
 		089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16142AD59FEA00741169 /* SceneDelegate.swift */; };
 		089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16162AD59FEA00741169 /* WelcomeViewController.swift */; };
@@ -176,6 +180,10 @@
 		083CF9152ADB230B001E95D5 /* TickerIntradayDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerIntradayDTO.swift; sourceTree = "<group>"; };
 		083CF9172ADB233F001E95D5 /* IntradayDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntradayDataDTO.swift; sourceTree = "<group>"; };
 		083CF9192ADB6378001E95D5 /* TickerIntradayDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerIntradayDetailDTO.swift; sourceTree = "<group>"; };
+		083CF91B2ADC5D4D001E95D5 /* TickerIntradayLatestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerIntradayLatestRequest.swift; sourceTree = "<group>"; };
+		083CF91D2ADC616C001E95D5 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
+		083CF91F2ADC6230001E95D5 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
+		083CF9212ADC64A3001E95D5 /* CVDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVDateFormatter.swift; sourceTree = "<group>"; };
 		089C160F2AD59FEA00741169 /* GBMChallengue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBMChallengue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089C16122AD59FEA00741169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089C16142AD59FEA00741169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -463,6 +471,8 @@
 				083CF8C22AD7BC26001E95D5 /* UIViewController+Ext.swift */,
 				083CF8EC2AD9041E001E95D5 /* UINavigationController+Ext.swift */,
 				083CF8FE2AD9FE20001E95D5 /* UITableView+Ext.swift */,
+				083CF91D2ADC616C001E95D5 /* Double+Ext.swift */,
+				083CF91F2ADC6230001E95D5 /* Int+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -583,6 +593,7 @@
 			isa = PBXGroup;
 			children = (
 				083CF8D12AD872EE001E95D5 /* Regex.swift */,
+				083CF9212ADC64A3001E95D5 /* CVDateFormatter.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -594,6 +605,7 @@
 				083CF8D52AD8924B001E95D5 /* SignInRequest.swift */,
 				083CF8D72AD89433001E95D5 /* SignUpRequest.swift */,
 				083CF9112ADB1DE0001E95D5 /* TickerIntradayRequest.swift */,
+				083CF91B2ADC5D4D001E95D5 /* TickerIntradayLatestRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -915,6 +927,7 @@
 				083CF8C92AD865C3001E95D5 /* SignUpViewController.swift in Sources */,
 				083CF8FC2AD9FB4C001E95D5 /* TickerTableViewCell.swift in Sources */,
 				083CF8C52AD7BC65001E95D5 /* ToolsDependency.swift in Sources */,
+				083CF91E2ADC616C001E95D5 /* Double+Ext.swift in Sources */,
 				083CF8BC2AD7B869001E95D5 /* SignInConfigurator.swift in Sources */,
 				089C16682AD60C1500741169 /* ApiRequestProtocol.swift in Sources */,
 				083CF8FF2AD9FE20001E95D5 /* UITableView+Ext.swift in Sources */,
@@ -926,8 +939,10 @@
 				083CF8D02AD8689B001E95D5 /* SignUpConfigurator.swift in Sources */,
 				083CF9042AD9FFEE001E95D5 /* TickerDTO.swift in Sources */,
 				083CF9182ADB233F001E95D5 /* IntradayDataDTO.swift in Sources */,
+				083CF9202ADC6230001E95D5 /* Int+Ext.swift in Sources */,
 				083CF8AA2AD7831F001E95D5 /* UIButton+Ext.swift in Sources */,
 				083CF90E2ADA527C001E95D5 /* TickerDetailConfigurator.swift in Sources */,
+				083CF91C2ADC5D4D001E95D5 /* TickerIntradayLatestRequest.swift in Sources */,
 				083CF8BA2AD7B64F001E95D5 /* SignInPresenter.swift in Sources */,
 				089C16752AD61A2900741169 /* ApiResult.swift in Sources */,
 				083CF8A22AD77B07001E95D5 /* String+Ext.swift in Sources */,
@@ -953,6 +968,7 @@
 				089C16642AD6028B00741169 /* ApiClient.swift in Sources */,
 				083CF8B62AD78A6E001E95D5 /* AccessDependency.swift in Sources */,
 				083CF8D22AD872EE001E95D5 /* Regex.swift in Sources */,
+				083CF9222ADC64A3001E95D5 /* CVDateFormatter.swift in Sources */,
 				083CF8EA2AD90306001E95D5 /* TickerListViewController.swift in Sources */,
 				083CF9082ADA00DA001E95D5 /* StockDTO.swift in Sources */,
 				083CF9122ADB1DE0001E95D5 /* TickerIntradayRequest.swift in Sources */,

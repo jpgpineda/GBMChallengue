@@ -20,5 +20,6 @@ struct Host {
     struct Mock {
         static let tickerMock = ""
         static let tickerDetailMock = ""
+        static let tickerIntradayLatestMock = ""
     }
 }

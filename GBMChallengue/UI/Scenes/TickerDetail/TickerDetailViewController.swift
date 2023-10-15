@@ -23,7 +23,6 @@ class TickerDetailViewController: UIViewController {
     @IBOutlet weak var lowPriceLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    
     ///////////////////////////////////////
     // MARK: Properties
     ///////////////////////////////////////
@@ -64,9 +63,22 @@ class TickerDetailViewController: UIViewController {
     @IBAction func dismissView(_ sender: UIButton) {
         presenter.dismissView()
     }
+    
+    @IBAction func filterByDate(_ sender: GBMFilterButton) {
+        sender.isSelected = !sender.isSelected
+    }
 }
 
 extension TickerDetailViewController: TickerDetailView {
+    func updateIntradayInfo(intraday: IntradayDataDTO) {
+        openPriceLabel.text = intraday.open.toString()
+        closePriceLabel.text = intraday.close?.toString()
+        highPriceLabel.text = intraday.high.toString()
+        lowPriceLabel.text = intraday.low.toString()
+        volumeLabel.text = intraday.volume?.toString()
+        dateLabel.text = CVDateFormatter.shortDate(intraday.date)
+    }
+    
     func updateInfo(intraday: TickerIntradayDTO) {
         print(intraday)
     }

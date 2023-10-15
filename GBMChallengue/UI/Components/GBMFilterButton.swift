@@ -9,7 +9,8 @@ import UIKit
 
 class GBMFilterButton: UIButton {
     override func awakeFromNib() {
-        setTitleColor(.systemBackground, for: .normal)
+        setTitleColor(.label, for: .normal)
+        backgroundColor = .separator
         roundCorners(.allCorners, radius: .eight)
         titleLabel?.font = .systemFont(ofSize: .ten, weight: .bold)
     }
