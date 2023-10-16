@@ -6,6 +6,8 @@
 //
 
 extension Int {
+    static let one: Int = 1
+    
     func toString() -> String {
         return String(self)
     }

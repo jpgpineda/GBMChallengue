@@ -42,6 +42,7 @@
 "lowPrice"                  = "Precio mas bajo";
 "volume"                    = "Volumen";
 "date"                      = "Fecha";
+"prices"                    = "Precios";
 
 // MARK: Welcome
 "begin"                     = "Comenzar";

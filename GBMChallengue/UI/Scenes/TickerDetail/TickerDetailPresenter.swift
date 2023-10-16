@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import DGCharts
 
 protocol TickerDetailView {
     func showFailure(message: String)
     func updateInfo(intraday: TickerIntradayDTO)
     func updateIntradayInfo(intraday: IntradayDataDTO)
+    func updateChart(with info: [ChartDataEntry])
 }
 
 protocol TickerDetailPresenter {
@@ -18,6 +20,9 @@ protocol TickerDetailPresenter {
     var router: TickerDetailRouter { get set }
     var useCase: TickerUseCase { get set }
     func getTickerDetail(ticker: TickerDetailDTO)
+    func setupCharData(timeInterval: TimeIntervalType,
+                       valueForChart: ValueForChartType,
+                       intraday: [IntradayDataDTO])
     func dismissView()
 }
 
@@ -25,6 +30,7 @@ class TickerDetailPresenterImplementation: TickerDetailPresenter {
     internal var view: TickerDetailView
     internal var router: TickerDetailRouter
     internal var useCase: TickerUseCase
+    var chartData: [ChartDataEntry] = [ChartDataEntry]()
     
     init(view: TickerDetailView,
          router: TickerDetailRouter,
@@ -66,6 +72,51 @@ class TickerDetailPresenterImplementation: TickerDetailPresenter {
                 view.showFailure(message: error.localizedDescription)
             }
         }
+    }
+    
+    func setupCharData(timeInterval: TimeIntervalType,
+                       valueForChart: ValueForChartType,
+                       intraday: [IntradayDataDTO]) {
+        chartData.removeAll()
+        switch timeInterval {
+        case .today:
+            let filterItems: [Double] = intraday.filter {
+                $0.date <= Date()
+            }.compactMap {
+                $0.date.timeIntervalSince1970
+            }
+            for (x,y) in zip(filterItems, intraday) {
+                chartData.append(ChartDataEntry(x: x, y: y.getValueByType(type: valueForChart)))
+            }
+        case .week:
+            let filterItems: [Double] = intraday.filter {
+                $0.date <= Date().oneWeekAfter()
+            }.compactMap {
+                $0.date.timeIntervalSince1970
+            }
+            for (x,y) in zip(filterItems, intraday) {
+                chartData.append(ChartDataEntry(x: x, y: y.getValueByType(type: valueForChart)))
+            }
+        case .month:
+            let filterItems: [Double] = intraday.filter {
+                $0.date <= Date().oneMonthAfter()
+            }.compactMap {
+                $0.date.timeIntervalSince1970
+            }
+            for (x,y) in zip(filterItems, intraday) {
+                chartData.append(ChartDataEntry(x: x, y: y.getValueByType(type: valueForChart)))
+            }
+        case .year:
+            let filterItems: [Double] = intraday.filter {
+                $0.date <= Date().oneYearAfter()
+            }.compactMap {
+                $0.date.timeIntervalSince1970
+            }
+            for (x,y) in zip(filterItems, intraday) {
+                chartData.append(ChartDataEntry(x: x, y: y.getValueByType(type: valueForChart)))
+            }
+        }
+        view.updateChart(with: chartData)
     }
     
     func dismissView() {

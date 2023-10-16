@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import DGCharts
+import TinyConstraints
 
 class TickerDetailViewController: UIViewController {
     ///////////////////////////////////////
@@ -22,6 +24,7 @@ class TickerDetailViewController: UIViewController {
     @IBOutlet weak var highPriceLabel: UILabel!
     @IBOutlet weak var lowPriceLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
+    @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     ///////////////////////////////////////
     // MARK: Properties
@@ -29,7 +32,17 @@ class TickerDetailViewController: UIViewController {
     private let configurator = TickerDetailConfiguratorImplementation()
     var presenter: TickerDetailPresenter!
     var ticker: TickerDetailDTO?
+    var intraday: [IntradayDataDTO] = [IntradayDataDTO]()
     var isFilterShowing: Bool = false
+    var selectedTime: TimeIntervalType = .today
+    var selectedValue: ValueForChartType = .openPrice
+    lazy var lineChart: LineChartView = {
+        let chartView = LineChartView()
+        chartView.rightAxis.enabled = false
+        chartView.xAxis.labelPosition = .topInside
+        chartView.animate(xAxisDuration: 2.5)
+        return chartView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +57,19 @@ class TickerDetailViewController: UIViewController {
         tickerSymbolLabel.text = ticker.symbol
         stockAcronymLabel.text = ticker.stock.acronym
         stockCountry.text = ticker.stock.country
+        chartView.addSubview(lineChart)
+        lineChart.centerInSuperview()
+        lineChart.width(to: chartView)
+        lineChart.height(to: chartView)
     }
     
     @IBAction func applyFiilter(_ sender: GBMFilterButton) {
         filterView.isHidden = true
         isFilterShowing = false
+        selectedValue = ValueForChartType(rawValue: sender.tag) ?? .openPrice
+        presenter.setupCharData(timeInterval: selectedTime,
+                                valueForChart: selectedValue,
+                                intraday: intraday)
     }
     
     @IBAction func addToFavorites(_ sender: UIButton) {
@@ -66,10 +87,27 @@ class TickerDetailViewController: UIViewController {
     
     @IBAction func filterByDate(_ sender: GBMFilterButton) {
         sender.isSelected = !sender.isSelected
+        selectedTime = TimeIntervalType(rawValue: sender.tag) ?? .today
+        presenter.setupCharData(timeInterval: selectedTime,
+                                valueForChart: selectedValue,
+                                intraday: intraday)
     }
 }
 
 extension TickerDetailViewController: TickerDetailView {
+    func updateChart(with dataSet: [ChartDataEntry]) {
+        let set = LineChartDataSet(entries: dataSet, label: .Localized.prices)
+        set.drawCirclesEnabled = false
+        set.fillColor = .label
+        set.mode = .cubicBezier
+        set.setColor(.label)
+        set.fill = ColorFill(color: .label)
+        set.fillAlpha = 0.8
+        set.highlightColor = .systemBlue
+        let data = LineChartData(dataSet: set)
+        lineChart.data = data
+    }
+    
     func updateIntradayInfo(intraday: IntradayDataDTO) {
         openPriceLabel.text = intraday.open.toString()
         closePriceLabel.text = intraday.close?.toString()
@@ -80,7 +118,10 @@ extension TickerDetailViewController: TickerDetailView {
     }
     
     func updateInfo(intraday: TickerIntradayDTO) {
-        print(intraday)
+        self.intraday = intraday.tickerDetail.intraday
+        presenter.setupCharData(timeInterval: selectedTime,
+                                valueForChart: selectedValue,
+                                intraday: self.intraday)
     }
     
     func showFailure(message: String) {

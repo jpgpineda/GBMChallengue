@@ -29,4 +29,19 @@ struct IntradayDataDTO {
         last = response.last
         volume = response.volume
     }
+    
+    func getValueByType(type: ValueForChartType) -> Double {
+        switch type {
+        case .openPrice:
+            return open
+        case .closePrice:
+            return close ?? .zero
+        case .highPrice:
+            return high
+        case .lowPrice:
+            return low
+        case .volume:
+            return Double(volume ?? .zero)
+        }
+    }
 }

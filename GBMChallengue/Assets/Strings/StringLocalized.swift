@@ -45,6 +45,7 @@ extension String {
         static var lowPrice: String { return getLocalizedString(#function) }
         static var volume: String { return getLocalizedString(#function) }
         static var date: String { return getLocalizedString(#function) }
+        static var prices: String { return getLocalizedString(#function) }
         
         // MARK: Welcome
         static var begin: String { return getLocalizedString(#function) }

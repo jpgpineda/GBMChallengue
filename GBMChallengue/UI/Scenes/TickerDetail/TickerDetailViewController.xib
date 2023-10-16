@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TickerDetailViewController" customModule="GBMChallengue" customModuleProvider="target">
             <connections>
+                <outlet property="chartView" destination="b02-o4-vW5" id="bn0-dL-K77"/>
                 <outlet property="closePriceLabel" destination="gDn-vS-Obr" id="Uj1-Ya-QzO"/>
                 <outlet property="dateLabel" destination="ABe-U9-HIh" id="DfQ-Xi-avv"/>
                 <outlet property="filterView" destination="llz-gl-HNZ" id="hfw-XL-QuI"/>
