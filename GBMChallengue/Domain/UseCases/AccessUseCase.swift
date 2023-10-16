@@ -9,6 +9,9 @@ protocol AccessUseCase {
     var apiGateway: AccessApiGateway { get set }
     func requestSignIn(parameters: SignInRequest) async -> ApiResult<Bool>
     func createUser(parameters: SignUpRequest) async -> ApiResult<Bool>
+    func requestSignOut() async -> ApiResult<Bool>
+    func saveLocalAuthPref(isEnabled: Bool)
+    func getLocalAuthPref() -> Bool
 }
 
 class AccessUseCaseImplementation: AccessUseCase {
@@ -24,5 +27,17 @@ class AccessUseCaseImplementation: AccessUseCase {
     
     func createUser(parameters: SignUpRequest) async -> ApiResult<Bool> {
         return await apiGateway.createUser(parameters: parameters)
+    }
+    
+    func requestSignOut() async -> ApiResult<Bool> {
+        return await apiGateway.requestSignOut()
+    }
+    
+    func saveLocalAuthPref(isEnabled: Bool) {
+        apiGateway.saveLocalAuthPref(isEnabled: isEnabled)
+    }
+    
+    func getLocalAuthPref() -> Bool {
+        return apiGateway.getLocalAuthPref()
     }
 }

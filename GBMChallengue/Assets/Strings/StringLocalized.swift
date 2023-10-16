@@ -36,6 +36,13 @@ extension String {
         static var newAccountQuestion: String { return getLocalizedString(#function) }
         static var signUp: String { return getLocalizedString(#function) }
         static var restorePassword: String { return getLocalizedString(#function) }
+        static var biometricDescription: String { return getLocalizedString(#function) }
+        static var enableBiometricLogin: String { return getLocalizedString(#function) }
+        
+        // MARK: Sign In
+        static var welcome: String { return getLocalizedString(#function) }
+        static var signOut: String { return getLocalizedString(#function) }
+        static var settings: String { return getLocalizedString(#function) }
         
         // MARK: Ticker Detail
         static var filterBy: String { return getLocalizedString(#function) }
@@ -54,6 +61,8 @@ extension String {
         static var emptyField: String { return getLocalizedString(#function) }
         static var invalidEmail: String { return getLocalizedString(#function) }
         static var invalidPassword: String { return getLocalizedString(#function) }
+        static var invalidBiometric: String { return getLocalizedString(#function) }
+        static var biometricUnavailable: String { return getLocalizedString(#function) }
         
         // MARK: Success messages
         static var congratsTitle: String { return getLocalizedString(#function) }

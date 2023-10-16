@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -59,7 +59,7 @@
                             </userDefinedRuntimeAttributes>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGE-7r-Wox" customClass="GBMButton" customModule="GBMChallengue" customModuleProvider="target">
-                            <rect key="frame" x="16" y="289.33333333333337" width="361" height="45"/>
+                            <rect key="frame" x="16" y="297.33333333333337" width="361" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="45" id="mK1-6l-bzy"/>
                             </constraints>
@@ -74,7 +74,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-An-N9l" customClass="GBMDashedButton" customModule="GBMChallengue" customModuleProvider="target">
-                            <rect key="frame" x="169.66666666666666" y="223.33333333333331" width="54" height="34"/>
+                            <rect key="frame" x="169.66666666666666" y="215.33333333333331" width="54" height="34"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
@@ -119,23 +119,49 @@
                                 <constraint firstItem="FZN-RG-ebA" firstAttribute="leading" secondItem="UwI-4L-BzI" secondAttribute="leading" id="qXN-lZ-bo0"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYd-90-ttm" customClass="GBMCheckButton" customModule="GBMChallengue" customModuleProvider="target">
+                            <rect key="frame" x="16" y="265.33333333333337" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="6kH-DY-U0o"/>
+                                <constraint firstAttribute="height" constant="16" id="9ND-Mb-6WZ"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="Square150x150Logo.scale-200.png"/>
+                            <connections>
+                                <action selector="activateBiometric:" destination="-1" eventType="touchUpInside" id="x1h-jt-QTV"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrI-M1-mF6">
+                            <rect key="frame" x="40" y="265" width="35.333333333333343" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="enableBiometricLogin"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="7F6-wp-ie4" secondAttribute="trailing" constant="16" id="5wj-8Y-FDo"/>
-                        <constraint firstItem="Zhf-An-N9l" firstAttribute="top" secondItem="7F6-wp-ie4" secondAttribute="bottom" constant="16" id="9u5-O3-ZP2"/>
+                        <constraint firstItem="Zhf-An-N9l" firstAttribute="top" secondItem="7F6-wp-ie4" secondAttribute="bottom" constant="8" id="9u5-O3-ZP2"/>
                         <constraint firstAttribute="trailing" secondItem="vQ7-7K-8dg" secondAttribute="trailing" constant="16" id="Ekk-Rx-9PX"/>
                         <constraint firstAttribute="bottom" secondItem="UwI-4L-BzI" secondAttribute="bottom" constant="32" id="GFK-aq-B3H"/>
                         <constraint firstItem="wGE-7r-Wox" firstAttribute="leading" secondItem="N4t-Oy-ccL" secondAttribute="leading" constant="16" id="J3h-dd-gPj"/>
                         <constraint firstAttribute="trailing" secondItem="wGE-7r-Wox" secondAttribute="trailing" constant="16" id="NEu-Sj-MEe"/>
                         <constraint firstItem="MM6-gX-9A6" firstAttribute="top" secondItem="N4t-Oy-ccL" secondAttribute="top" constant="32" id="WeT-ej-55A"/>
+                        <constraint firstItem="wrI-M1-mF6" firstAttribute="leading" secondItem="qYd-90-ttm" secondAttribute="trailing" constant="8" id="YQ5-Ye-ew0"/>
+                        <constraint firstItem="wrI-M1-mF6" firstAttribute="centerY" secondItem="qYd-90-ttm" secondAttribute="centerY" id="ZCV-ls-s1R"/>
                         <constraint firstItem="vQ7-7K-8dg" firstAttribute="leading" secondItem="N4t-Oy-ccL" secondAttribute="leading" constant="16" id="ZPP-Rn-7qF"/>
                         <constraint firstItem="7F6-wp-ie4" firstAttribute="top" secondItem="vQ7-7K-8dg" secondAttribute="bottom" constant="32" id="bEU-1W-e6T"/>
+                        <constraint firstItem="wGE-7r-Wox" firstAttribute="top" secondItem="qYd-90-ttm" secondAttribute="bottom" constant="16" id="bQ9-Zk-cta"/>
                         <constraint firstItem="Zhf-An-N9l" firstAttribute="centerX" secondItem="N4t-Oy-ccL" secondAttribute="centerX" id="i5I-mU-DXe"/>
+                        <constraint firstItem="qYd-90-ttm" firstAttribute="top" secondItem="Zhf-An-N9l" secondAttribute="bottom" constant="16" id="pdh-LG-76y"/>
                         <constraint firstItem="UwI-4L-BzI" firstAttribute="centerX" secondItem="N4t-Oy-ccL" secondAttribute="centerX" id="rUA-si-FXc"/>
                         <constraint firstItem="MM6-gX-9A6" firstAttribute="centerX" secondItem="N4t-Oy-ccL" secondAttribute="centerX" id="sTk-WJ-b7y"/>
+                        <constraint firstItem="qYd-90-ttm" firstAttribute="leading" secondItem="N4t-Oy-ccL" secondAttribute="leading" constant="16" id="v3f-qO-GT9"/>
                         <constraint firstItem="7F6-wp-ie4" firstAttribute="leading" secondItem="N4t-Oy-ccL" secondAttribute="leading" constant="16" id="vJ5-48-Qc9"/>
-                        <constraint firstItem="wGE-7r-Wox" firstAttribute="top" secondItem="Zhf-An-N9l" secondAttribute="bottom" constant="32" id="wL3-lf-M5s"/>
                         <constraint firstItem="vQ7-7K-8dg" firstAttribute="top" secondItem="MM6-gX-9A6" secondAttribute="bottom" constant="32" id="ynG-cX-gaf"/>
                     </constraints>
                 </view>
@@ -179,10 +205,14 @@
         </view>
     </objects>
     <resources>
+        <image name="Square150x150Logo.scale-200.png" width="300" height="300"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <namedColor name="mainPurple">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

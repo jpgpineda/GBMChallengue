@@ -5,6 +5,8 @@
 //  Created by javier pineda on 11/10/23.
 //
 
+import LocalAuthentication
+
 protocol SignInView {
     func showFailure(message: String)
     func showSuccess(message: String)
@@ -19,6 +21,9 @@ protocol SignInPresenter {
     func requestSignIn()
     func presentRestorePassword()
     func presentSignUp()
+    func saveLocalAuthPref(isEnabled: Bool)
+    func getLocalAuthPref() -> Bool
+    func doSignIn()
     func dismissScreen()
     func validateData() -> Bool
 }
@@ -50,6 +55,41 @@ class SignInPresenterImplementation: SignInPresenter {
                 router.dismissLoader()
                 view.showFailure(message: error.localizedDescription)
             }
+        }
+    }
+    
+    func doSignIn() {
+        if useCase.getLocalAuthPref() {
+            requestLocalAuth()
+        } else {
+            requestSignIn()
+        }
+    }
+    
+    func saveLocalAuthPref(isEnabled: Bool) {
+        useCase.saveLocalAuthPref(isEnabled: isEnabled)
+    }
+    
+    func getLocalAuthPref() -> Bool {
+        return useCase.getLocalAuthPref()
+    }
+    
+    func requestLocalAuth() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: .Localized.biometricDescription) { [weak self] success, _ in
+                DispatchQueue.main.async {
+                    if success {
+                        self?.requestSignIn()
+                    } else {
+                        self?.view.showFailure(message: .Localized.invalidBiometric)
+                    }
+                }
+            }
+        } else {
+            view.showFailure(message: .Localized.biometricUnavailable)
         }
     }
     

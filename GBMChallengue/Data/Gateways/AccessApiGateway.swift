@@ -13,6 +13,9 @@ protocol AccessApiGateway {
     var firebaseDB: Firestore { get set }
     func requestSignIn(parameters: SignInRequest) async -> ApiResult<Bool>
     func createUser(parameters: SignUpRequest) async -> ApiResult<Bool>
+    func requestSignOut() async -> ApiResult<Bool>
+    func saveLocalAuthPref(isEnabled: Bool)
+    func getLocalAuthPref() -> Bool
 }
 
 class AccessApiGatewayImplementation: AccessApiGateway {
@@ -43,6 +46,15 @@ class AccessApiGatewayImplementation: AccessApiGateway {
         }
     }
     
+    func requestSignOut() async -> ApiResult<Bool> {
+        do {
+            try auth.signOut()
+            return .success(true)
+        } catch {
+            return .failure(ApiError.requestFailed(description: error.localizedDescription))
+        }
+    }
+    
     private func saveUserInfo(parameters: SignUpRequest) async -> ApiResult<Bool> {
         guard let userUid = auth.currentUser?.uid else { return .failure(ApiError.sessionNotActive) }
         do {
@@ -51,5 +63,13 @@ class AccessApiGatewayImplementation: AccessApiGateway {
         } catch {
             return .failure(ApiError.requestFailed(description: error.localizedDescription))
         }
+    }
+    
+    func saveLocalAuthPref(isEnabled: Bool) {
+        UserPrefs.shared.saveIsLocalAuthEnabled(isEnabled: isEnabled)
+    }
+    
+    func getLocalAuthPref() -> Bool {
+        return UserPrefs.shared.getIsLocalAuthEnabled()
     }
 }

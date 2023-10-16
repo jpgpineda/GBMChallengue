@@ -114,11 +114,11 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wjo-Mc-Vj0">
                                                             <rect key="frame" x="8" y="16" width="380" height="32"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYu-4J-YfX" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYu-4J-YfX" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="186" height="32"/>
                                                                     <color key="tintColor" systemColor="separatorColor"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="localized" value="openPrice"/>
                                                                     </userDefinedRuntimeAttributes>
@@ -126,11 +126,11 @@
                                                                         <action selector="applyFiilter:" destination="-1" eventType="touchUpInside" id="fMS-6b-xil"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTE-6e-FUm" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTE-6e-FUm" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
                                                                     <rect key="frame" x="194" y="0.0" width="186" height="32"/>
                                                                     <color key="tintColor" systemColor="separatorColor"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="localized" value="closePrice"/>
                                                                     </userDefinedRuntimeAttributes>
@@ -146,11 +146,11 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y7T-6W-ue1">
                                                             <rect key="frame" x="8" y="56" width="380" height="32"/>
                                                             <subviews>
-                                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zds-ji-l8l" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zds-ji-l8l" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="186" height="32"/>
                                                                     <color key="tintColor" systemColor="separatorColor"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="localized" value="highPrice"/>
                                                                     </userDefinedRuntimeAttributes>
@@ -158,11 +158,11 @@
                                                                         <action selector="applyFiilter:" destination="-1" eventType="touchUpInside" id="kQQ-I3-Pmr"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVJ-MF-8mI" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVJ-MF-8mI" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
                                                                     <rect key="frame" x="194" y="0.0" width="186" height="32"/>
                                                                     <color key="tintColor" systemColor="separatorColor"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="string" keyPath="localized" value="lowPrice"/>
                                                                     </userDefinedRuntimeAttributes>
@@ -176,14 +176,14 @@
                                                                 <constraint firstAttribute="height" constant="32" id="wcq-OD-52f"/>
                                                             </constraints>
                                                         </stackView>
-                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-0H-jtW" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-0H-jtW" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="96" width="380" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="ZsT-JE-aT5"/>
                                                             </constraints>
                                                             <color key="tintColor" systemColor="separatorColor"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="string" keyPath="localized" value="volume"/>
                                                             </userDefinedRuntimeAttributes>

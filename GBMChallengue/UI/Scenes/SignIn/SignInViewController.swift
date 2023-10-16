@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class SignInViewController: UIViewController {
     ///////////////////////////////////////
@@ -32,7 +33,7 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func requestSignIn(_ sender: GBMButton) {
-        presenter.requestSignIn()
+        presenter.doSignIn()
     }
     
     @IBAction func presentSignUP(_ sender: GBMDashedButton) {
@@ -41,6 +42,10 @@ class SignInViewController: UIViewController {
     
     @IBAction func backToWelcome(_ sender: UIButton) {
         presenter.dismissScreen()
+    }
+    
+    @IBAction func activateBiometric(_ sender: GBMCheckButton) {
+        presenter.saveLocalAuthPref(isEnabled: sender.isChecked)
     }
     
     private func validateFields() {

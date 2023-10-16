@@ -28,7 +28,7 @@ class TickerListRouterImplementation: TickerListRouter {
     }
     
     func presentDrawerMenu() {
-        guard let viewController = ModuleManager.homeDependency.makeDrawerMenuViewController() else { return }
+        guard let viewController = ModuleManager.homeDependency.makeDrawerMenuViewController(delegate: DrawerTransitionManager()) else { return }
         controller.present(viewController, animated: true)
     }
     

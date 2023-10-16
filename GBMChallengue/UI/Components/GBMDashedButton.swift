@@ -15,7 +15,7 @@ class GBMDashedButton: UIButton {
     }
     
     private func setUp() {
-        dashedLine.strokeColor = UIColor.secondaryLabel.cgColor
+        dashedLine.strokeColor = UIColor.label.cgColor
         dashedLine.lineWidth = .two
         titleLabel?.font = .systemFont(ofSize: .ten, weight: .semibold)
         setTitleColor(.label, for: .normal)
