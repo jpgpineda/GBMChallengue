@@ -10,6 +10,9 @@ protocol TickerUseCase {
     func requestTicker(parameters: TickerRequest) async -> ApiResult<TickersDTO>
     func requesTickerIntraday(parameters: TickerIntradayRequest) async -> ApiResult<TickerIntradayDTO>
     func requestLatestIntradayData(parameters: TickerIntradayLatestRequest) async -> ApiResult<IntradayDataDTO>
+    func saveTickerToFavorites(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler)
+    func getFavoriteTickers() -> [TickerDetailDTO]?
+    func deleteTicker(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler)
 }
 
 class TickerUseCaseImplementation: TickerUseCase {
@@ -47,5 +50,21 @@ class TickerUseCaseImplementation: TickerUseCase {
         case .failure(let error):
             return .failure(error)
         }
+    }
+    
+    func saveTickerToFavorites(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler) {
+        apiGateway.saveTickerToFavorites(ticker: ticker, completion: completion)
+    }
+    
+    func getFavoriteTickers() -> [TickerDetailDTO]? {
+        guard let tickers = apiGateway.getFavoriteTickers(),
+              !tickers.isEmpty else { return nil }
+        return tickers.compactMap {
+            TickerDetailDTO(with: $0)
+        }
+    }
+    
+    func deleteTicker(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler) {
+        apiGateway.deleteTicker(ticker: ticker, completion: completion)
     }
 }

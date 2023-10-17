@@ -15,4 +15,14 @@ struct TickerDetailDTO {
         symbol = response.symbol
         stock = StockDTO(with: response.stockExchange)
     }
+    
+    init(with model: TickerModel) {
+        name = model.name
+        symbol = model.symbol
+        guard let stockModel = model.stock else {
+            stock = StockDTO()
+            return
+        }
+        stock = StockDTO(with: stockModel)
+    }
 }

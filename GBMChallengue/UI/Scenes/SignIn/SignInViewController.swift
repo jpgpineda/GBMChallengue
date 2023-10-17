@@ -24,12 +24,14 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(controller: self)
+        presenter.requestBiometricLogin()
         setupView()
     }
     
     private func setupView() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        emailTextField.text = presenter.getLastSignUser()
     }
 
     @IBAction func requestSignIn(_ sender: GBMButton) {
@@ -45,7 +47,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func activateBiometric(_ sender: GBMCheckButton) {
-        presenter.saveLocalAuthPref(isEnabled: sender.isChecked)
+        presenter.isLocalAuthOn = !sender.isChecked
     }
     
     private func validateFields() {

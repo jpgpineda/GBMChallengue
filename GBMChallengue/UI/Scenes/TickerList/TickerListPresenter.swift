@@ -18,6 +18,7 @@ protocol TickerListPresenter {
     var useCase: TickerUseCase { get set }
     func requestTickers(offSet: Int?)
     func presentTickerDetail(ticker: TickerDetailDTO)
+    func presentFavoriteTickers()
     func presentDrawerMenu()
 }
 
@@ -58,6 +59,10 @@ class TickerListPresenterImplementation: TickerListPresenter {
     
     func presentTickerDetail(ticker: TickerDetailDTO) {
         router.presentTickerDetail(ticker: ticker)
+    }
+    
+    func presentFavoriteTickers()  {
+        router.presentFavoriteTickers()
     }
     
     func presentDrawerMenu() {

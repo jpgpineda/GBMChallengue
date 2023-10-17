@@ -19,15 +19,18 @@ class SignInConfiguratorImplementation: SignInConfigurator {
         let firebaseDB = Firestore.firestore()
         // ApiGateway
         let apiGateway = AccessApiGatewayImplementation(auth: auth, firebaseDB: firebaseDB)
+        let userApiGateway = UserApiGatewayImplementation(auth: auth, firebaseFB: firebaseDB)
         // UseCase
         let useCase = AccessUseCaseImplementation(apiGateway: apiGateway)
+        let userUseCase = UserUseCaseImplementation(apiGateway: userApiGateway)
         // Router
         let router = SignInRouterImplementation(controller: controller)
         
         // Presenter
         let presenter = SignInPresenterImplementation(view: controller,
                                                       router: router,
-                                                      useCase: useCase)
+                                                      useCase: useCase,
+                                                      userUseCase: userUseCase)
         
         controller.presenter = presenter
     }

@@ -5,6 +5,8 @@
 //  Created by javier pineda on 13/10/23.
 //
 
+import RealmSwift
+
 protocol TickerListConfigurator {
     func configure(_ controller: TickerListViewController)
 }
@@ -13,8 +15,10 @@ class TickerListConfiguratorImplementation: TickerListConfigurator {
     func configure(_ controller: TickerListViewController) {
         // ApiClient
         let apiClient = ApiClient()
+        let storageContext = StorageContextImplementation(realmDB: try! Realm())
         // ApiGateway
-        let apiGateway = TickerApiGatewayImplementation(apiClient: apiClient)
+        let apiGateway = TickerApiGatewayImplementation(apiClient: apiClient,
+                                                        storageContext: storageContext)
         // UseCase
         let useCase = TickerUseCaseImplementation(apiGateway: apiGateway)
         // Router

@@ -51,6 +51,17 @@
 "date"                      = "Fecha";
 "prices"                    = "Precios";
 
+// MARK: Favorites
+"favoritesTitle"            = "Favoritos";
+"emptyFavorites"            = "Aun no tienes favoritos";
+"tickerEliminationMessage"  = "¿Deseas eliminar este ticker?";
+
+// MARK: Tools
+"caution"                   = "Precaución";
+"delete"                    = "Eliminar";
+"confirm"                   = "Si";
+"cancel"                    = "Cancelar";
+
 // MARK: Welcome
 "begin"                     = "Comenzar";
 
@@ -64,4 +75,5 @@
 // MARK: Success messages
 "congratsTitle"             = "Felicidades!!";
 "accountCreated"            = "Tu cuenta ha sido creada satisfactoriamente";
-
+"tickerSaved"               = "Tu ticker se ha guardado satisfactoriamente";
+"tickerDeleted"             = "Tu ticker se ha eliminado satisfactoriamente";

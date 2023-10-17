@@ -16,4 +16,13 @@ extension UIButton {
             return title(for: .normal) ?? .empty
         }
     }
+    
+    var isFavorite: Bool {
+        set {
+            setImage(newValue ? UIImage(systemName: "star.fill") : UIImage(systemName: "star"), for: .normal)
+        }
+        get {
+            return false
+        }
+    }
 }

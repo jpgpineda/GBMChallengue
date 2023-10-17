@@ -25,6 +25,7 @@ class TickerDetailViewController: UIViewController {
     @IBOutlet weak var lowPriceLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     ///////////////////////////////////////
     // MARK: Properties
@@ -73,7 +74,8 @@ class TickerDetailViewController: UIViewController {
     }
     
     @IBAction func addToFavorites(_ sender: UIButton) {
-        
+        guard let ticker = ticker else { return }
+        presenter.saveTickerToFavorites(ticker: ticker)
     }
     
     @IBAction func presentFilterView(_ sender: UIButton) {
@@ -95,6 +97,11 @@ class TickerDetailViewController: UIViewController {
 }
 
 extension TickerDetailViewController: TickerDetailView {
+    func showSuccess(message: String) {
+        favoriteButton.isFavorite = true
+        showSuccessAlert(message: message)
+    }
+    
     func updateChart(with dataSet: [ChartDataEntry]) {
         let set = LineChartDataSet(entries: dataSet, label: .Localized.prices)
         set.drawCirclesEnabled = false

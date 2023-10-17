@@ -16,13 +16,16 @@ protocol SignInPresenter {
     var view: SignInView { get set }
     var router: SignInRouter { get set }
     var useCase: AccessUseCase { get set }
+    var userUseCase: UserUseCase { get set }
     var email: String { get set }
     var password: String { get set }
+    var isLocalAuthOn: Bool { get set }
     func requestSignIn()
+    func requestBiometricLogin()
     func presentRestorePassword()
     func presentSignUp()
-    func saveLocalAuthPref(isEnabled: Bool)
     func getLocalAuthPref() -> Bool
+    func getLastSignUser() -> String
     func doSignIn()
     func dismissScreen()
     func validateData() -> Bool
@@ -32,15 +35,19 @@ class SignInPresenterImplementation: SignInPresenter {
     internal var view: SignInView
     internal var router: SignInRouter
     internal var useCase: AccessUseCase
+    internal var userUseCase: UserUseCase
     var email: String = .empty
     var password: String = .empty
+    var isLocalAuthOn: Bool = false
     
     init(view: SignInView,
          router: SignInRouter,
-         useCase: AccessUseCase) {
+         useCase: AccessUseCase,
+         userUseCase: UserUseCase) {
         self.view = view
         self.router = router
         self.useCase = useCase
+        self.userUseCase = userUseCase
     }
     
     func requestSignIn() {
@@ -51,6 +58,10 @@ class SignInPresenterImplementation: SignInPresenter {
             switch response {
             case .success(_):
                 router.presentTickerList()
+                userUseCase.saveLastSignedUser(email: email)
+                if isLocalAuthOn {
+                    useCase.saveLocalAuthPref(isEnabled: userUseCase.canEncryptCredentials(email: email, password: password))
+                }
             case .failure(let error):
                 router.dismissLoader()
                 view.showFailure(message: error.localizedDescription)
@@ -58,20 +69,31 @@ class SignInPresenterImplementation: SignInPresenter {
         }
     }
     
-    func doSignIn() {
+    func requestBiometricLogin() {
         if useCase.getLocalAuthPref() {
+            guard let credentials = userUseCase.canRetrieveEncryptedCrendentials(email: userUseCase.getLastSignedUser()) else { return }
+            email = credentials.email
+            password = credentials.password
+            requestLocalAuth()
+        }
+    }
+    
+    func doSignIn() {
+        if isLocalAuthOn {
             requestLocalAuth()
         } else {
             requestSignIn()
         }
     }
     
-    func saveLocalAuthPref(isEnabled: Bool) {
-        useCase.saveLocalAuthPref(isEnabled: isEnabled)
-    }
-    
     func getLocalAuthPref() -> Bool {
         return useCase.getLocalAuthPref()
+    }
+    
+    func getLastSignUser() -> String {
+        let email = userUseCase.getLastSignedUser()
+        self.email = email
+        return email
     }
     
     func requestLocalAuth() {

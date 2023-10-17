@@ -43,4 +43,42 @@ extension UIViewController {
             successBanner.show()
         }
     }
+    
+    func getDeleteActionConfiguration(deleteAction: @escaping() -> Void) -> UISwipeActionsConfiguration {
+        let delete = UIContextualAction(style: .destructive, title: .Localized.delete) { _, _, completion in
+            deleteAction()
+            completion(true)
+        }
+        delete.image = UIImage(systemName: "trash.fill")
+        let config = UISwipeActionsConfiguration(actions: [delete])
+        config.performsFirstActionWithFullSwipe = true
+        return config
+    }
+    
+    func showConfimation(title: String,
+                         message: String,
+                         cancel: String?,
+                         confirm: String,
+                         confirmAction:  @escaping() -> Void) {
+        
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .actionSheet)
+        
+        if let cancel = cancel {
+            alert.addAction(UIAlertAction(title: cancel,
+                                          style: .destructive,
+                                          handler: nil))
+        }
+        
+        alert.addAction(UIAlertAction(title: confirm,
+                                      style: .default,
+                                      handler: { (action) in
+                                        
+                                        confirmAction()
+                                        
+        }))
+        
+        present(alert, animated: true, completion: nil)
+    } 
 }

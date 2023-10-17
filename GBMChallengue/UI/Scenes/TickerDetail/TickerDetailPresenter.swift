@@ -13,6 +13,7 @@ protocol TickerDetailView {
     func updateInfo(intraday: TickerIntradayDTO)
     func updateIntradayInfo(intraday: IntradayDataDTO)
     func updateChart(with info: [ChartDataEntry])
+    func showSuccess(message: String)
 }
 
 protocol TickerDetailPresenter {
@@ -23,6 +24,7 @@ protocol TickerDetailPresenter {
     func setupCharData(timeInterval: TimeIntervalType,
                        valueForChart: ValueForChartType,
                        intraday: [IntradayDataDTO])
+    func saveTickerToFavorites(ticker: TickerDetailDTO)
     func dismissView()
 }
 
@@ -117,6 +119,19 @@ class TickerDetailPresenterImplementation: TickerDetailPresenter {
             }
         }
         view.updateChart(with: chartData)
+    }
+    
+    func saveTickerToFavorites(ticker: TickerDetailDTO) {
+        router.showLoader()
+        useCase.saveTickerToFavorites(ticker: ticker) { [weak self] result in
+            self?.router.dismissLoader()
+            switch result {
+            case .success(_):
+                self?.view.showSuccess(message: .Localized.tickerSaved)
+            case .failure(let error):
+                self?.view.showFailure(message: error.customDescription)
+            }
+        }
     }
     
     func dismissView() {

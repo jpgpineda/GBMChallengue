@@ -14,6 +14,7 @@
                 <outlet property="chartView" destination="b02-o4-vW5" id="bn0-dL-K77"/>
                 <outlet property="closePriceLabel" destination="gDn-vS-Obr" id="Uj1-Ya-QzO"/>
                 <outlet property="dateLabel" destination="ABe-U9-HIh" id="DfQ-Xi-avv"/>
+                <outlet property="favoriteButton" destination="bIe-qa-fbQ" id="ytT-ek-s11"/>
                 <outlet property="filterView" destination="llz-gl-HNZ" id="hfw-XL-QuI"/>
                 <outlet property="highPriceLabel" destination="O09-Re-zQu" id="Z82-hP-0vB"/>
                 <outlet property="lowPriceLabel" destination="FAN-ZA-qE9" id="dO9-Fd-xXx"/>

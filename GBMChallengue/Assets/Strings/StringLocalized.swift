@@ -54,6 +54,17 @@ extension String {
         static var date: String { return getLocalizedString(#function) }
         static var prices: String { return getLocalizedString(#function) }
         
+        // MARK: Favorites
+        static var favoritesTitle: String { return getLocalizedString(#function) }
+        static var emptyFavorites: String { return getLocalizedString(#function) }
+        static var tickerEliminationMessage: String { return getLocalizedString(#function) }
+        
+        // MARK: Tools
+        static var caution: String { return getLocalizedString(#function) }
+        static var delete: String { return getLocalizedString(#function) }
+        static var confirm: String { return getLocalizedString(#function) }
+        static var cancel: String { return getLocalizedString(#function) }
+        
         // MARK: Welcome
         static var begin: String { return getLocalizedString(#function) }
         
@@ -67,6 +78,8 @@ extension String {
         // MARK: Success messages
         static var congratsTitle: String { return getLocalizedString(#function) }
         static var accountCreated: String { return getLocalizedString(#function) }
+        static var tickerSaved: String { return getLocalizedString(#function) }
+        static var tickerDeleted: String { return getLocalizedString(#function) }
         
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)

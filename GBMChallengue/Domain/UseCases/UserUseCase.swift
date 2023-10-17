@@ -8,6 +8,10 @@
 protocol UserUseCase {
     var apiGateway: UserApiGateway { get set }
     func fetchUserInfo() async -> ApiResult<UserDTO>
+    func canEncryptCredentials(email: String, password: String) -> Bool
+    func canRetrieveEncryptedCrendentials(email: String) -> CredentialDTO?
+    func saveLastSignedUser(email: String)
+    func getLastSignedUser() -> String
 }
 
 class UserUseCaseImplementation: UserUseCase {
@@ -25,5 +29,21 @@ class UserUseCaseImplementation: UserUseCase {
         case .failure(let apiError):
             return .failure(apiError)
         }
+    }
+    
+    func canEncryptCredentials(email: String, password: String) -> Bool {
+        return apiGateway.canEncryptCredentials(email: email, password: password)
+    }
+    
+    func canRetrieveEncryptedCrendentials(email: String) -> CredentialDTO? {
+        return apiGateway.canRetrieveEncryptedCrendentials(email: email)
+    }
+    
+    func saveLastSignedUser(email: String) {
+        apiGateway.saveLastSignedUser(email: email)
+    }
+    
+    func getLastSignedUser() -> String {
+        return apiGateway.getLastSignedUser()
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 enum UserKeys: String {
     case isLocalAuthEnabled
+    case lastSignedUser
 }
 
 struct UserPrefs {
@@ -21,5 +22,13 @@ struct UserPrefs {
     
     internal func getIsLocalAuthEnabled() -> Bool {
         return defaults.bool(forKey: UserKeys.isLocalAuthEnabled.rawValue)
+    }
+    
+    internal func saveLastSignedUser(email: String) {
+        defaults.set(email, forKey: UserKeys.lastSignedUser.rawValue)
+    }
+    
+    internal func getLastSignedUser() -> String {
+        return defaults.string(forKey: UserKeys.lastSignedUser.rawValue) ?? .empty
     }
 }

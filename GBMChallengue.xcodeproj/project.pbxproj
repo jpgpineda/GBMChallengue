@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080EEB842ADDF468008172EB /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB832ADDF468008172EB /* StockModel.swift */; };
+		080EEB882ADDFD10008172EB /* FavoriteTickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB862ADDFD10008172EB /* FavoriteTickersViewController.swift */; };
+		080EEB892ADDFD10008172EB /* FavoriteTickersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 080EEB872ADDFD10008172EB /* FavoriteTickersViewController.xib */; };
+		080EEB8B2ADDFD39008172EB /* FavoriteTickersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB8A2ADDFD39008172EB /* FavoriteTickersRouter.swift */; };
+		080EEB8D2ADDFDCC008172EB /* FavoriteTickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB8C2ADDFDCC008172EB /* FavoriteTickerPresenter.swift */; };
+		080EEB8F2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB8E2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift */; };
+		080EEB912ADF010F008172EB /* CredentialDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB902ADF010F008172EB /* CredentialDTO.swift */; };
 		083CF8A02AD77AC3001E95D5 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */; };
 		083CF8A22AD77B07001E95D5 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A12AD77B07001E95D5 /* String+Ext.swift */; };
 		083CF8A42AD77C0D001E95D5 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */; };
@@ -79,6 +86,8 @@
 		086007B82ADDEADD007BB5F1 /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086007B72ADDEADD007BB5F1 /* DrawerTransitionManager.swift */; };
 		086007BA2ADDECEA007BB5F1 /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086007B92ADDECEA007BB5F1 /* DrawerPresentationController.swift */; };
 		086007BC2ADDEE58007BB5F1 /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086007BB2ADDEE58007BB5F1 /* DrawerSlideAnimation.swift */; };
+		086007BF2ADDF1D2007BB5F1 /* StorageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086007BE2ADDF1D2007BB5F1 /* StorageContext.swift */; };
+		086007C12ADDF353007BB5F1 /* TickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086007C02ADDF353007BB5F1 /* TickerModel.swift */; };
 		089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16122AD59FEA00741169 /* AppDelegate.swift */; };
 		089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16142AD59FEA00741169 /* SceneDelegate.swift */; };
 		089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16162AD59FEA00741169 /* WelcomeViewController.swift */; };
@@ -137,6 +146,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		080EEB832ADDF468008172EB /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		080EEB862ADDFD10008172EB /* FavoriteTickersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTickersViewController.swift; sourceTree = "<group>"; };
+		080EEB872ADDFD10008172EB /* FavoriteTickersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTickersViewController.xib; sourceTree = "<group>"; };
+		080EEB8A2ADDFD39008172EB /* FavoriteTickersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTickersRouter.swift; sourceTree = "<group>"; };
+		080EEB8C2ADDFDCC008172EB /* FavoriteTickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTickerPresenter.swift; sourceTree = "<group>"; };
+		080EEB8E2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTickersConfigurator.swift; sourceTree = "<group>"; };
+		080EEB902ADF010F008172EB /* CredentialDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialDTO.swift; sourceTree = "<group>"; };
 		083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		083CF8A12AD77B07001E95D5 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -209,6 +225,8 @@
 		086007B72ADDEADD007BB5F1 /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
 		086007B92ADDECEA007BB5F1 /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
 		086007BB2ADDEE58007BB5F1 /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
+		086007BE2ADDF1D2007BB5F1 /* StorageContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageContext.swift; sourceTree = "<group>"; };
+		086007C02ADDF353007BB5F1 /* TickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerModel.swift; sourceTree = "<group>"; };
 		089C160F2AD59FEA00741169 /* GBMChallengue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBMChallengue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089C16122AD59FEA00741169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089C16142AD59FEA00741169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +305,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		080EEB852ADDFCE9008172EB /* FavoriteTickers */ = {
+			isa = PBXGroup;
+			children = (
+				080EEB8C2ADDFDCC008172EB /* FavoriteTickerPresenter.swift */,
+				080EEB8E2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift */,
+				080EEB8A2ADDFD39008172EB /* FavoriteTickersRouter.swift */,
+				080EEB862ADDFD10008172EB /* FavoriteTickersViewController.swift */,
+				080EEB872ADDFD10008172EB /* FavoriteTickersViewController.xib */,
+			);
+			path = FavoriteTickers;
+			sourceTree = "<group>";
+		};
 		083CF8B12AD786FA001E95D5 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +414,7 @@
 				083CF9172ADB233F001E95D5 /* IntradayDataDTO.swift */,
 				083CF9192ADB6378001E95D5 /* TickerIntradayDetailDTO.swift */,
 				086007AE2ADDDE32007BB5F1 /* UserDTO.swift */,
+				080EEB902ADF010F008172EB /* CredentialDTO.swift */,
 			);
 			path = DomainObjects;
 			sourceTree = "<group>";
@@ -396,6 +427,14 @@
 				086007BB2ADDEE58007BB5F1 /* DrawerSlideAnimation.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		086007BD2ADDF1BD007BB5F1 /* StorageContext */ = {
+			isa = PBXGroup;
+			children = (
+				086007BE2ADDF1D2007BB5F1 /* StorageContext.swift */,
+			);
+			path = StorageContext;
 			sourceTree = "<group>";
 		};
 		089C16062AD59FEA00741169 = {
@@ -524,6 +563,7 @@
 		089C164E2AD5B5A200741169 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				086007BD2ADDF1BD007BB5F1 /* StorageContext */,
 				089C165C2AD6000000741169 /* Network */,
 				089C16582AD5B63900741169 /* Defaults */,
 				089C16522AD5B5C700741169 /* Entities */,
@@ -548,6 +588,7 @@
 		089C16502AD5B5AF00741169 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				080EEB852ADDFCE9008172EB /* FavoriteTickers */,
 				083CF8EE2AD90826001E95D5 /* TickerDetail */,
 				083CF8E72AD902E5001E95D5 /* TickerList */,
 				083CF8E22AD901C0001E95D5 /* DrawerMenu */,
@@ -579,6 +620,8 @@
 		089C16532AD5B5D000741169 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				086007C02ADDF353007BB5F1 /* TickerModel.swift */,
+				080EEB832ADDF468008172EB /* StockModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -839,6 +882,7 @@
 				08D3F7C62AD776450088C29E /* GoogleService-Info.plist in Resources */,
 				083CF8C12AD7BA63001E95D5 /* LoaderViewController.xib in Resources */,
 				083CF8FD2AD9FB4C001E95D5 /* TickerTableViewCell.xib in Resources */,
+				080EEB892ADDFD10008172EB /* FavoriteTickersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,11 +1021,14 @@
 				083CF8FF2AD9FE20001E95D5 /* UITableView+Ext.swift in Sources */,
 				089C16702AD615C500741169 /* Ticker.swift in Sources */,
 				083CF8C32AD7BC26001E95D5 /* UIViewController+Ext.swift in Sources */,
+				086007C12ADDF353007BB5F1 /* TickerModel.swift in Sources */,
+				080EEB842ADDF468008172EB /* StockModel.swift in Sources */,
 				083CF9102ADA5A18001E95D5 /* GBMFilterButton.swift in Sources */,
 				083CF8CC2AD866A9001E95D5 /* SignUpRouter.swift in Sources */,
 				083CF8B42AD78A20001E95D5 /* ModuleManager.swift in Sources */,
 				083CF8D02AD8689B001E95D5 /* SignUpConfigurator.swift in Sources */,
 				083CF9042AD9FFEE001E95D5 /* TickerDTO.swift in Sources */,
+				080EEB8F2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift in Sources */,
 				083CF9182ADB233F001E95D5 /* IntradayDataDTO.swift in Sources */,
 				083CF9202ADC6230001E95D5 /* Int+Ext.swift in Sources */,
 				083CF8AA2AD7831F001E95D5 /* UIButton+Ext.swift in Sources */,
@@ -995,7 +1042,9 @@
 				083CF8D62AD8924B001E95D5 /* SignInRequest.swift in Sources */,
 				083CF8F62AD9F5FE001E95D5 /* TickerListPresenter.swift in Sources */,
 				089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */,
+				086007BF2ADDF1D2007BB5F1 /* StorageContext.swift in Sources */,
 				083CF8F12AD90840001E95D5 /* TickerDetailViewController.swift in Sources */,
+				080EEB882ADDFD10008172EB /* FavoriteTickersViewController.swift in Sources */,
 				086007A92ADDD983007BB5F1 /* DrawerMenuRouter.swift in Sources */,
 				083CF8F42AD9F5F1001E95D5 /* TickerListRouter.swift in Sources */,
 				08CA6B662ADCB8D500650BFC /* Date+Ext.swift in Sources */,
@@ -1010,6 +1059,7 @@
 				083CF8CE2AD86743001E95D5 /* SignUpPresenter.swift in Sources */,
 				083CF8A82AD7822A001E95D5 /* GBMButton.swift in Sources */,
 				086007B32ADDE4C9007BB5F1 /* UserUseCase.swift in Sources */,
+				080EEB912ADF010F008172EB /* CredentialDTO.swift in Sources */,
 				083CF8E12AD901AC001E95D5 /* HomeDependency.swift in Sources */,
 				089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */,
 				083CF9262ADC9050001E95D5 /* ValueForChartType.swift in Sources */,
@@ -1038,10 +1088,12 @@
 				08CA6B682ADCBFF500650BFC /* UserPrefs.swift in Sources */,
 				083CF8DD2AD8983B001E95D5 /* AccessUseCase.swift in Sources */,
 				083CF8F82AD9F7B7001E95D5 /* TickerListConfigurator.swift in Sources */,
+				080EEB8B2ADDFD39008172EB /* FavoriteTickersRouter.swift in Sources */,
 				089C165E2AD6000F00741169 /* ApiError.swift in Sources */,
 				083CF90A2ADA5032001E95D5 /* TickerDetailRouter.swift in Sources */,
 				083CF8D42AD89010001E95D5 /* AccessApiGateway.swift in Sources */,
 				083CF8D82AD89433001E95D5 /* SignUpRequest.swift in Sources */,
+				080EEB8D2ADDFDCC008172EB /* FavoriteTickerPresenter.swift in Sources */,
 				083CF8DB2AD89670001E95D5 /* FirebaseCollections.swift in Sources */,
 				089C166E2AD6154400741169 /* TickerApiGateway.swift in Sources */,
 				083CF8E52AD901D2001E95D5 /* DrawerMenuViewController.swift in Sources */,

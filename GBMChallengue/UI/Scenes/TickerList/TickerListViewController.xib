@@ -58,11 +58,28 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mr-YY-qzp">
+                    <rect key="frame" x="353" y="75" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="dhe-ow-KwI"/>
+                        <constraint firstAttribute="height" constant="24" id="nJQ-X3-Gch"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                    </state>
+                    <connections>
+                        <action selector="presentFavorites:" destination="-1" eventType="touchUpInside" id="LZP-ml-YWa"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6eF-eH-Oc8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0CU-th-gJh"/>
+                <constraint firstItem="4mr-YY-qzp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="6ap-un-vEU"/>
                 <constraint firstItem="lk8-IK-2cv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7jH-6f-stV"/>
                 <constraint firstItem="6eF-eH-Oc8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="AoC-4j-jzJ"/>
                 <constraint firstItem="lk8-IK-2cv" firstAttribute="top" secondItem="bsM-3A-l9u" secondAttribute="bottom" constant="32" id="Ipn-Xk-sQh"/>
@@ -70,12 +87,14 @@
                 <constraint firstAttribute="bottom" secondItem="lk8-IK-2cv" secondAttribute="bottom" id="gt0-SG-v13"/>
                 <constraint firstItem="bsM-3A-l9u" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="omN-m7-LY3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lk8-IK-2cv" secondAttribute="trailing" id="r2i-OH-U3y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4mr-YY-qzp" secondAttribute="trailing" constant="16" id="rUw-Jz-boQ"/>
             </constraints>
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

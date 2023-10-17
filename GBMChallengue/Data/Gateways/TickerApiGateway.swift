@@ -8,16 +8,24 @@
 import Foundation
 
 protocol TickerApiGateway {
+    var apiClient: ApiClient { get set }
+    var storageContext: StorageContext { get set }
     func fetchTickers(parameters: TickerRequest) async -> ApiResult<Tickers>
     func fetchTickerIntradayData(parameters: TickerIntradayRequest) async -> ApiResult<TickerIntraday>
     func fetchTickerLatestIntradayData(parameters: TickerIntradayLatestRequest) async -> ApiResult<Intraday>
+    func saveTickerToFavorites(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler)
+    func getFavoriteTickers() -> [TickerModel]?
+    func deleteTicker(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler)
 }
 
 class TickerApiGatewayImplementation: TickerApiGateway {
-    private let apiClient: ApiClient
+    internal var apiClient: ApiClient
+    internal var storageContext: StorageContext
     
-    init(apiClient: ApiClient) {
+    init(apiClient: ApiClient,
+         storageContext: StorageContext) {
         self.apiClient = apiClient
+        self.storageContext = storageContext
     }
     
     func fetchTickers(parameters: TickerRequest) async -> ApiResult<Tickers> {
@@ -48,5 +56,17 @@ class TickerApiGatewayImplementation: TickerApiGateway {
         } catch {
             return .failure(ApiError.requestFailed(description: error.localizedDescription))
         }
+    }
+    
+    func saveTickerToFavorites(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler) {
+        storageContext.saveModel(model: TickerModel(with: ticker), completion: completion)
+    }
+    
+    func getFavoriteTickers() -> [TickerModel]? {
+        return storageContext.getModel(model: TickerModel.self, predicate: nil) as? [TickerModel]
+    }
+    
+    func deleteTicker(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler) {
+        storageContext.deleteModel(model: TickerModel(with: ticker), completion: completion)
     }
 }

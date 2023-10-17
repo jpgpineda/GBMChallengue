@@ -42,6 +42,10 @@ class TickerListViewController: UIViewController {
         presenter.requestTickers(offSet: currentOffset)
     }
     
+    @IBAction func presentFavorites(_ sender: UIButton) {
+        presenter.presentFavoriteTickers()
+    }
+    
     @IBAction func openDrawerMenu(_ sender: UIButton) {
         presenter.presentDrawerMenu()
     }

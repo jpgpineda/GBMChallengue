@@ -13,4 +13,14 @@ struct StockDTO {
         acronym = response.acronym
         country = response.countryCode
     }
+    
+    init(with model: StockModel) {
+        acronym = model.acronym
+        country = model.country
+    }
+    
+    init() {
+        acronym = .empty
+        country = .empty
+    }
 }
