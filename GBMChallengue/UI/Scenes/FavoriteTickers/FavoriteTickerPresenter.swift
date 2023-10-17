@@ -36,7 +36,10 @@ class FavoriteTickerPresenterImplementation: FavoriteTickerPresenter {
     }
     
     func getFavorites() {
-        guard let tickers = useCase.getFavoriteTickers() else { return }
+        guard let tickers = useCase.getFavoriteTickers() else {
+            view.updateTickerList(data: [])
+            return
+        }
         view.updateTickerList(data: tickers)
     }
     
@@ -47,7 +50,9 @@ class FavoriteTickerPresenterImplementation: FavoriteTickerPresenter {
             switch result {
             case .success(_):
                 self?.view.showSuccess(message: .Localized.tickerDeleted)
-                self?.getFavorites()
+                delay(.fast) {
+                    self?.getFavorites()
+                }
             case .failure(let error):
                 self?.view.showFailure(message: error.customDescription)
             }

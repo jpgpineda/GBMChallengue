@@ -13,6 +13,7 @@ protocol TickerDetailView {
     func updateInfo(intraday: TickerIntradayDTO)
     func updateIntradayInfo(intraday: IntradayDataDTO)
     func updateChart(with info: [ChartDataEntry])
+    func updateFavoriteButtonState(isFavorite: Bool)
     func showSuccess(message: String)
 }
 
@@ -25,6 +26,8 @@ protocol TickerDetailPresenter {
                        valueForChart: ValueForChartType,
                        intraday: [IntradayDataDTO])
     func saveTickerToFavorites(ticker: TickerDetailDTO)
+    func checkIfTickerIsFavorite(ticker: TickerDetailDTO)
+    func removeTickerFromFavorites(ticker: TickerDetailDTO)
     func dismissView()
 }
 
@@ -132,6 +135,24 @@ class TickerDetailPresenterImplementation: TickerDetailPresenter {
                 self?.view.showFailure(message: error.customDescription)
             }
         }
+    }
+    
+    func removeTickerFromFavorites(ticker: TickerDetailDTO) {
+        router.showLoader()
+        useCase.deleteTicker(ticker: ticker) { [weak self] result in
+            self?.router.dismissLoader()
+            switch result {
+            case .success(_):
+                self?.view.showSuccess(message: .Localized.tickerDeleted)
+                self?.view.updateFavoriteButtonState(isFavorite: false)
+            case .failure(let error):
+                self?.view.showFailure(message: error.customDescription)
+            }
+        }
+    }
+    
+    func checkIfTickerIsFavorite(ticker: TickerDetailDTO) {
+        view.updateFavoriteButtonState(isFavorite: useCase.tickerIsFavorite(ticker: ticker))
     }
     
     func dismissView() {

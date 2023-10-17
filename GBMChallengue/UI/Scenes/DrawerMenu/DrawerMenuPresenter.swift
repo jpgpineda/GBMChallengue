@@ -8,6 +8,7 @@
 import Foundation
 
 protocol DrawerMenuView {
+    func notifySignOutRequested()
     func updateUserInfo(data: UserDTO)
     func showFailure(message: String)
 }
@@ -20,6 +21,7 @@ protocol DrawerMenuPresenter {
     func fetchUserInfo()
     func requestSignOut()
     func openAppSettings()
+    func showSignOutConfirmation()
 }
 
 class DrawerMenuPresenterImplementation: DrawerMenuPresenter {
@@ -61,7 +63,10 @@ class DrawerMenuPresenterImplementation: DrawerMenuPresenter {
             router.dismissLoader()
             switch response {
             case .success(_):
-                router.dismissView()
+                DispatchQueue.main.async {
+                    self.router.dismissView()
+                }
+                view.notifySignOutRequested()
             case .failure(let apiError):
                 view.showFailure(message: apiError.customDescription)
             }
@@ -70,5 +75,9 @@ class DrawerMenuPresenterImplementation: DrawerMenuPresenter {
     
     func openAppSettings() {
         router.openAppSettings()
+    }
+    
+    func showSignOutConfirmation() {
+        router.showSignOutConfirmation()
     }
 }

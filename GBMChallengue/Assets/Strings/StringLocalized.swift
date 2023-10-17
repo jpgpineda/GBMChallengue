@@ -39,10 +39,11 @@ extension String {
         static var biometricDescription: String { return getLocalizedString(#function) }
         static var enableBiometricLogin: String { return getLocalizedString(#function) }
         
-        // MARK: Sign In
+        // MARK: Menu
         static var welcome: String { return getLocalizedString(#function) }
         static var signOut: String { return getLocalizedString(#function) }
         static var settings: String { return getLocalizedString(#function) }
+        static var signOutConfirmation: String { return getLocalizedString(#function) }
         
         // MARK: Ticker Detail
         static var filterBy: String { return getLocalizedString(#function) }

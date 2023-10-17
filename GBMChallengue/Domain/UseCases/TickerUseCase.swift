@@ -12,6 +12,7 @@ protocol TickerUseCase {
     func requestLatestIntradayData(parameters: TickerIntradayLatestRequest) async -> ApiResult<IntradayDataDTO>
     func saveTickerToFavorites(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler)
     func getFavoriteTickers() -> [TickerDetailDTO]?
+    func tickerIsFavorite(ticker: TickerDetailDTO) -> Bool
     func deleteTicker(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler)
 }
 
@@ -62,6 +63,10 @@ class TickerUseCaseImplementation: TickerUseCase {
         return tickers.compactMap {
             TickerDetailDTO(with: $0)
         }
+    }
+    
+    func tickerIsFavorite(ticker: TickerDetailDTO) -> Bool {
+        return apiGateway.tickerIsFavorite(ticker: ticker)
     }
     
     func deleteTicker(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler) {

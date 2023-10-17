@@ -6,6 +6,8 @@
 //
 
 extension Double {
+    static let fast: Double = 0.50
+    
     func toString() -> String {
         return String(self)
     }

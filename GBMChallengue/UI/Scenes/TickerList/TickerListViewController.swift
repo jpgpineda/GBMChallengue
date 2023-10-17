@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class TickerListViewController: UIViewController {
     ///////////////////////////////////////
@@ -21,6 +22,7 @@ class TickerListViewController: UIViewController {
     var currentOffset: Int = .zero
     var currentLimit: Int = .zero
     private let refreshControl = UIRefreshControl()
+    let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()

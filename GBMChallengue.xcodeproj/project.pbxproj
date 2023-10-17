@@ -14,6 +14,9 @@
 		080EEB8D2ADDFDCC008172EB /* FavoriteTickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB8C2ADDFDCC008172EB /* FavoriteTickerPresenter.swift */; };
 		080EEB8F2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB8E2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift */; };
 		080EEB912ADF010F008172EB /* CredentialDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB902ADF010F008172EB /* CredentialDTO.swift */; };
+		080EEB942ADF09E9008172EB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 080EEB932ADF09E9008172EB /* RxCocoa */; };
+		080EEB962ADF09E9008172EB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 080EEB952ADF09E9008172EB /* RxSwift */; };
+		080EEB982ADF4855008172EB /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB972ADF4855008172EB /* Delay.swift */; };
 		083CF8A02AD77AC3001E95D5 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */; };
 		083CF8A22AD77B07001E95D5 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A12AD77B07001E95D5 /* String+Ext.swift */; };
 		083CF8A42AD77C0D001E95D5 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */; };
@@ -153,6 +156,7 @@
 		080EEB8C2ADDFDCC008172EB /* FavoriteTickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTickerPresenter.swift; sourceTree = "<group>"; };
 		080EEB8E2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTickersConfigurator.swift; sourceTree = "<group>"; };
 		080EEB902ADF010F008172EB /* CredentialDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialDTO.swift; sourceTree = "<group>"; };
+		080EEB972ADF4855008172EB /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 		083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		083CF8A12AD77B07001E95D5 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -275,7 +279,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080EEB942ADF09E9008172EB /* RxCocoa in Frameworks */,
 				089C16832AD76C9500741169 /* RealmSwift in Frameworks */,
+				080EEB962ADF09E9008172EB /* RxSwift in Frameworks */,
 				089C16862AD76D4C00741169 /* Lottie in Frameworks */,
 				089C167C2AD76BA600741169 /* FirebaseCrashlytics in Frameworks */,
 				089C167E2AD76BA600741169 /* FirebaseFirestore in Frameworks */,
@@ -679,6 +685,7 @@
 			children = (
 				083CF8D12AD872EE001E95D5 /* Regex.swift */,
 				083CF9212ADC64A3001E95D5 /* CVDateFormatter.swift */,
+				080EEB972ADF4855008172EB /* Delay.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -771,6 +778,8 @@
 				089C16802AD76C9500741169 /* Realm */,
 				089C16822AD76C9500741169 /* RealmSwift */,
 				089C16852AD76D4C00741169 /* Lottie */,
+				080EEB932ADF09E9008172EB /* RxCocoa */,
+				080EEB952ADF09E9008172EB /* RxSwift */,
 			);
 			productName = GBMChallengue;
 			productReference = 089C160F2AD59FEA00741169 /* GBMChallengue.app */;
@@ -851,6 +860,7 @@
 				089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				089C16842AD76D4B00741169 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				080EEB922ADF09E9008172EB /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 089C16102AD59FEA00741169 /* Products */;
 			projectDirPath = "";
@@ -1055,6 +1065,7 @@
 				083CF90C2ADA518B001E95D5 /* TickerDetailPresenter.swift in Sources */,
 				083CF9142ADB21AF001E95D5 /* TickerIntraday.swift in Sources */,
 				083CF91A2ADB6378001E95D5 /* TickerIntradayDetailDTO.swift in Sources */,
+				080EEB982ADF4855008172EB /* Delay.swift in Sources */,
 				083CF8AC2AD7836E001E95D5 /* UITextfield+Ext.swift in Sources */,
 				083CF8CE2AD86743001E95D5 /* SignUpPresenter.swift in Sources */,
 				083CF8A82AD7822A001E95D5 /* GBMButton.swift in Sources */,
@@ -1462,6 +1473,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		080EEB922ADF09E9008172EB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1489,6 +1508,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		080EEB932ADF09E9008172EB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080EEB922ADF09E9008172EB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		080EEB952ADF09E9008172EB /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080EEB922ADF09E9008172EB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		089C16772AD76BA600741169 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

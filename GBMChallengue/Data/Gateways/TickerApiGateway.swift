@@ -15,6 +15,7 @@ protocol TickerApiGateway {
     func fetchTickerLatestIntradayData(parameters: TickerIntradayLatestRequest) async -> ApiResult<Intraday>
     func saveTickerToFavorites(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler)
     func getFavoriteTickers() -> [TickerModel]?
+    func tickerIsFavorite(ticker: TickerDetailDTO) -> Bool
     func deleteTicker(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler)
 }
 
@@ -66,7 +67,14 @@ class TickerApiGatewayImplementation: TickerApiGateway {
         return storageContext.getModel(model: TickerModel.self, predicate: nil) as? [TickerModel]
     }
     
+    func tickerIsFavorite(ticker: TickerDetailDTO) -> Bool {
+        let predicate = NSPredicate(format: "symbol == %@", ticker.symbol)
+        return (storageContext.getModel(model: TickerModel.self, predicate: predicate) as? [TickerModel])?.first != nil
+    }
+    
     func deleteTicker(ticker: TickerDetailDTO, completion: @escaping ModelOperationCompletionHandler) {
-        storageContext.deleteModel(model: TickerModel(with: ticker), completion: completion)
+        let predicate = NSPredicate(format: "symbol == %@", ticker.symbol)
+        guard let objectToDelete = (storageContext.getModel(model: TickerModel.self, predicate: predicate))?.first else { return }
+        storageContext.deleteModel(model: objectToDelete, completion: completion)
     }
 }

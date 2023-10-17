@@ -12,6 +12,7 @@ protocol DrawerMenuRouter {
     func dismissLoader()
     func dismissView()
     func openAppSettings()
+    func showSignOutConfirmation()
 }
 
 class DrawerMenuRouterImplementation: DrawerMenuRouter {
@@ -37,6 +38,15 @@ class DrawerMenuRouterImplementation: DrawerMenuRouter {
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
         if UIApplication.shared.canOpenURL(settingsUrl) {
             UIApplication.shared.open(settingsUrl)
+        }
+    }
+    
+    func showSignOutConfirmation() {
+        controller.showConfimation(title: .Localized.caution,
+                                   message: .Localized.signOutConfirmation,
+                                   cancel: .Localized.cancel,
+                                   confirm: .Localized.confirm) {
+            self.controller.presenter.requestSignOut()
         }
     }
 }

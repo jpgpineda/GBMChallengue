@@ -44,9 +44,11 @@ class StorageContextImplementation: StorageContext {
         return Array(realmDB.objects(model))
     }
     
-    func deleteModel<T: Object>(model: T, completion: @escaping ModelOperationCompletionHandler) {
+    func deleteModel<T: Object>(model: T,
+                                completion: @escaping ModelOperationCompletionHandler) {
         do {
             try realmDB.write {
+                realmDB.add(model, update: .modified)
                 realmDB.delete(model)
                 completion(.success(true))
             }

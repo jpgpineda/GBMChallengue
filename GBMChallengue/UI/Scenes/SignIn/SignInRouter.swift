@@ -40,7 +40,9 @@ class SignInRouterImplementation: SignInRouter {
         DispatchQueue.main.async {
             let navigationController = UINavigationController(rootViewController: viewController)
             navigationController.setupPresentation()
-            self.controller.present(navigationController, animated: true)
+            self.controller.present(navigationController, animated: true) { [weak self] in
+                self?.dismissLoader()
+            }
         }
     }
     

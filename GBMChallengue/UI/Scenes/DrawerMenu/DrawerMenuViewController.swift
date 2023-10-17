@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class DrawerMenuViewController: UIViewController {
     ///////////////////////////////////////
@@ -18,6 +20,10 @@ class DrawerMenuViewController: UIViewController {
     private let configurator = DrawerMenuConfiguratorImplementation()
     var presenter: DrawerMenuPresenter!
     var transitionManager: DrawerTransitionManager?
+    private let signOutBehaviour: BehaviorRelay = BehaviorRelay(value: false)
+    var signOutObservable: Observable<Bool> {
+        return signOutBehaviour.asObservable()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +36,15 @@ class DrawerMenuViewController: UIViewController {
     }
     
     @IBAction func signOut(_ sender: UIButton) {
-        presenter.requestSignOut()
+        presenter.showSignOutConfirmation()
     }
 }
 
 extension DrawerMenuViewController: DrawerMenuView {
+    func notifySignOutRequested() {
+        signOutBehaviour.accept(true)
+    }
+    
     func updateUserInfo(data: UserDTO) {
         userNameLabel.text = data.name + .whiteSpace + data.lastNames
     }

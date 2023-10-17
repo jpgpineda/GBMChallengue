@@ -37,6 +37,7 @@ class TickerDetailViewController: UIViewController {
     var isFilterShowing: Bool = false
     var selectedTime: TimeIntervalType = .today
     var selectedValue: ValueForChartType = .openPrice
+    var isFavorite: Bool = false
     lazy var lineChart: LineChartView = {
         let chartView = LineChartView()
         chartView.rightAxis.enabled = false
@@ -53,6 +54,7 @@ class TickerDetailViewController: UIViewController {
     
     private func setupView() {
         guard let ticker = ticker else { return }
+        presenter.checkIfTickerIsFavorite(ticker: ticker)
         presenter.getTickerDetail(ticker: ticker)
         tickerNameLabel.text = ticker.name
         tickerSymbolLabel.text = ticker.symbol
@@ -75,7 +77,11 @@ class TickerDetailViewController: UIViewController {
     
     @IBAction func addToFavorites(_ sender: UIButton) {
         guard let ticker = ticker else { return }
-        presenter.saveTickerToFavorites(ticker: ticker)
+        if isFavorite {
+            presenter.removeTickerFromFavorites(ticker: ticker)
+        } else {
+            presenter.saveTickerToFavorites(ticker: ticker)
+        }
     }
     
     @IBAction func presentFilterView(_ sender: UIButton) {
@@ -97,6 +103,11 @@ class TickerDetailViewController: UIViewController {
 }
 
 extension TickerDetailViewController: TickerDetailView {
+    func updateFavoriteButtonState(isFavorite: Bool) {
+        self.isFavorite = isFavorite
+        favoriteButton.isFavorite = isFavorite
+    }
+    
     func showSuccess(message: String) {
         favoriteButton.isFavorite = true
         showSuccessAlert(message: message)

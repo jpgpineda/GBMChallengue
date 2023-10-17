@@ -49,7 +49,7 @@ extension FavoriteTickersViewController: FavoriteTickerView {
     
     func updateTickerList(data: [TickerDetailDTO]) {
         tickers = data
-        emptyTickersLabel.isHidden = true
+        emptyTickersLabel.isHidden = !data.isEmpty
         tickerTable.reloadData()
     }
 }
