@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "230D3049-8611-4EFD-A9B0-8A020D328D8C",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:GBMChallengue.xcodeproj",
+        "identifier" : "089C16242AD59FEC00741169",
+        "name" : "GBMChallengueTests"
+      }
+    }
+  ],
+  "version" : 1
+}

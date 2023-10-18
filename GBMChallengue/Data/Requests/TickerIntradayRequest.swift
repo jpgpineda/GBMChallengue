@@ -14,7 +14,7 @@ struct TickerIntradayRequest: ApiRequest {
         if isUnitTest {
             return Host.Mock.tickerDetailMock
         } else {
-            let url = Host.marketStack + "tickers/%@/intraday?access_key=ef4d5df55f0413cbbfc9334f95351573&limit=2"
+            let url = Host.marketStack + "tickers/%@/intraday?access_key=ef4d5df55f0413cbbfc9334f95351573&limit=100"
             return String(format: url, symbol)
         }
     }

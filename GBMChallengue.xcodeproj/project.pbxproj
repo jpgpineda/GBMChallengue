@@ -17,6 +17,11 @@
 		080EEB942ADF09E9008172EB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 080EEB932ADF09E9008172EB /* RxCocoa */; };
 		080EEB962ADF09E9008172EB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 080EEB952ADF09E9008172EB /* RxSwift */; };
 		080EEB982ADF4855008172EB /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB972ADF4855008172EB /* Delay.swift */; };
+		080EEB9A2AE04218008172EB /* GBMBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EEB992AE04218008172EB /* GBMBaseTest.swift */; };
+		080EEB9D2AE04941008172EB /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 080EEB9C2AE04941008172EB /* Realm */; };
+		080EEBA12AE04AA6008172EB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 080EEBA02AE04AA6008172EB /* RxCocoa */; };
+		080EEBA32AE04AC1008172EB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 080EEBA22AE04AC1008172EB /* FirebaseAuth */; };
+		080EEBA52AE04AC1008172EB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 080EEBA42AE04AC1008172EB /* FirebaseFirestore */; };
 		083CF8A02AD77AC3001E95D5 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */; };
 		083CF8A22AD77B07001E95D5 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A12AD77B07001E95D5 /* String+Ext.swift */; };
 		083CF8A42AD77C0D001E95D5 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */; };
@@ -157,6 +162,8 @@
 		080EEB8E2ADDFF5E008172EB /* FavoriteTickersConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTickersConfigurator.swift; sourceTree = "<group>"; };
 		080EEB902ADF010F008172EB /* CredentialDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialDTO.swift; sourceTree = "<group>"; };
 		080EEB972ADF4855008172EB /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		080EEB992AE04218008172EB /* GBMBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMBaseTest.swift; sourceTree = "<group>"; };
+		080EEB9B2AE0473B008172EB /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		083CF89F2AD77AC3001E95D5 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 		083CF8A12AD77B07001E95D5 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		083CF8A32AD77C0D001E95D5 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -296,7 +303,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080EEBA12AE04AA6008172EB /* RxCocoa in Frameworks */,
+				080EEB9D2AE04941008172EB /* Realm in Frameworks */,
 				FE3540CCFEC5434FAFD2FE19 /* Pods_GBMChallengueTests.framework in Frameworks */,
+				080EEBA52AE04AC1008172EB /* FirebaseFirestore in Frameworks */,
+				080EEBA32AE04AC1008172EB /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +488,7 @@
 				089C164D2AD5B57300741169 /* Domain */,
 				089C164F2AD5B5A700741169 /* UI */,
 				089C164B2AD5B53800741169 /* Utils */,
+				080EEB9B2AE0473B008172EB /* TestPlan.xctestplan */,
 			);
 			path = GBMChallengue;
 			sourceTree = "<group>";
@@ -485,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				089C16292AD59FEC00741169 /* GBMChallengueTests.swift */,
+				080EEB992AE04218008172EB /* GBMBaseTest.swift */,
 			);
 			path = GBMChallengueTests;
 			sourceTree = "<group>";
@@ -800,6 +813,12 @@
 				089C16272AD59FEC00741169 /* PBXTargetDependency */,
 			);
 			name = GBMChallengueTests;
+			packageProductDependencies = (
+				080EEB9C2AE04941008172EB /* Realm */,
+				080EEBA02AE04AA6008172EB /* RxCocoa */,
+				080EEBA22AE04AC1008172EB /* FirebaseAuth */,
+				080EEBA42AE04AC1008172EB /* FirebaseFirestore */,
+			);
 			productName = GBMChallengueTests;
 			productReference = 089C16252AD59FEC00741169 /* GBMChallengueTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1120,6 +1139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089C162A2AD59FEC00741169 /* GBMChallengueTests.swift in Sources */,
+				080EEB9A2AE04218008172EB /* GBMBaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1517,6 +1537,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 080EEB922ADF09E9008172EB /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		080EEB9C2AE04941008172EB /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C167F2AD76C9500741169 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		080EEBA02AE04AA6008172EB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 080EEB922ADF09E9008172EB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		080EEBA22AE04AC1008172EB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		080EEBA42AE04AC1008172EB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 089C16762AD76BA600741169 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 		089C16772AD76BA600741169 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
