@@ -65,6 +65,7 @@
 
 // MARK: Welcome
 "begin"                     = "Comenzar";
+"welcomeToGBM"              = "Bienvenido a GBMChallengue";
 
 // MARK: Validation errors
 "emptyField"                = "El campo no puede estar vacío";

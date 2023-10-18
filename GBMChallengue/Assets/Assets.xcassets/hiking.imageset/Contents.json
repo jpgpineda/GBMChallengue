@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "hiking.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

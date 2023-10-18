@@ -32,13 +32,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiking" translatesAutoresizingMaskIntoConstraints="NO" id="EfV-g5-LPP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghD-a2-sUL">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jV1-GG-AdC">
+                                        <rect key="frame" x="24" y="127.99999999999999" width="345" height="38.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localized" value="welcomeToGBM"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jV1-GG-AdC" firstAttribute="leading" secondItem="ghD-a2-sUL" secondAttribute="leading" constant="24" id="And-CE-TLo"/>
+                                    <constraint firstItem="jV1-GG-AdC" firstAttribute="top" secondItem="ghD-a2-sUL" secondAttribute="top" constant="128" id="fJW-4h-d3B"/>
+                                    <constraint firstAttribute="trailing" secondItem="jV1-GG-AdC" secondAttribute="trailing" constant="24" id="ggG-rH-KeE"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxt-jU-0jb" customClass="GBMButton" customModule="GBMChallengue" customModuleProvider="target">
                                 <rect key="frame" x="32" y="757" width="329" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="z8F-ga-Iu1"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localized" value="begin"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="YES"/>
@@ -52,18 +75,30 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bxt-jU-0jb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="00k-Zr-PKd"/>
+                            <constraint firstItem="ghD-a2-sUL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7TT-kO-H17"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EfV-g5-LPP" secondAttribute="trailing" id="M95-ON-L8h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bxt-jU-0jb" secondAttribute="bottom" constant="16" id="O2F-X1-b04"/>
+                            <constraint firstAttribute="bottom" secondItem="ghD-a2-sUL" secondAttribute="bottom" id="QM8-HY-E8M"/>
+                            <constraint firstItem="EfV-g5-LPP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZL1-WR-zb5"/>
+                            <constraint firstItem="EfV-g5-LPP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aip-AY-A7x"/>
+                            <constraint firstItem="ghD-a2-sUL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bIc-XL-17U"/>
+                            <constraint firstItem="ghD-a2-sUL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gAo-u5-gML"/>
+                            <constraint firstAttribute="bottom" secondItem="EfV-g5-LPP" secondAttribute="bottom" id="hg7-CT-LZ6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bxt-jU-0jb" secondAttribute="trailing" constant="32" id="lwJ-0w-lfr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CVT-jk-oWT"/>
+                    <connections>
+                        <outlet property="coverView" destination="ghD-a2-sUL" id="Jhh-gH-aCj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hiking" width="612" height="792"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

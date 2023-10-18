@@ -8,10 +8,15 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    ///////////////////////////////////////
+    // MARK: Outlets
+    ///////////////////////////////////////
+    @IBOutlet weak var coverView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        coverView.setupGradient()
     }
 
     @IBAction func showSignIn(_ sender: GBMButton) {

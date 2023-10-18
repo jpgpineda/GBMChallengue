@@ -12,9 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="GBMChallengue" customModuleProvider="target">
             <connections>
-                <outlet property="emailTextField" destination="vQ7-7K-8dg" id="Ibh-5j-xZy"/>
-                <outlet property="passwordTextField" destination="7F6-wp-ie4" id="rCT-Dd-lzO"/>
-                <outlet property="signInButton" destination="wGE-7r-Wox" id="YRw-Uc-g1f"/>
+                <outlet property="biometricCheckButton" destination="Xp0-Ep-quj" id="NzB-IM-G9n"/>
+                <outlet property="emailTextField" destination="DUr-UH-59T" id="zsZ-ue-h5l"/>
+                <outlet property="faceIdButton" destination="pMm-cb-2W0" id="moM-4b-NlF"/>
+                <outlet property="logoImage" destination="F2n-kj-Vw1" id="FN1-uM-XDL"/>
+                <outlet property="passwordTextField" destination="HDs-iP-ZVu" id="BXI-g1-UYn"/>
+                <outlet property="signInButton" destination="dKl-Kw-v9L" id="rTa-8d-va0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,156 +26,13 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4t-Oy-ccL" customClass="GBMContainer" customModule="GBMChallengue" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="251" width="393" height="601"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MM6-gX-9A6">
-                            <rect key="frame" x="164.33333333333334" y="32" width="64.666666666666657" height="31.333333333333329"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="login"/>
-                            </userDefinedRuntimeAttributes>
-                        </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQ7-7K-8dg" customClass="GBMTextField" customModule="GBMChallengue" customModuleProvider="target">
-                            <rect key="frame" x="16" y="95.333333333333314" width="361" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="4jv-iD-GPJ"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="email"/>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7F6-wp-ie4" customClass="GBMTextField" customModule="GBMChallengue" customModuleProvider="target">
-                            <rect key="frame" x="16" y="167.33333333333331" width="361" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="tbp-ZB-YzO"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
-                                <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="password"/>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGE-7r-Wox" customClass="GBMButton" customModule="GBMChallengue" customModuleProvider="target">
-                            <rect key="frame" x="16" y="321.33333333333337" width="361" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="mK1-6l-bzy"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Button"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="signIn"/>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="NO"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="requestSignIn:" destination="-1" eventType="touchUpInside" id="hbh-5g-LWX"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhf-An-N9l" customClass="GBMDashedButton" customModule="GBMChallengue" customModuleProvider="target">
-                            <rect key="frame" x="169.66666666666666" y="215.33333333333331" width="54" height="34"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Button"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="restorePass"/>
-                            </userDefinedRuntimeAttributes>
-                        </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwI-4L-BzI">
-                            <rect key="frame" x="138" y="544" width="117" height="25"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZN-RG-ebA">
-                                    <rect key="frame" x="0.0" y="2" width="42" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="newAccountQuestion"/>
-                                    </userDefinedRuntimeAttributes>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wf-1a-rRF" customClass="GBMDashedButton" customModule="GBMChallengue" customModuleProvider="target">
-                                    <rect key="frame" x="42" y="-5.6666666666666288" width="75" height="34.333333333333336"/>
-                                    <color key="tintColor" name="mainPurple"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Button">
-                                        <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                    </buttonConfiguration>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="signUp"/>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="presentSignUP:" destination="-1" eventType="touchUpInside" id="iYG-NV-1Ck"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="FZN-RG-ebA" secondAttribute="bottom" constant="2" id="47z-bo-0TG"/>
-                                <constraint firstItem="FZN-RG-ebA" firstAttribute="top" secondItem="UwI-4L-BzI" secondAttribute="top" constant="2" id="6pA-Ij-1oC"/>
-                                <constraint firstItem="1Wf-1a-rRF" firstAttribute="leading" secondItem="FZN-RG-ebA" secondAttribute="trailing" id="7mr-2T-Dru"/>
-                                <constraint firstAttribute="trailing" secondItem="1Wf-1a-rRF" secondAttribute="trailing" id="RKF-c3-LP5"/>
-                                <constraint firstItem="1Wf-1a-rRF" firstAttribute="centerY" secondItem="FZN-RG-ebA" secondAttribute="centerY" constant="-1" id="WD9-B9-z8m"/>
-                                <constraint firstItem="FZN-RG-ebA" firstAttribute="centerY" secondItem="UwI-4L-BzI" secondAttribute="centerY" id="hYl-1U-t1o"/>
-                                <constraint firstItem="FZN-RG-ebA" firstAttribute="leading" secondItem="UwI-4L-BzI" secondAttribute="leading" id="qXN-lZ-bo0"/>
-                            </constraints>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYd-90-ttm" customClass="GBMCheckButton" customModule="GBMChallengue" customModuleProvider="target">
-                            <rect key="frame" x="16" y="281.33333333333337" width="24" height="24"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="24" id="6kH-DY-U0o"/>
-                                <constraint firstAttribute="height" constant="24" id="9ND-Mb-6WZ"/>
-                            </constraints>
-                            <color key="tintColor" systemColor="labelColor"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="Square150x150Logo.scale-200.png">
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                            </state>
-                            <connections>
-                                <action selector="activateBiometric:" destination="-1" eventType="touchUpInside" id="x1h-jt-QTV"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrI-M1-mF6">
-                            <rect key="frame" x="48" y="285" width="35.333333333333343" height="17"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="enableBiometricLogin"/>
-                            </userDefinedRuntimeAttributes>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-kj-Vw1">
+                    <rect key="frame" x="156.66666666666666" y="91" width="80" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="7F6-wp-ie4" secondAttribute="trailing" constant="16" id="5wj-8Y-FDo"/>
-                        <constraint firstItem="Zhf-An-N9l" firstAttribute="top" secondItem="7F6-wp-ie4" secondAttribute="bottom" constant="8" id="9u5-O3-ZP2"/>
-                        <constraint firstAttribute="trailing" secondItem="vQ7-7K-8dg" secondAttribute="trailing" constant="16" id="Ekk-Rx-9PX"/>
-                        <constraint firstAttribute="bottom" secondItem="UwI-4L-BzI" secondAttribute="bottom" constant="32" id="GFK-aq-B3H"/>
-                        <constraint firstItem="wGE-7r-Wox" firstAttribute="leading" secondItem="N4t-Oy-ccL" secondAttribute="leading" constant="16" id="J3h-dd-gPj"/>
-                        <constraint firstAttribute="trailing" secondItem="wGE-7r-Wox" secondAttribute="trailing" constant="16" id="NEu-Sj-MEe"/>
-                        <constraint firstItem="MM6-gX-9A6" firstAttribute="top" secondItem="N4t-Oy-ccL" secondAttribute="top" constant="32" id="WeT-ej-55A"/>
-                        <constraint firstItem="wrI-M1-mF6" firstAttribute="leading" secondItem="qYd-90-ttm" secondAttribute="trailing" constant="8" id="YQ5-Ye-ew0"/>
-                        <constraint firstItem="wrI-M1-mF6" firstAttribute="centerY" secondItem="qYd-90-ttm" secondAttribute="centerY" id="ZCV-ls-s1R"/>
-                        <constraint firstItem="vQ7-7K-8dg" firstAttribute="leading" secondItem="N4t-Oy-ccL" secondAttribute="leading" constant="16" id="ZPP-Rn-7qF"/>
-                        <constraint firstItem="7F6-wp-ie4" firstAttribute="top" secondItem="vQ7-7K-8dg" secondAttribute="bottom" constant="32" id="bEU-1W-e6T"/>
-                        <constraint firstItem="wGE-7r-Wox" firstAttribute="top" secondItem="qYd-90-ttm" secondAttribute="bottom" constant="16" id="bQ9-Zk-cta"/>
-                        <constraint firstItem="Zhf-An-N9l" firstAttribute="centerX" secondItem="N4t-Oy-ccL" secondAttribute="centerX" id="i5I-mU-DXe"/>
-                        <constraint firstItem="qYd-90-ttm" firstAttribute="top" secondItem="Zhf-An-N9l" secondAttribute="bottom" constant="32" id="pdh-LG-76y"/>
-                        <constraint firstItem="UwI-4L-BzI" firstAttribute="centerX" secondItem="N4t-Oy-ccL" secondAttribute="centerX" id="rUA-si-FXc"/>
-                        <constraint firstItem="MM6-gX-9A6" firstAttribute="centerX" secondItem="N4t-Oy-ccL" secondAttribute="centerX" id="sTk-WJ-b7y"/>
-                        <constraint firstItem="qYd-90-ttm" firstAttribute="leading" secondItem="N4t-Oy-ccL" secondAttribute="leading" constant="16" id="v3f-qO-GT9"/>
-                        <constraint firstItem="7F6-wp-ie4" firstAttribute="leading" secondItem="N4t-Oy-ccL" secondAttribute="leading" constant="16" id="vJ5-48-Qc9"/>
-                        <constraint firstItem="vQ7-7K-8dg" firstAttribute="top" secondItem="MM6-gX-9A6" secondAttribute="bottom" constant="32" id="ynG-cX-gaf"/>
+                        <constraint firstAttribute="height" constant="80" id="rqU-mY-wIR"/>
+                        <constraint firstAttribute="width" constant="80" id="zC8-9L-RsU"/>
                     </constraints>
-                </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F2n-kj-Vw1">
-                    <rect key="frame" x="132.66666666666666" y="91" width="127.99999999999997" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="128" id="rqU-mY-wIR"/>
-                        <constraint firstAttribute="width" constant="128" id="zC8-9L-RsU"/>
-                    </constraints>
+                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmW-L6-2uU">
                     <rect key="frame" x="16" y="75" width="24" height="24"/>
@@ -190,25 +50,221 @@
                         <action selector="backToWelcome:" destination="-1" eventType="touchUpInside" id="wDg-Fv-6Gv"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLK-1N-su7" customClass="GBMContainer" customModule="GBMChallengue" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="203" width="393" height="649"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHd-Rx-cce">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="649"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgU-Oo-bHM">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="649"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so5-AG-Lvg">
+                                            <rect key="frame" x="164" y="32" width="65" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="Jpw-bg-zck"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="login"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUr-UH-59T" customClass="GBMTextField" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="96" width="361" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="cB6-V7-SlQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="email"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDs-iP-ZVu" customClass="GBMTextField" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="168" width="361" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="aja-ZA-dpL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="password"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-Kw-v9L" customClass="GBMButton" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="322" width="361" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="vNf-Ti-nOL"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="signIn"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isActive" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="requestSignIn:" destination="-1" eventType="touchUpInside" id="Tvh-Th-cRn"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZX-Qj-lpM" customClass="GBMDashedButton" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="169.66666666666666" y="216" width="54" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="34" id="qHV-yi-Sp5"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="restorePass"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-is-rRQ">
+                                            <rect key="frame" x="138" y="592" width="117" height="25"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEm-5k-wj3">
+                                                    <rect key="frame" x="0.0" y="2" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="newAccountQuestion"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-Mj-yTd" customClass="GBMDashedButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                    <rect key="frame" x="42" y="-5.3333333333333712" width="75" height="34"/>
+                                                    <color key="tintColor" name="mainPurple"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                        <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                                    </buttonConfiguration>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="localized" value="signUp"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="presentSignUP:" destination="-1" eventType="touchUpInside" id="jzh-iV-4gI"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="q7s-Mj-yTd" firstAttribute="leading" secondItem="pEm-5k-wj3" secondAttribute="trailing" id="Eje-r3-XyW"/>
+                                                <constraint firstItem="pEm-5k-wj3" firstAttribute="centerY" secondItem="eSg-is-rRQ" secondAttribute="centerY" id="Kua-Za-LIT"/>
+                                                <constraint firstAttribute="bottom" secondItem="pEm-5k-wj3" secondAttribute="bottom" constant="2" id="LFg-5H-bvG"/>
+                                                <constraint firstItem="q7s-Mj-yTd" firstAttribute="centerY" secondItem="pEm-5k-wj3" secondAttribute="centerY" constant="-1" id="S4l-ny-leE"/>
+                                                <constraint firstItem="pEm-5k-wj3" firstAttribute="top" secondItem="eSg-is-rRQ" secondAttribute="top" constant="2" id="YX4-ZA-oey"/>
+                                                <constraint firstItem="pEm-5k-wj3" firstAttribute="leading" secondItem="eSg-is-rRQ" secondAttribute="leading" id="e7a-w9-YGw"/>
+                                                <constraint firstAttribute="trailing" secondItem="q7s-Mj-yTd" secondAttribute="trailing" id="s8p-fx-Nso"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xp0-Ep-quj" customClass="GBMCheckButton" customModule="GBMChallengue" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="282" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="9y5-pL-7oE"/>
+                                                <constraint firstAttribute="height" constant="24" id="tRb-yg-tSw"/>
+                                            </constraints>
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="Square150x150Logo.scale-200.png">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="activateBiometric:" destination="-1" eventType="touchUpInside" id="4od-qy-upw"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKr-xf-8D4">
+                                            <rect key="frame" x="48" y="285.66666666666669" width="35.666666666666657" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localized" value="enableBiometricLogin"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMm-cb-2W0">
+                                            <rect key="frame" x="180.66666666666666" y="399" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="5KQ-E0-9lQ"/>
+                                                <constraint firstAttribute="width" constant="32" id="bxp-Ce-SGq"/>
+                                            </constraints>
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal">
+                                                <imageReference key="image" image="faceid" catalog="system" symbolScale="large"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="requestBiometricSignUP:" destination="-1" eventType="touchUpInside" id="mm2-xN-Joe"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="dKl-Kw-v9L" firstAttribute="leading" secondItem="NgU-Oo-bHM" secondAttribute="leading" constant="16" id="1ON-CB-VdC"/>
+                                        <constraint firstItem="pMm-cb-2W0" firstAttribute="centerX" secondItem="NgU-Oo-bHM" secondAttribute="centerX" id="48m-iy-lhD"/>
+                                        <constraint firstItem="Xp0-Ep-quj" firstAttribute="leading" secondItem="NgU-Oo-bHM" secondAttribute="leading" constant="16" id="6ic-ho-lgp"/>
+                                        <constraint firstItem="yZX-Qj-lpM" firstAttribute="centerX" secondItem="NgU-Oo-bHM" secondAttribute="centerX" id="7YO-F7-Trm"/>
+                                        <constraint firstItem="DUr-UH-59T" firstAttribute="leading" secondItem="NgU-Oo-bHM" secondAttribute="leading" constant="16" id="AtF-Im-5Gj"/>
+                                        <constraint firstItem="eKr-xf-8D4" firstAttribute="leading" secondItem="Xp0-Ep-quj" secondAttribute="trailing" constant="8" id="DAV-Dm-s3f"/>
+                                        <constraint firstItem="so5-AG-Lvg" firstAttribute="centerX" secondItem="NgU-Oo-bHM" secondAttribute="centerX" id="FDB-Pk-lLT"/>
+                                        <constraint firstItem="HDs-iP-ZVu" firstAttribute="top" secondItem="DUr-UH-59T" secondAttribute="bottom" constant="32" id="FOg-P6-9mX"/>
+                                        <constraint firstItem="eSg-is-rRQ" firstAttribute="centerX" secondItem="NgU-Oo-bHM" secondAttribute="centerX" id="Gx0-7a-nyS"/>
+                                        <constraint firstItem="dKl-Kw-v9L" firstAttribute="top" secondItem="Xp0-Ep-quj" secondAttribute="bottom" constant="16" id="MdX-ZG-hrE"/>
+                                        <constraint firstAttribute="trailing" secondItem="dKl-Kw-v9L" secondAttribute="trailing" constant="16" id="N5c-NH-mCT"/>
+                                        <constraint firstItem="yZX-Qj-lpM" firstAttribute="top" secondItem="HDs-iP-ZVu" secondAttribute="bottom" constant="8" id="Qsx-ZO-CwG"/>
+                                        <constraint firstItem="DUr-UH-59T" firstAttribute="top" secondItem="so5-AG-Lvg" secondAttribute="bottom" constant="32" id="UU5-QR-JCn"/>
+                                        <constraint firstItem="eSg-is-rRQ" firstAttribute="top" secondItem="pMm-cb-2W0" secondAttribute="bottom" constant="161" id="Vtt-6j-3jI"/>
+                                        <constraint firstItem="pMm-cb-2W0" firstAttribute="top" secondItem="dKl-Kw-v9L" secondAttribute="bottom" constant="32" id="XoA-dX-jry"/>
+                                        <constraint firstItem="eKr-xf-8D4" firstAttribute="centerY" secondItem="Xp0-Ep-quj" secondAttribute="centerY" id="Zq9-XQ-Xhj"/>
+                                        <constraint firstItem="Xp0-Ep-quj" firstAttribute="top" secondItem="yZX-Qj-lpM" secondAttribute="bottom" constant="32" id="bTT-GN-9vv"/>
+                                        <constraint firstAttribute="trailing" secondItem="HDs-iP-ZVu" secondAttribute="trailing" constant="16" id="dbc-ur-zga"/>
+                                        <constraint firstAttribute="trailing" secondItem="DUr-UH-59T" secondAttribute="trailing" constant="16" id="fm5-FG-0Zm"/>
+                                        <constraint firstItem="HDs-iP-ZVu" firstAttribute="leading" secondItem="NgU-Oo-bHM" secondAttribute="leading" constant="16" id="iA7-CX-y1m"/>
+                                        <constraint firstAttribute="bottom" secondItem="eSg-is-rRQ" secondAttribute="bottom" constant="32" id="uHK-NF-Ozq"/>
+                                        <constraint firstItem="so5-AG-Lvg" firstAttribute="top" secondItem="NgU-Oo-bHM" secondAttribute="top" constant="32" id="vlL-M6-Bmx"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="NgU-Oo-bHM" secondAttribute="bottom" id="FSg-HO-6jN"/>
+                                <constraint firstAttribute="trailing" secondItem="NgU-Oo-bHM" secondAttribute="trailing" id="K8D-nz-wde"/>
+                                <constraint firstItem="NgU-Oo-bHM" firstAttribute="leading" secondItem="CHd-Rx-cce" secondAttribute="leading" id="Lqk-Fw-9e2"/>
+                                <constraint firstItem="NgU-Oo-bHM" firstAttribute="top" secondItem="CHd-Rx-cce" secondAttribute="top" id="QKy-rL-2kR"/>
+                                <constraint firstItem="NgU-Oo-bHM" firstAttribute="height" secondItem="CHd-Rx-cce" secondAttribute="height" priority="250" id="XdK-Eq-fcu"/>
+                                <constraint firstItem="NgU-Oo-bHM" firstAttribute="width" secondItem="CHd-Rx-cce" secondAttribute="width" id="b60-U7-3yl"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="CHd-Rx-cce" secondAttribute="bottom" id="4rm-mD-gRv"/>
+                        <constraint firstItem="CHd-Rx-cce" firstAttribute="leading" secondItem="zLK-1N-su7" secondAttribute="leading" id="jhD-FV-6Oo"/>
+                        <constraint firstItem="CHd-Rx-cce" firstAttribute="top" secondItem="zLK-1N-su7" secondAttribute="top" id="kEh-0t-HQq"/>
+                        <constraint firstAttribute="trailing" secondItem="CHd-Rx-cce" secondAttribute="trailing" id="tbz-iT-PeE"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="F2n-kj-Vw1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="3Q1-pF-rlK"/>
+                <constraint firstAttribute="bottom" secondItem="zLK-1N-su7" secondAttribute="bottom" id="7Yt-l9-rp6"/>
+                <constraint firstItem="zLK-1N-su7" firstAttribute="top" secondItem="F2n-kj-Vw1" secondAttribute="bottom" constant="32" id="CnH-YC-lD2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zLK-1N-su7" secondAttribute="trailing" id="MUk-Uu-LP3"/>
                 <constraint firstItem="tmW-L6-2uU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="SlU-Ia-48A"/>
-                <constraint firstItem="N4t-Oy-ccL" firstAttribute="top" secondItem="F2n-kj-Vw1" secondAttribute="bottom" constant="32" id="Vvi-od-fsw"/>
                 <constraint firstItem="F2n-kj-Vw1" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ZWU-o1-Sdo"/>
-                <constraint firstItem="N4t-Oy-ccL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="b4J-v4-Wu8"/>
+                <constraint firstItem="zLK-1N-su7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ff9-Nf-u4v"/>
                 <constraint firstItem="tmW-L6-2uU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="gbv-2h-IYX"/>
-                <constraint firstAttribute="bottom" secondItem="N4t-Oy-ccL" secondAttribute="bottom" id="uDU-m9-mNa"/>
-                <constraint firstItem="N4t-Oy-ccL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ved-sq-8Nz"/>
             </constraints>
-            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+            <point key="canvasLocation" x="129.00763358778624" y="-11.971830985915494"/>
         </view>
     </objects>
     <resources>
         <image name="Square150x150Logo.scale-200.png" width="300" height="300"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="faceid" catalog="system" width="128" height="115"/>
+        <image name="logo" width="709" height="709"/>
         <namedColor name="mainPurple">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -217,6 +273,9 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

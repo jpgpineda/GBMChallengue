@@ -68,6 +68,7 @@ extension String {
         
         // MARK: Welcome
         static var begin: String { return getLocalizedString(#function) }
+        static var welcomeToGBM: String { return getLocalizedString(#function) }
         
         // MARK: Validation Errors
         static var emptyField: String { return getLocalizedString(#function) }

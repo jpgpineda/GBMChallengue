@@ -12,6 +12,9 @@ class SignInViewController: UIViewController {
     ///////////////////////////////////////
     // MARK: Outlets
     ///////////////////////////////////////
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var faceIdButton: UIButton!
+    @IBOutlet weak var biometricCheckButton: GBMCheckButton!
     @IBOutlet weak var emailTextField: GBMTextField!
     @IBOutlet weak var passwordTextField: GBMTextField!
     @IBOutlet weak var signInButton: GBMButton!
@@ -31,10 +34,17 @@ class SignInViewController: UIViewController {
     private func setupView() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        logoImage.roundCorners(.allCorners, radius: .fifthTeen)
         emailTextField.text = presenter.getLastSignUser()
+        faceIdButton.isHidden = !presenter.getLocalAuthPref()
+        biometricCheckButton.isChecked = !presenter.getLocalAuthPref()
     }
 
     @IBAction func requestSignIn(_ sender: GBMButton) {
+        presenter.doSignIn()
+    }
+    
+    @IBAction func requestBiometricSignUP(_ sender: Any) {
         presenter.doSignIn()
     }
     

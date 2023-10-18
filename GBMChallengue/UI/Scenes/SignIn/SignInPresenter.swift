@@ -87,7 +87,9 @@ class SignInPresenterImplementation: SignInPresenter {
     }
     
     func getLocalAuthPref() -> Bool {
-        return useCase.getLocalAuthPref()
+        let preference = useCase.getLocalAuthPref()
+        isLocalAuthOn = preference
+        return preference
     }
     
     func getLastSignUser() -> String {
