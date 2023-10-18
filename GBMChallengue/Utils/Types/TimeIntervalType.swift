@@ -6,8 +6,8 @@
 //
 
 enum TimeIntervalType: Int {
-    case today  = 5
-    case week   = 6
-    case month  = 7
-    case year   = 8
+    case today  = 0
+    case week   = 1
+    case month  = 2
+    case year   = 3
 }

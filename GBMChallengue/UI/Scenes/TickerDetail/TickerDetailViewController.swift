@@ -18,6 +18,7 @@ class TickerDetailViewController: UIViewController {
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var stockNameLabel: UILabel!
     @IBOutlet weak var stockAcronymLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var stockCountry: UILabel!
     @IBOutlet weak var openPriceLabel: UILabel!
     @IBOutlet weak var closePriceLabel: UILabel!
@@ -26,6 +27,8 @@ class TickerDetailViewController: UIViewController {
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var chartView: UIView!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet var categoryButtons: [GBMFilterButton]!
+    @IBOutlet var timeButtons: [GBMFilterButton]!
     @IBOutlet weak var dateLabel: UILabel!
     ///////////////////////////////////////
     // MARK: Properties
@@ -69,10 +72,14 @@ class TickerDetailViewController: UIViewController {
     @IBAction func applyFiilter(_ sender: GBMFilterButton) {
         filterView.isHidden = true
         isFilterShowing = false
+        categoryLabel.text = (ValueForChartType(rawValue: sender.tag) ?? .openPrice).getCategoryById()
         selectedValue = ValueForChartType(rawValue: sender.tag) ?? .openPrice
         presenter.setupCharData(timeInterval: selectedTime,
                                 valueForChart: selectedValue,
                                 intraday: intraday)
+        categoryButtons.forEach {
+            $0.isSelected = $0 == sender
+        }
     }
     
     @IBAction func addToFavorites(_ sender: UIButton) {
@@ -99,6 +106,9 @@ class TickerDetailViewController: UIViewController {
         presenter.setupCharData(timeInterval: selectedTime,
                                 valueForChart: selectedValue,
                                 intraday: intraday)
+        timeButtons.forEach {
+            $0.isSelected = $0 == sender
+        }
     }
 }
 
@@ -121,7 +131,7 @@ extension TickerDetailViewController: TickerDetailView {
         set.setColor(.label)
         set.fill = ColorFill(color: .label)
         set.fillAlpha = 0.8
-        set.highlightColor = .systemBlue
+        set.highlightColor = .label
         let data = LineChartData(dataSet: set)
         lineChart.data = data
     }

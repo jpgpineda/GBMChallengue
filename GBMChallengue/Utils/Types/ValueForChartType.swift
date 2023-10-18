@@ -11,4 +11,19 @@ enum ValueForChartType: Int {
     case highPrice  = 2
     case lowPrice   = 3
     case volume     = 4
+    
+    func getCategoryById() -> String {
+        switch self {
+        case .openPrice:
+            return .Localized.openPrice
+        case .closePrice:
+            return .Localized.closePrice
+        case .highPrice:
+            return .Localized.highPrice
+        case .lowPrice:
+            return .Localized.lowPrice
+        case .volume:
+            return .Localized.volume
+        }
+    }
 }

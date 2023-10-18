@@ -11,10 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TickerDetailViewController" customModule="GBMChallengue" customModuleProvider="target">
             <connections>
+                <outlet property="categoryLabel" destination="fK7-yE-wwV" id="8He-6x-XMy"/>
                 <outlet property="chartView" destination="b02-o4-vW5" id="bn0-dL-K77"/>
                 <outlet property="closePriceLabel" destination="gDn-vS-Obr" id="Uj1-Ya-QzO"/>
                 <outlet property="dateLabel" destination="ABe-U9-HIh" id="DfQ-Xi-avv"/>
-                <outlet property="favoriteButton" destination="bIe-qa-fbQ" id="ytT-ek-s11"/>
+                <outlet property="favoriteButton" destination="bIe-qa-fbQ" id="0gl-yd-17T"/>
                 <outlet property="filterView" destination="llz-gl-HNZ" id="hfw-XL-QuI"/>
                 <outlet property="highPriceLabel" destination="O09-Re-zQu" id="Z82-hP-0vB"/>
                 <outlet property="lowPriceLabel" destination="FAN-ZA-qE9" id="dO9-Fd-xXx"/>
@@ -26,6 +27,15 @@
                 <outlet property="tickerSymbolLabel" destination="GNj-tz-iRn" id="hKT-Jd-YqG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="volumeLabel" destination="SZ2-XJ-LIG" id="fub-dc-CvP"/>
+                <outletCollection property="timeButtons" destination="cgu-Sk-4QI" collectionClass="NSMutableArray" id="PHJ-yt-Vle"/>
+                <outletCollection property="categoryButtons" destination="ZYu-4J-YfX" collectionClass="NSMutableArray" id="LdL-h4-apr"/>
+                <outletCollection property="categoryButtons" destination="hTE-6e-FUm" collectionClass="NSMutableArray" id="YcN-cW-7xB"/>
+                <outletCollection property="categoryButtons" destination="Zds-ji-l8l" collectionClass="NSMutableArray" id="BdH-DK-37B"/>
+                <outletCollection property="categoryButtons" destination="NVJ-MF-8mI" collectionClass="NSMutableArray" id="QL7-Ef-oa6"/>
+                <outletCollection property="categoryButtons" destination="MgF-0H-jtW" collectionClass="NSMutableArray" id="uAK-AC-5Lt"/>
+                <outletCollection property="timeButtons" destination="dxk-AM-bxy" collectionClass="NSMutableArray" id="NJL-ij-HNL"/>
+                <outletCollection property="timeButtons" destination="5MZ-Is-z82" collectionClass="NSMutableArray" id="dKS-za-bIO"/>
+                <outletCollection property="timeButtons" destination="6Kb-4M-pIN" collectionClass="NSMutableArray" id="3GZ-DY-qjX"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -220,10 +230,10 @@
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="1D"/>
                                                                     <connections>
-                                                                        <action selector="filterByDate:" destination="-1" eventType="touchUpInside" id="XgV-z0-Q45"/>
+                                                                        <action selector="filterByDate:" destination="-1" eventType="touchUpInside" id="7mr-j3-aLm"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-AM-bxy" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-AM-bxy" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
                                                                     <rect key="frame" x="97" y="0.0" width="89" height="32"/>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="1S"/>
@@ -231,7 +241,7 @@
                                                                         <action selector="filterByDate:" destination="-1" eventType="touchUpInside" id="bHo-IY-F5w"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MZ-Is-z82" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5MZ-Is-z82" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
                                                                     <rect key="frame" x="194" y="0.0" width="89" height="32"/>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="1M"/>
@@ -239,7 +249,7 @@
                                                                         <action selector="filterByDate:" destination="-1" eventType="touchUpInside" id="gIy-UX-iVN"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kb-4M-pIN" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
+                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kb-4M-pIN" customClass="GBMFilterButton" customModule="GBMChallengue" customModuleProvider="target">
                                                                     <rect key="frame" x="291" y="0.0" width="89" height="32"/>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="1A"/>
