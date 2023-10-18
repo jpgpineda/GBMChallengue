@@ -119,6 +119,9 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="localized" value="restorePass"/>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="restorePassword:" destination="-1" eventType="touchUpInside" id="sYD-cx-R1S"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSg-is-rRQ">
                                             <rect key="frame" x="138" y="592" width="117" height="25"/>

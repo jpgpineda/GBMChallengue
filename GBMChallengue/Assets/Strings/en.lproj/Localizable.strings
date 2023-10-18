@@ -62,10 +62,15 @@
 "delete"                    = "Eliminar";
 "confirm"                   = "Si";
 "cancel"                    = "Cancelar";
+"continueTitle"             = "Continuar";
 
 // MARK: Welcome
 "begin"                     = "Comenzar";
 "welcomeToGBM"              = "Bienvenido a GBMChallengue";
+
+// MARK: Restore password
+"restoreTitle"              = "¿Olvidaste tu contraseña?";
+"restoreDescription"        = "Ingresa el correo con el que te registraste para generar una nueva contraseña";
 
 // MARK: Validation errors
 "emptyField"                = "El campo no puede estar vacío";
@@ -79,3 +84,4 @@
 "accountCreated"            = "Tu cuenta ha sido creada satisfactoriamente";
 "tickerSaved"               = "Tu ticker se ha guardado satisfactoriamente";
 "tickerDeleted"             = "Tu ticker se ha eliminado satisfactoriamente";
+"passwordResetLinkSend"     = "Se ha enviado un enlace a tu correo electronico";

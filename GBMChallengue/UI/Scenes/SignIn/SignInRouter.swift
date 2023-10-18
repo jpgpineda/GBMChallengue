@@ -32,7 +32,8 @@ class SignInRouterImplementation: SignInRouter {
     }
     
     func presentRestorePassword() {
-        
+        guard let viewController = ModuleManager.accessDependency.makeRestorePasswordViewController() else { return }
+        controller.show(viewController, sender: nil)
     }
     
     func presentTickerList() {

@@ -118,7 +118,7 @@ class SignInPresenterImplementation: SignInPresenter {
     }
     
     func presentRestorePassword() {
-        
+        router.presentRestorePassword()
     }
     
     func presentSignUp() {

@@ -12,6 +12,7 @@ protocol AccessUseCase {
     func requestSignOut() async -> ApiResult<Bool>
     func saveLocalAuthPref(isEnabled: Bool)
     func getLocalAuthPref() -> Bool
+    func sendRestorePasswordLink(email: String) async -> ApiResult<Bool>
 }
 
 class AccessUseCaseImplementation: AccessUseCase {
@@ -39,5 +40,9 @@ class AccessUseCaseImplementation: AccessUseCase {
     
     func getLocalAuthPref() -> Bool {
         return apiGateway.getLocalAuthPref()
+    }
+    
+    func sendRestorePasswordLink(email: String) async -> ApiResult<Bool> {
+        return await apiGateway.sendRestorePasswordLink(email: email)
     }
 }

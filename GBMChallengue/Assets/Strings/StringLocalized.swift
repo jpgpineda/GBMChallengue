@@ -65,10 +65,15 @@ extension String {
         static var delete: String { return getLocalizedString(#function) }
         static var confirm: String { return getLocalizedString(#function) }
         static var cancel: String { return getLocalizedString(#function) }
+        static var continueTitle: String { return getLocalizedString(#function) }
         
         // MARK: Welcome
         static var begin: String { return getLocalizedString(#function) }
         static var welcomeToGBM: String { return getLocalizedString(#function) }
+        
+        // MARK: Restore password
+        static var restoreTitle: String { return getLocalizedString(#function) }
+        static var restoreDescription: String { return getLocalizedString(#function) }
         
         // MARK: Validation Errors
         static var emptyField: String { return getLocalizedString(#function) }
@@ -82,6 +87,7 @@ extension String {
         static var accountCreated: String { return getLocalizedString(#function) }
         static var tickerSaved: String { return getLocalizedString(#function) }
         static var tickerDeleted: String { return getLocalizedString(#function) }
+        static var passwordResetLinkSend: String { return getLocalizedString(#function) }
         
         internal static func getLocalizedString(_ key: String) -> String {
             return NSLocalizedString(key, comment: key)

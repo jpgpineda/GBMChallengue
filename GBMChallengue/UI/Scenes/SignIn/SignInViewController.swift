@@ -40,6 +40,10 @@ class SignInViewController: UIViewController {
         biometricCheckButton.isChecked = !presenter.getLocalAuthPref()
     }
 
+    @IBAction func restorePassword(_ sender: GBMDashedButton) {
+        presenter.presentRestorePassword()
+    }
+    
     @IBAction func requestSignIn(_ sender: GBMButton) {
         presenter.doSignIn()
     }

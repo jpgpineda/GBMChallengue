@@ -16,6 +16,7 @@ protocol AccessApiGateway {
     func requestSignOut() async -> ApiResult<Bool>
     func saveLocalAuthPref(isEnabled: Bool)
     func getLocalAuthPref() -> Bool
+    func sendRestorePasswordLink(email: String) async -> ApiResult<Bool>
 }
 
 class AccessApiGatewayImplementation: AccessApiGateway {
@@ -71,5 +72,14 @@ class AccessApiGatewayImplementation: AccessApiGateway {
     
     func getLocalAuthPref() -> Bool {
         return UserPrefs.shared.getIsLocalAuthEnabled()
+    }
+    
+    func sendRestorePasswordLink(email: String) async -> ApiResult<Bool> {
+        do {
+            try await auth.sendPasswordReset(withEmail: email)
+            return .success(true)
+        } catch {
+            return .failure(ApiError.requestFailed(description: error.localizedDescription))
+        }
     }
 }
