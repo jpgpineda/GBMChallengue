@@ -16,7 +16,8 @@ protocol TickerListPresenter {
     var view: TickerListView { get set }
     var router: TickerListRouter { get set }
     var useCase: TickerUseCase { get set }
-    func requestTickers(offSet: Int?)
+    var isPaginating: Bool { get set }
+    func requestTickers(pagination: Bool, offSet: Int?)
     func presentTickerDetail(ticker: TickerDetailDTO)
     func presentFavoriteTickers()
     func presentDrawerMenu()
@@ -27,6 +28,7 @@ class TickerListPresenterImplementation: TickerListPresenter {
     internal var router: TickerListRouter
     internal var useCase: TickerUseCase
     var tickers: [TickerDetailDTO] = [TickerDetailDTO]()
+    var isPaginating: Bool = false
     
     init(view: TickerListView,
          router: TickerListRouter,
@@ -36,7 +38,10 @@ class TickerListPresenterImplementation: TickerListPresenter {
         self.useCase = useCase
     }
     
-    func requestTickers(offSet: Int?) {
+    func requestTickers(pagination: Bool, offSet: Int?) {
+        if pagination {
+            isPaginating = true
+        }
         router.showLoader()
         let parameters = TickerRequest(offSet: offSet)
         Task {
@@ -45,14 +50,15 @@ class TickerListPresenterImplementation: TickerListPresenter {
             switch response {
             case .success(let tickers):
                 self.tickers = tickers.tickers
-                if offSet != nil {
-                    self.tickers.append(contentsOf: tickers.tickers)
-                }
                 DispatchQueue.main.async {
                     self.view.updateTickerList(tickers: self.tickers)
+                    if pagination {
+                        self.isPaginating = false
+                    }
                 }
             case .failure(let error):
                 view.showFailure(message: error.localizedDescription)
+                isPaginating = false
             }
         }
     }

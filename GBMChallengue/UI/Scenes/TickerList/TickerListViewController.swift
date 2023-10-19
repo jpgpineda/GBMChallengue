@@ -19,9 +19,8 @@ class TickerListViewController: UIViewController {
     private let configurator = TickerListConfiguratorImplementation()
     var presenter: TickerListPresenter!
     var tickers: [TickerDetailDTO] = [TickerDetailDTO]()
-    var currentOffset: Int = .zero
+    var currentOffset: Int = 100
     var currentLimit: Int = .zero
-    private let refreshControl = UIRefreshControl()
     let bag = DisposeBag()
     
     override func viewDidLoad() {
@@ -32,16 +31,14 @@ class TickerListViewController: UIViewController {
     }
     
     private func setupView() {
-        presenter.requestTickers(offSet: nil)
+        presenter.requestTickers(pagination: false, offSet: nil)
         tickersTableView.registerCell(TickerTableViewCell.identifier)
         tickersTableView.dataSource = self
         tickersTableView.delegate = self
-        refreshControl.addTarget(self, action: #selector(loadMoreTickers), for: .valueChanged)
-        tickersTableView.refreshControl = refreshControl
     }
     
-    @objc private func loadMoreTickers() {
-        presenter.requestTickers(offSet: currentOffset)
+    private func loadMoreTickers() {
+        presenter.requestTickers(pagination: true, offSet: currentOffset)
     }
     
     @IBAction func presentFavorites(_ sender: UIButton) {
@@ -59,8 +56,8 @@ extension TickerListViewController: TickerListView {
     }
     
     func updateTickerList(tickers: [TickerDetailDTO]) {
-        self.tickers = tickers
-        refreshControl.endRefreshing()
+        self.tickers.append(contentsOf: tickers)
+        currentOffset += 100
         tickersTableView.reloadData()
     }
 }
@@ -75,9 +72,14 @@ extension TickerListViewController: UITableViewDataSource {
         cell.setupView(ticker: tickers[indexPath.row])
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == tickers.count - 1 {
+}
+
+extension TickerListViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (tickersTableView.contentSize.height-100-scrollView.frame.size.height) {
+            guard !presenter.isPaginating else { return }
+            tickersTableView.alwaysBounceVertical = false
             loadMoreTickers()
         }
     }
