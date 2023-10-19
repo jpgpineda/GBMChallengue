@@ -11,6 +11,7 @@ class GBMCheckButton: UIButton {
     let checkedImage = UIImage(systemName: "square.fill")
     let uncheckedImage = UIImage(systemName: "square")
     
+    @IBInspectable
     var isChecked: Bool = false {
         didSet {
             if isChecked {

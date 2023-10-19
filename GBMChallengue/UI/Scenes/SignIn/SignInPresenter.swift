@@ -24,7 +24,7 @@ protocol SignInPresenter {
     func requestBiometricLogin()
     func presentRestorePassword()
     func presentSignUp()
-    func getLocalAuthPref() -> Bool
+    func getLocalAuthPref() -> Bool?
     func getLastSignUser() -> String
     func doSignIn()
     func dismissScreen()
@@ -70,7 +70,8 @@ class SignInPresenterImplementation: SignInPresenter {
     }
     
     func requestBiometricLogin() {
-        if useCase.getLocalAuthPref() {
+        guard let localPref = useCase.getLocalAuthPref() else { return }
+        if localPref {
             guard let credentials = userUseCase.canRetrieveEncryptedCrendentials(email: userUseCase.getLastSignedUser()) else { return }
             email = credentials.email
             password = credentials.password
@@ -86,8 +87,8 @@ class SignInPresenterImplementation: SignInPresenter {
         }
     }
     
-    func getLocalAuthPref() -> Bool {
-        let preference = useCase.getLocalAuthPref()
+    func getLocalAuthPref() -> Bool? {
+        guard let preference = useCase.getLocalAuthPref() else { return nil }
         isLocalAuthOn = preference
         return preference
     }

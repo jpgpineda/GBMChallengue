@@ -61,8 +61,8 @@ class TickerDetailViewController: UIViewController {
         presenter.getTickerDetail(ticker: ticker)
         tickerNameLabel.text = ticker.name
         tickerSymbolLabel.text = ticker.symbol
-        stockAcronymLabel.text = ticker.stock.acronym
         stockCountry.text = ticker.stock.country
+        stockAcronymLabel.text = ticker.stock.acronym
         chartView.addSubview(lineChart)
         lineChart.centerInSuperview()
         lineChart.width(to: chartView)
@@ -147,6 +147,7 @@ extension TickerDetailViewController: TickerDetailView {
     
     func updateInfo(intraday: TickerIntradayDTO) {
         self.intraday = intraday.tickerDetail.intraday
+        stockNameLabel.text = intraday.tickerDetail.name
         presenter.setupCharData(timeInterval: selectedTime,
                                 valueForChart: selectedValue,
                                 intraday: self.intraday)

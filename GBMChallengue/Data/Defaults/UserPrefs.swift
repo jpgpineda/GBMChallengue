@@ -20,8 +20,8 @@ struct UserPrefs {
         defaults.set(isEnabled, forKey: UserKeys.isLocalAuthEnabled.rawValue)
     }
     
-    internal func getIsLocalAuthEnabled() -> Bool {
-        return defaults.bool(forKey: UserKeys.isLocalAuthEnabled.rawValue)
+    internal func getIsLocalAuthEnabled() -> Bool? {
+        return defaults.object(forKey: UserKeys.isLocalAuthEnabled.rawValue) as? Bool
     }
     
     internal func saveLastSignedUser(email: String) {

@@ -15,7 +15,7 @@ protocol AccessApiGateway {
     func createUser(parameters: SignUpRequest) async -> ApiResult<Bool>
     func requestSignOut() async -> ApiResult<Bool>
     func saveLocalAuthPref(isEnabled: Bool)
-    func getLocalAuthPref() -> Bool
+    func getLocalAuthPref() -> Bool?
     func sendRestorePasswordLink(email: String) async -> ApiResult<Bool>
 }
 
@@ -70,7 +70,7 @@ class AccessApiGatewayImplementation: AccessApiGateway {
         UserPrefs.shared.saveIsLocalAuthEnabled(isEnabled: isEnabled)
     }
     
-    func getLocalAuthPref() -> Bool {
+    func getLocalAuthPref() -> Bool? {
         return UserPrefs.shared.getIsLocalAuthEnabled()
     }
     

@@ -27,7 +27,6 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(controller: self)
-        presenter.requestBiometricLogin()
         setupView()
     }
     
@@ -36,8 +35,10 @@ class SignInViewController: UIViewController {
         passwordTextField.delegate = self
         logoImage.roundCorners(.allCorners, radius: .fifthTeen)
         emailTextField.text = presenter.getLastSignUser()
-        faceIdButton.isHidden = !presenter.getLocalAuthPref()
-        biometricCheckButton.isChecked = !presenter.getLocalAuthPref()
+        guard let localPreference = presenter.getLocalAuthPref() else { return }
+        faceIdButton.isHidden = !localPreference
+        presenter.requestBiometricLogin()
+        biometricCheckButton.isChecked = !localPreference
     }
 
     @IBAction func restorePassword(_ sender: GBMDashedButton) {

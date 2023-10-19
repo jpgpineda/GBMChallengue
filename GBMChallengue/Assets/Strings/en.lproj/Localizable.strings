@@ -75,7 +75,7 @@
 // MARK: Validation errors
 "emptyField"                = "El campo no puede estar vacío";
 "invalidEmail"              = "El correo no tiene un formato válido";
-"invalidPassword"           = "La contraseña debe tener al menos 8 caracteres";
+"invalidPassword"           = "La contraseña debe tener al menos 8 caracteres y al menos un numero";
 "invalidBiometric"          = "No pudimos identificarte, intentalo de nuevo";
 "biometricUnavailable"      = "Tu dispositivo no permite autenticación biometrica";
 

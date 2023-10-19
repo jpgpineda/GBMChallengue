@@ -77,7 +77,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="cB6-V7-SlQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="hintLocalized" value="email"/>
                                             </userDefinedRuntimeAttributes>
@@ -172,6 +172,9 @@
                                             <state key="normal" image="Square150x150Logo.scale-200.png">
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                             </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isChecked" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="activateBiometric:" destination="-1" eventType="touchUpInside" id="4od-qy-upw"/>
                                             </connections>

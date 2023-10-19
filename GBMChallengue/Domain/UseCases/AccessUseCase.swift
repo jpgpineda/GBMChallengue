@@ -11,7 +11,7 @@ protocol AccessUseCase {
     func createUser(parameters: SignUpRequest) async -> ApiResult<Bool>
     func requestSignOut() async -> ApiResult<Bool>
     func saveLocalAuthPref(isEnabled: Bool)
-    func getLocalAuthPref() -> Bool
+    func getLocalAuthPref() -> Bool?
     func sendRestorePasswordLink(email: String) async -> ApiResult<Bool>
 }
 
@@ -38,7 +38,7 @@ class AccessUseCaseImplementation: AccessUseCase {
         apiGateway.saveLocalAuthPref(isEnabled: isEnabled)
     }
     
-    func getLocalAuthPref() -> Bool {
+    func getLocalAuthPref() -> Bool? {
         return apiGateway.getLocalAuthPref()
     }
     
