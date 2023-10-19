@@ -92,6 +92,10 @@
 		086007BC2ADDEE58007BB5F1 /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086007BB2ADDEE58007BB5F1 /* DrawerSlideAnimation.swift */; };
 		086007BF2ADDF1D2007BB5F1 /* StorageContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086007BE2ADDF1D2007BB5F1 /* StorageContext.swift */; };
 		086007C12ADDF353007BB5F1 /* TickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086007C02ADDF353007BB5F1 /* TickerModel.swift */; };
+		089834852AE188F00034475A /* ToolsDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089834812AE188EF0034475A /* ToolsDependency.swift */; };
+		089834862AE188F00034475A /* ModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089834822AE188EF0034475A /* ModuleManager.swift */; };
+		089834872AE188F00034475A /* AccessDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089834832AE188F00034475A /* AccessDependency.swift */; };
+		089834882AE188F00034475A /* HomeDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089834842AE188F00034475A /* HomeDependency.swift */; };
 		089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16122AD59FEA00741169 /* AppDelegate.swift */; };
 		089C16152AD59FEA00741169 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16142AD59FEA00741169 /* SceneDelegate.swift */; };
 		089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C16162AD59FEA00741169 /* WelcomeViewController.swift */; };
@@ -127,10 +131,6 @@
 		08A2E5192AE069EF00D3695D /* RestorePasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2E5182AE069EF00D3695D /* RestorePasswordRouter.swift */; };
 		08A2E51B2AE06A5E00D3695D /* RestorePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2E51A2AE06A5E00D3695D /* RestorePasswordPresenter.swift */; };
 		08A2E51D2AE06B3D00D3695D /* RestorePasswordConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2E51C2AE06B3D00D3695D /* RestorePasswordConfigurator.swift */; };
-		08A2E5402AE1873700D3695D /* AccessDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2E53C2AE1873600D3695D /* AccessDependency.swift */; };
-		08A2E5412AE1873700D3695D /* HomeDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2E53D2AE1873700D3695D /* HomeDependency.swift */; };
-		08A2E5422AE1873700D3695D /* ModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2E53E2AE1873700D3695D /* ModuleManager.swift */; };
-		08A2E5432AE1873700D3695D /* ToolsDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A2E53F2AE1873700D3695D /* ToolsDependency.swift */; };
 		08CA6B662ADCB8D500650BFC /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA6B652ADCB8D500650BFC /* Date+Ext.swift */; };
 		08CA6B682ADCBFF500650BFC /* UserPrefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA6B672ADCBFF500650BFC /* UserPrefs.swift */; };
 		08CA6B6A2ADCC10200650BFC /* GBMCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA6B692ADCC10200650BFC /* GBMCheckButton.swift */; };
@@ -239,6 +239,10 @@
 		086007BB2ADDEE58007BB5F1 /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
 		086007BE2ADDF1D2007BB5F1 /* StorageContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageContext.swift; sourceTree = "<group>"; };
 		086007C02ADDF353007BB5F1 /* TickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerModel.swift; sourceTree = "<group>"; };
+		089834812AE188EF0034475A /* ToolsDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsDependency.swift; sourceTree = "<group>"; };
+		089834822AE188EF0034475A /* ModuleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleManager.swift; sourceTree = "<group>"; };
+		089834832AE188F00034475A /* AccessDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessDependency.swift; sourceTree = "<group>"; };
+		089834842AE188F00034475A /* HomeDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDependency.swift; sourceTree = "<group>"; };
 		089C160F2AD59FEA00741169 /* GBMChallengue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBMChallengue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089C16122AD59FEA00741169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089C16142AD59FEA00741169 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,10 +275,6 @@
 		08A2E5182AE069EF00D3695D /* RestorePasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordRouter.swift; sourceTree = "<group>"; };
 		08A2E51A2AE06A5E00D3695D /* RestorePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordPresenter.swift; sourceTree = "<group>"; };
 		08A2E51C2AE06B3D00D3695D /* RestorePasswordConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorePasswordConfigurator.swift; sourceTree = "<group>"; };
-		08A2E53C2AE1873600D3695D /* AccessDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessDependency.swift; sourceTree = "<group>"; };
-		08A2E53D2AE1873700D3695D /* HomeDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDependency.swift; sourceTree = "<group>"; };
-		08A2E53E2AE1873700D3695D /* ModuleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleManager.swift; sourceTree = "<group>"; };
-		08A2E53F2AE1873700D3695D /* ToolsDependency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsDependency.swift; sourceTree = "<group>"; };
 		08CA6B652ADCB8D500650BFC /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		08CA6B672ADCBFF500650BFC /* UserPrefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrefs.swift; sourceTree = "<group>"; };
 		08CA6B692ADCC10200650BFC /* GBMCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMCheckButton.swift; sourceTree = "<group>"; };
@@ -464,6 +464,17 @@
 			path = StorageContext;
 			sourceTree = "<group>";
 		};
+		089834802AE188CF0034475A /* ViewDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				089834832AE188F00034475A /* AccessDependency.swift */,
+				089834842AE188F00034475A /* HomeDependency.swift */,
+				089834822AE188EF0034475A /* ModuleManager.swift */,
+				089834812AE188EF0034475A /* ToolsDependency.swift */,
+			);
+			path = ViewDependencies;
+			sourceTree = "<group>";
+		};
 		089C16062AD59FEA00741169 = {
 			isa = PBXGroup;
 			children = (
@@ -552,8 +563,8 @@
 		089C164B2AD5B53800741169 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				089834802AE188CF0034475A /* ViewDependencies */,
 				083CF8D92AD89663001E95D5 /* Constants */,
-				08A2E53B2AE1872C00D3695D /* Dependencies */,
 				089C164C2AD5B53E00741169 /* Extensions */,
 				089C165A2AD5B66500741169 /* Tools */,
 				089C16572AD5B61500741169 /* Types */,
@@ -738,17 +749,6 @@
 				08A2E5152AE069DB00D3695D /* RestorePasswordViewController.xib */,
 			);
 			path = RestorePassword;
-			sourceTree = "<group>";
-		};
-		08A2E53B2AE1872C00D3695D /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				08A2E53C2AE1873600D3695D /* AccessDependency.swift */,
-				08A2E53D2AE1873700D3695D /* HomeDependency.swift */,
-				08A2E53E2AE1873700D3695D /* ModuleManager.swift */,
-				08A2E53F2AE1873700D3695D /* ToolsDependency.swift */,
-			);
-			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		08D3F7C22AD775560088C29E /* Components */ = {
@@ -1063,7 +1063,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A2E5432AE1873700D3695D /* ToolsDependency.swift in Sources */,
 				083CF8C92AD865C3001E95D5 /* SignUpViewController.swift in Sources */,
 				083CF8FC2AD9FB4C001E95D5 /* TickerTableViewCell.swift in Sources */,
 				086007AB2ADDDD8B007BB5F1 /* DrawerMenuPresenter.swift in Sources */,
@@ -1072,12 +1071,10 @@
 				083CF8BC2AD7B869001E95D5 /* SignInConfigurator.swift in Sources */,
 				089C16682AD60C1500741169 /* ApiRequestProtocol.swift in Sources */,
 				083CF8FF2AD9FE20001E95D5 /* UITableView+Ext.swift in Sources */,
-				08A2E5402AE1873700D3695D /* AccessDependency.swift in Sources */,
 				089C16702AD615C500741169 /* Ticker.swift in Sources */,
 				08A2E5162AE069DB00D3695D /* RestorePasswordViewController.swift in Sources */,
 				083CF8C32AD7BC26001E95D5 /* UIViewController+Ext.swift in Sources */,
 				086007C12ADDF353007BB5F1 /* TickerModel.swift in Sources */,
-				08A2E5412AE1873700D3695D /* HomeDependency.swift in Sources */,
 				080EEB842ADDF468008172EB /* StockModel.swift in Sources */,
 				083CF9102ADA5A18001E95D5 /* GBMFilterButton.swift in Sources */,
 				083CF8CC2AD866A9001E95D5 /* SignUpRouter.swift in Sources */,
@@ -1100,6 +1097,7 @@
 				089C16172AD59FEA00741169 /* WelcomeViewController.swift in Sources */,
 				086007BF2ADDF1D2007BB5F1 /* StorageContext.swift in Sources */,
 				083CF8F12AD90840001E95D5 /* TickerDetailViewController.swift in Sources */,
+				089834862AE188F00034475A /* ModuleManager.swift in Sources */,
 				080EEB882ADDFD10008172EB /* FavoriteTickersViewController.swift in Sources */,
 				086007A92ADDD983007BB5F1 /* DrawerMenuRouter.swift in Sources */,
 				083CF8F42AD9F5F1001E95D5 /* TickerListRouter.swift in Sources */,
@@ -1121,6 +1119,7 @@
 				083CF9262ADC9050001E95D5 /* ValueForChartType.swift in Sources */,
 				089C166C2AD611DC00741169 /* RequestManager.swift in Sources */,
 				089C16892AD7725700741169 /* SignInViewController.swift in Sources */,
+				089834872AE188F00034475A /* AccessDependency.swift in Sources */,
 				089C16642AD6028B00741169 /* ApiClient.swift in Sources */,
 				08A2E5192AE069EF00D3695D /* RestorePasswordRouter.swift in Sources */,
 				086007AF2ADDDE32007BB5F1 /* UserDTO.swift in Sources */,
@@ -1136,6 +1135,7 @@
 				089C16472AD5B50000741169 /* StringLocalized.swift in Sources */,
 				083CF8A42AD77C0D001E95D5 /* UIView+Ext.swift in Sources */,
 				083CF8B02AD785AE001E95D5 /* GBMDashedButton.swift in Sources */,
+				089834882AE188F00034475A /* HomeDependency.swift in Sources */,
 				083CF8C02AD7BA63001E95D5 /* LoaderViewController.swift in Sources */,
 				083CF9242ADC8F9F001E95D5 /* TimeIntervalType.swift in Sources */,
 				083CF8ED2AD9041E001E95D5 /* UINavigationController+Ext.swift in Sources */,
@@ -1151,7 +1151,6 @@
 				083CF8D42AD89010001E95D5 /* AccessApiGateway.swift in Sources */,
 				083CF8D82AD89433001E95D5 /* SignUpRequest.swift in Sources */,
 				080EEB8D2ADDFDCC008172EB /* FavoriteTickerPresenter.swift in Sources */,
-				08A2E5422AE1873700D3695D /* ModuleManager.swift in Sources */,
 				083CF8DB2AD89670001E95D5 /* FirebaseCollections.swift in Sources */,
 				089C166E2AD6154400741169 /* TickerApiGateway.swift in Sources */,
 				083CF8E52AD901D2001E95D5 /* DrawerMenuViewController.swift in Sources */,
@@ -1159,6 +1158,7 @@
 				086007BA2ADDECEA007BB5F1 /* DrawerPresentationController.swift in Sources */,
 				086007BC2ADDEE58007BB5F1 /* DrawerSlideAnimation.swift in Sources */,
 				083CF9062ADA009F001E95D5 /* TickerDetailDTO.swift in Sources */,
+				089834852AE188F00034475A /* ToolsDependency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
