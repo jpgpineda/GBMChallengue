@@ -1,0 +1,6 @@
+framework module Pods_GBMChallengueTests {
+  umbrella header "Pods-GBMChallengueTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
