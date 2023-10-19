@@ -31,15 +31,12 @@
 		083CF8AC2AD7836E001E95D5 /* UITextfield+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8AB2AD7836D001E95D5 /* UITextfield+Ext.swift */; };
 		083CF8AE2AD78534001E95D5 /* GBMContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8AD2AD78534001E95D5 /* GBMContainer.swift */; };
 		083CF8B02AD785AE001E95D5 /* GBMDashedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8AF2AD785AE001E95D5 /* GBMDashedButton.swift */; };
-		083CF8B42AD78A20001E95D5 /* ModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8B32AD78A20001E95D5 /* ModuleManager.swift */; };
-		083CF8B62AD78A6E001E95D5 /* AccessDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8B52AD78A6E001E95D5 /* AccessDependency.swift */; };
 		083CF8B82AD7B595001E95D5 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8B72AD7B595001E95D5 /* SignInRouter.swift */; };
 		083CF8BA2AD7B64F001E95D5 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8B92AD7B64F001E95D5 /* SignInPresenter.swift */; };
 		083CF8BC2AD7B869001E95D5 /* SignInConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8BB2AD7B869001E95D5 /* SignInConfigurator.swift */; };
 		083CF8C02AD7BA63001E95D5 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8BE2AD7BA63001E95D5 /* LoaderViewController.swift */; };
 		083CF8C12AD7BA63001E95D5 /* LoaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083CF8BF2AD7BA63001E95D5 /* LoaderViewController.xib */; };
 		083CF8C32AD7BC26001E95D5 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8C22AD7BC26001E95D5 /* UIViewController+Ext.swift */; };
-		083CF8C52AD7BC65001E95D5 /* ToolsDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8C42AD7BC65001E95D5 /* ToolsDependency.swift */; };
 		083CF8C92AD865C3001E95D5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8C72AD865C3001E95D5 /* SignUpViewController.swift */; };
 		083CF8CA2AD865C3001E95D5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083CF8C82AD865C3001E95D5 /* SignUpViewController.xib */; };
 		083CF8CC2AD866A9001E95D5 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8CB2AD866A9001E95D5 /* SignUpRouter.swift */; };
@@ -52,7 +49,6 @@
 		083CF8DB2AD89670001E95D5 /* FirebaseCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8DA2AD89670001E95D5 /* FirebaseCollections.swift */; };
 		083CF8DD2AD8983B001E95D5 /* AccessUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8DC2AD8983B001E95D5 /* AccessUseCase.swift */; };
 		083CF8DF2AD8997A001E95D5 /* loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 083CF8DE2AD8997A001E95D5 /* loader.json */; };
-		083CF8E12AD901AC001E95D5 /* HomeDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8E02AD901AC001E95D5 /* HomeDependency.swift */; };
 		083CF8E52AD901D2001E95D5 /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8E32AD901D2001E95D5 /* DrawerMenuViewController.swift */; };
 		083CF8E62AD901D2001E95D5 /* DrawerMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 083CF8E42AD901D2001E95D5 /* DrawerMenuViewController.xib */; };
 		083CF8EA2AD90306001E95D5 /* TickerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083CF8E82AD90306001E95D5 /* TickerListViewController.swift */; };
@@ -178,15 +174,12 @@
 		083CF8AB2AD7836D001E95D5 /* UITextfield+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Ext.swift"; sourceTree = "<group>"; };
 		083CF8AD2AD78534001E95D5 /* GBMContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMContainer.swift; sourceTree = "<group>"; };
 		083CF8AF2AD785AE001E95D5 /* GBMDashedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBMDashedButton.swift; sourceTree = "<group>"; };
-		083CF8B32AD78A20001E95D5 /* ModuleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleManager.swift; sourceTree = "<group>"; };
-		083CF8B52AD78A6E001E95D5 /* AccessDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessDependency.swift; sourceTree = "<group>"; };
 		083CF8B72AD7B595001E95D5 /* SignInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
 		083CF8B92AD7B64F001E95D5 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		083CF8BB2AD7B869001E95D5 /* SignInConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInConfigurator.swift; sourceTree = "<group>"; };
 		083CF8BE2AD7BA63001E95D5 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		083CF8BF2AD7BA63001E95D5 /* LoaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderViewController.xib; sourceTree = "<group>"; };
 		083CF8C22AD7BC26001E95D5 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		083CF8C42AD7BC65001E95D5 /* ToolsDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsDependency.swift; sourceTree = "<group>"; };
 		083CF8C72AD865C3001E95D5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		083CF8C82AD865C3001E95D5 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		083CF8CB2AD866A9001E95D5 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
@@ -199,7 +192,6 @@
 		083CF8DA2AD89670001E95D5 /* FirebaseCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollections.swift; sourceTree = "<group>"; };
 		083CF8DC2AD8983B001E95D5 /* AccessUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessUseCase.swift; sourceTree = "<group>"; };
 		083CF8DE2AD8997A001E95D5 /* loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader.json; sourceTree = "<group>"; };
-		083CF8E02AD901AC001E95D5 /* HomeDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDependency.swift; sourceTree = "<group>"; };
 		083CF8E32AD901D2001E95D5 /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
 		083CF8E42AD901D2001E95D5 /* DrawerMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerMenuViewController.xib; sourceTree = "<group>"; };
 		083CF8E82AD90306001E95D5 /* TickerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerListViewController.swift; sourceTree = "<group>"; };
@@ -553,7 +545,6 @@
 			isa = PBXGroup;
 			children = (
 				083CF8D92AD89663001E95D5 /* Constants */,
-				089C16562AD5B60600741169 /* Dependencies */,
 				089C164C2AD5B53E00741169 /* Extensions */,
 				089C165A2AD5B66500741169 /* Tools */,
 				089C16572AD5B61500741169 /* Types */,
@@ -674,17 +665,6 @@
 				086007B22ADDE4C9007BB5F1 /* UserUseCase.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		089C16562AD5B60600741169 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				083CF8B32AD78A20001E95D5 /* ModuleManager.swift */,
-				083CF8B52AD78A6E001E95D5 /* AccessDependency.swift */,
-				083CF8C42AD7BC65001E95D5 /* ToolsDependency.swift */,
-				083CF8E02AD901AC001E95D5 /* HomeDependency.swift */,
-			);
-			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		089C16572AD5B61500741169 /* Types */ = {
@@ -1066,7 +1046,6 @@
 				083CF8C92AD865C3001E95D5 /* SignUpViewController.swift in Sources */,
 				083CF8FC2AD9FB4C001E95D5 /* TickerTableViewCell.swift in Sources */,
 				086007AB2ADDDD8B007BB5F1 /* DrawerMenuPresenter.swift in Sources */,
-				083CF8C52AD7BC65001E95D5 /* ToolsDependency.swift in Sources */,
 				08CA6B6A2ADCC10200650BFC /* GBMCheckButton.swift in Sources */,
 				083CF91E2ADC616C001E95D5 /* Double+Ext.swift in Sources */,
 				083CF8BC2AD7B869001E95D5 /* SignInConfigurator.swift in Sources */,
@@ -1079,7 +1058,6 @@
 				080EEB842ADDF468008172EB /* StockModel.swift in Sources */,
 				083CF9102ADA5A18001E95D5 /* GBMFilterButton.swift in Sources */,
 				083CF8CC2AD866A9001E95D5 /* SignUpRouter.swift in Sources */,
-				083CF8B42AD78A20001E95D5 /* ModuleManager.swift in Sources */,
 				083CF8D02AD8689B001E95D5 /* SignUpConfigurator.swift in Sources */,
 				083CF9042AD9FFEE001E95D5 /* TickerDTO.swift in Sources */,
 				08A2E51D2AE06B3D00D3695D /* RestorePasswordConfigurator.swift in Sources */,
@@ -1116,7 +1094,6 @@
 				083CF8A82AD7822A001E95D5 /* GBMButton.swift in Sources */,
 				086007B32ADDE4C9007BB5F1 /* UserUseCase.swift in Sources */,
 				080EEB912ADF010F008172EB /* CredentialDTO.swift in Sources */,
-				083CF8E12AD901AC001E95D5 /* HomeDependency.swift in Sources */,
 				089C16132AD59FEA00741169 /* AppDelegate.swift in Sources */,
 				083CF9262ADC9050001E95D5 /* ValueForChartType.swift in Sources */,
 				089C166C2AD611DC00741169 /* RequestManager.swift in Sources */,
@@ -1124,7 +1101,6 @@
 				089C16642AD6028B00741169 /* ApiClient.swift in Sources */,
 				08A2E5192AE069EF00D3695D /* RestorePasswordRouter.swift in Sources */,
 				086007AF2ADDDE32007BB5F1 /* UserDTO.swift in Sources */,
-				083CF8B62AD78A6E001E95D5 /* AccessDependency.swift in Sources */,
 				083CF8D22AD872EE001E95D5 /* Regex.swift in Sources */,
 				083CF9222ADC64A3001E95D5 /* CVDateFormatter.swift in Sources */,
 				083CF8EA2AD90306001E95D5 /* TickerListViewController.swift in Sources */,
